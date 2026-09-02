@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>Qcaaao's Bgs ValueList</title>
 
 <style>
 
+/* =========================
+   GENERAL
+========================= */
+
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background: #f5f5f5;
     color: #222;
 }
+
 
 /* =========================
    HEADER
@@ -26,6 +35,7 @@ body {
 
 header {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -33,31 +43,45 @@ header {
     height: 60px;
 
     background: white;
+
     border-bottom: 1px solid #ddd;
 
     display: flex;
+
     align-items: center;
+
+    padding: 0 15px;
 
     z-index: 1000;
 }
 
+
 .menu-button {
-    width: 60px;
-    height: 60px;
+    width: 42px;
+    height: 42px;
 
     border: none;
-    background: transparent;
 
-    font-size: 25px;
+    background: #eee;
+
+    border-radius: 8px;
+
+    font-size: 22px;
+
     cursor: pointer;
+
+    margin-right: 12px;
 }
 
+
 .logo {
-    font-size: 18px;
+    font-size: 19px;
+
     font-weight: bold;
 
     white-space: nowrap;
 }
+
 
 /* =========================
    SEARCH
@@ -66,17 +90,20 @@ header {
 .search-container {
     position: relative;
 
-    margin-left: auto;
-    margin-right: 15px;
+    /* Más separado del logo */
+    margin-left: 40px;
 
     width: 260px;
 }
 
+
 .search {
     width: 100%;
+
     height: 38px;
 
     border: 1px solid #ccc;
+
     border-radius: 8px;
 
     padding: 0 12px;
@@ -86,11 +113,15 @@ header {
     outline: none;
 }
 
+
 .search:focus {
     border-color: #999;
 }
 
+
 .search-results {
+    display: none;
+
     position: absolute;
 
     top: 45px;
@@ -101,16 +132,16 @@ header {
     background: white;
 
     border: 1px solid #ddd;
+
     border-radius: 8px;
 
-    display: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 
     overflow: hidden;
 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-
     z-index: 2000;
 }
+
 
 .search-result {
     padding: 12px;
@@ -122,9 +153,11 @@ header {
     font-size: 14px;
 }
 
+
 .search-result:hover {
     background: #f2f2f2;
 }
+
 
 .no-results {
     padding: 12px;
@@ -134,6 +167,7 @@ header {
     font-size: 14px;
 }
 
+
 /* =========================
    SIDEBAR
 ========================= */
@@ -142,55 +176,59 @@ header {
     position: fixed;
 
     top: 60px;
-    left: -230px;
 
-    width: 230px;
+    left: -240px;
+
+    width: 240px;
+
     height: calc(100vh - 60px);
 
     background: white;
 
     border-right: 1px solid #ddd;
 
-    transition: 0.25s;
+    padding: 15px;
 
-    z-index: 900;
+    transition: left 0.2s ease;
 
-    padding-top: 10px;
+    z-index: 999;
 }
+
 
 .sidebar.open {
     left: 0;
 }
 
+
 /* =========================
-   TEXTBUTTONS
+   TEXT BUTTONS
 ========================= */
 
 .text-button {
-    width: calc(100% - 20px);
-
-    margin: 4px 10px;
-
-    padding: 13px 15px;
+    width: 100%;
 
     background: transparent;
 
     border: none;
 
-    border-radius: 8px;
+    padding: 12px;
 
     text-align: left;
 
     font-size: 15px;
 
-    color: #222;
+    border-radius: 8px;
 
     cursor: pointer;
+
+    margin-bottom: 4px;
 }
 
+
 .text-button:hover {
-    background: #f0f0f0;
+    background: #f1f1f1;
 }
+
 
 .text-button.active {
     background: #e8e8e8;
@@ -198,35 +236,48 @@ header {
     font-weight: bold;
 }
 
+
 /* =========================
    MAIN
 ========================= */
 
 main {
-    padding: 85px 20px 30px;
+    padding-top: 85px;
+
+    padding-left: 20px;
+    padding-right: 20px;
 
     max-width: 1000px;
 
     margin: auto;
 }
 
+
 .page {
     display: none;
 }
+
 
 .page.active {
     display: block;
 }
 
+
 .page-title {
-    font-size: 28px;
+    margin-top: 0;
 
     margin-bottom: 20px;
 }
 
+
 /* =========================
-   PET CARD
+   PET CARDS
 ========================= */
+
+#petList {
+    width: 100%;
+}
+
 
 .pet-card {
     width: 100%;
@@ -246,9 +297,14 @@ main {
     gap: 15px;
 
     margin-bottom: 12px;
+
+    scroll-margin-top: 80px;
 }
 
-/* IMAGE */
+
+/* =========================
+   PET IMAGE BOX
+========================= */
 
 .pet-image {
     width: 85px;
@@ -270,14 +326,23 @@ main {
     overflow: hidden;
 }
 
+
+/*
+   El cuadro sigue midiendo 85x85,
+   pero la imagen ocupa más espacio.
+*/
+
 .pet-image img {
-    width: 100%;
-    height: 100%;
+    width: 115%;
+    height: 115%;
 
     object-fit: contain;
 }
 
-/* PET INFO */
+
+/* =========================
+   PET INFO
+========================= */
 
 .pet-info {
     display: flex;
@@ -287,6 +352,7 @@ main {
     gap: 4px;
 }
 
+
 .pet-name {
     font-size: 18px;
 
@@ -295,11 +361,13 @@ main {
     margin-bottom: 3px;
 }
 
+
 .pet-stats {
     font-size: 14px;
 
     color: #666;
 }
+
 
 /* =========================
    MOBILE
@@ -311,38 +379,57 @@ main {
         font-size: 15px;
     }
 
+
     .search-container {
+
         width: 150px;
 
-        margin-right: 10px;
+        /*
+           También queda separado
+           en móvil.
+        */
+
+        margin-left: 25px;
     }
+
 
     .search {
         height: 36px;
     }
+
 
     main {
         padding-left: 12px;
         padding-right: 12px;
     }
 
+
     .pet-card {
         padding: 12px;
     }
+
 
     .pet-image {
         width: 75px;
         height: 75px;
     }
 
+
     .pet-name {
         font-size: 17px;
+    }
+
+
+    .pet-stats {
+        font-size: 13px;
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
@@ -366,8 +453,6 @@ main {
     </div>
 
 
-    <!-- SEARCH SEPARADO DEL LOGO -->
-
     <div class="search-container">
 
         <input
@@ -389,6 +474,7 @@ main {
 </header>
 
 
+
 <!-- =========================
      SIDEBAR
 ========================= -->
@@ -399,8 +485,6 @@ main {
 >
 
 
-    <!-- TEXTBUTTON HOME -->
-
     <button
         class="text-button active"
         onclick="openPage('home', this)"
@@ -408,8 +492,6 @@ main {
         Home
     </button>
 
-
-    <!-- TEXTBUTTON EXPLORE -->
 
     <button
         class="text-button"
@@ -419,8 +501,6 @@ main {
     </button>
 
 
-    <!-- TEXTBUTTON PETS -->
-
     <button
         class="text-button"
         onclick="openPage('pets', this)"
@@ -428,8 +508,6 @@ main {
         Pets
     </button>
 
-
-    <!-- TEXTBUTTON VALUES -->
 
     <button
         class="text-button"
@@ -439,8 +517,6 @@ main {
     </button>
 
 
-    <!-- TEXTBUTTON SECRETS -->
-
     <button
         class="text-button"
         onclick="openPage('secrets', this)"
@@ -448,8 +524,6 @@ main {
         Secrets
     </button>
 
-
-    <!-- TEXTBUTTON W/L SYSTEM -->
 
     <button
         class="text-button"
@@ -461,6 +535,7 @@ main {
 </div>
 
 
+
 <!-- =========================
      MAIN
 ========================= -->
@@ -468,7 +543,9 @@ main {
 <main>
 
 
-    <!-- HOME -->
+    <!-- =====================
+         HOME
+    ====================== -->
 
     <section
         class="page active"
@@ -479,6 +556,7 @@ main {
             Home
         </h1>
 
+
         <p>
             Welcome to Qcaaao's Bgs ValueList.
         </p>
@@ -486,7 +564,10 @@ main {
     </section>
 
 
-    <!-- EXPLORE -->
+
+    <!-- =====================
+         EXPLORE
+    ====================== -->
 
     <section
         class="page"
@@ -497,14 +578,18 @@ main {
             Explore
         </h1>
 
+
         <p>
-            Explore the pets and values.
+            Explore Bubble Gum Simulator pets and values.
         </p>
 
     </section>
 
 
-    <!-- PETS -->
+
+    <!-- =====================
+         PETS
+    ====================== -->
 
     <section
         class="page"
@@ -516,17 +601,193 @@ main {
         </h1>
 
 
-        <!--
-            LAS PETS SE CREAN AUTOMÁTICAMENTE
-            DESDE const pets
-        -->
-
         <div id="petList"></div>
+
+
+        <script>
+
+        /*
+        ==========================================
+        PETS
+
+        Acá solamente están:
+        - name
+        - image
+
+        NO están las características.
+        ==========================================
+        */
+
+        const pets = [
+
+            {
+                name: "Shadow One",
+                image: "images/1136-removebg-preview.png"
+            }
+
+        ];
+
+
+        /*
+        ==========================================
+        CREAR ID AUTOMÁTICAMENTE
+        ==========================================
+        */
+
+        function createPetId(name) {
+
+            return name
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, "-")
+                .replace(/^-+|-+$/g, "");
+
+        }
+
+
+        /*
+        ==========================================
+        CREAR TARJETAS
+        ==========================================
+        */
+
+        const petList =
+            document.getElementById("petList");
+
+
+        pets.forEach(function(pet) {
+
+
+            /*
+            CARD
+            */
+
+            const card =
+                document.createElement("div");
+
+
+            card.className =
+                "pet-card";
+
+
+            card.id =
+                createPetId(pet.name);
+
+
+
+            /*
+            IMAGEN
+            */
+
+            const imageBox =
+                document.createElement("div");
+
+
+            imageBox.className =
+                "pet-image";
+
+
+            const image =
+                document.createElement("img");
+
+
+            image.src =
+                pet.image;
+
+
+            image.alt =
+                pet.name;
+
+
+            imageBox.appendChild(image);
+
+
+
+            /*
+            INFORMACIÓN
+            */
+
+            const info =
+                document.createElement("div");
+
+
+            info.className =
+                "pet-info";
+
+
+
+            /*
+            NOMBRE
+            */
+
+            const name =
+                document.createElement("div");
+
+
+            name.className =
+                "pet-name";
+
+
+            name.textContent =
+                "Pet: " + pet.name;
+
+
+
+            /*
+            ======================================
+            CARACTERÍSTICAS
+
+            Están separadas de const pets.
+            ======================================
+            */
+
+            const stats =
+                document.createElement("div");
+
+
+            stats.className =
+                "pet-stats";
+
+
+            stats.innerHTML = `
+                Hatched: 100<br>
+                Chance: 1/500<br>
+                Value: 250
+            `;
+
+
+
+            /*
+            ARMAR INFORMACIÓN
+            */
+
+            info.appendChild(name);
+
+            info.appendChild(stats);
+
+
+
+            /*
+            ARMAR CARD
+            */
+
+            card.appendChild(imageBox);
+
+            card.appendChild(info);
+
+
+            petList.appendChild(card);
+
+        });
+
+        </script>
 
     </section>
 
 
-    <!-- VALUES -->
+
+    <!-- =====================
+         VALUES
+    ====================== -->
 
     <section
         class="page"
@@ -537,6 +798,7 @@ main {
             Values
         </h1>
 
+
         <p>
             Pet values will appear here.
         </p>
@@ -544,7 +806,10 @@ main {
     </section>
 
 
-    <!-- SECRETS -->
+
+    <!-- =====================
+         SECRETS
+    ====================== -->
 
     <section
         class="page"
@@ -555,6 +820,7 @@ main {
             Secrets
         </h1>
 
+
         <p>
             Secret pets will appear here.
         </p>
@@ -562,7 +828,10 @@ main {
     </section>
 
 
-    <!-- W/L SYSTEM -->
+
+    <!-- =====================
+         W/L SYSTEM
+    ====================== -->
 
     <section
         class="page"
@@ -573,145 +842,23 @@ main {
             W/L System
         </h1>
 
+
         <p>
-            W/L System.
+            W/L System
         </p>
 
     </section>
 
+
 </main>
+
 
 
 <script>
 
-/* ==================================================
-   PET DATABASE
-================================================== */
-
-/*
-   PARA AGREGAR UNA PET SOLO COPIA ESTO:
-
-   {
-       name: "Nombre",
-       image: "images/Nombre.png",
-       hatched: "100",
-       chance: "1/500",
-       value: "250"
-   }
-
-*/
-
-const pets = [
-
-    {
-        name: "Shadow One",
-
-        image: "images/1136-removebg-preview.png",
-
-        hatched: "100",
-
-        chance: "1/500",
-
-        value: "250"
-    }
-
-];
-
-
-/* ==================================================
-   CREAR ID AUTOMÁTICO
-================================================== */
-
-function createPetId(name) {
-
-    return name
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-
-}
-
-
-/* ==================================================
-   GENERAR PETS
-================================================== */
-
-function generatePets() {
-
-    const petList =
-        document.getElementById("petList");
-
-
-    petList.innerHTML = "";
-
-
-    pets.forEach(function(pet) {
-
-
-        const petId =
-            createPetId(pet.name);
-
-
-        const card =
-            document.createElement("div");
-
-
-        card.className =
-            "pet-card";
-
-
-        card.id =
-            petId;
-
-
-        card.innerHTML = `
-
-            <div class="pet-image">
-
-                <img
-                    src="${pet.image}"
-                    alt="${pet.name}"
-                >
-
-            </div>
-
-
-            <div class="pet-info">
-
-                <div class="pet-name">
-                    Pet: ${pet.name}
-                </div>
-
-
-                <div class="pet-stats">
-                    Hatched: ${pet.hatched}
-                </div>
-
-
-                <div class="pet-stats">
-                    Chance: ${pet.chance}
-                </div>
-
-
-                <div class="pet-stats">
-                    Value: ${pet.value}
-                </div>
-
-            </div>
-
-        `;
-
-
-        petList.appendChild(card);
-
-    });
-
-}
-
-
-/* ==================================================
-   TOGGLE MENU
-================================================== */
+/* =========================
+   SIDEBAR
+========================= */
 
 function toggleMenu() {
 
@@ -724,16 +871,12 @@ function toggleMenu() {
 }
 
 
-/* ==================================================
-   OPEN PAGE
-================================================== */
+/* =========================
+   CAMBIAR DE PÁGINA
+========================= */
 
 function openPage(pageId, button) {
 
-
-    /*
-       Ocultar todas las páginas
-    */
 
     const pages =
         document.querySelectorAll(".page");
@@ -746,10 +889,6 @@ function openPage(pageId, button) {
     });
 
 
-    /*
-       Mostrar página seleccionada
-    */
-
     const selectedPage =
         document.getElementById(pageId);
 
@@ -760,11 +899,6 @@ function openPage(pageId, button) {
 
     }
 
-
-    /*
-       Quitar active de todos
-       los TextButtons
-    */
 
     const buttons =
         document.querySelectorAll(".text-button");
@@ -777,20 +911,12 @@ function openPage(pageId, button) {
     });
 
 
-    /*
-       Activar botón seleccionado
-    */
-
     if (button) {
 
         button.classList.add("active");
 
     }
 
-
-    /*
-       Cerrar sidebar
-    */
 
     document
         .getElementById("sidebar")
@@ -799,9 +925,10 @@ function openPage(pageId, button) {
 }
 
 
-/* ==================================================
-   SEARCH
-================================================== */
+
+/* =========================
+   BUSCAR PETS
+========================= */
 
 function searchPets() {
 
@@ -816,15 +943,16 @@ function searchPets() {
 
     const value =
         input.value
-        .toLowerCase()
-        .trim();
+            .toLowerCase()
+            .trim();
 
 
     results.innerHTML = "";
 
 
+
     /*
-       Search vacío
+    SEARCH VACÍO
     */
 
     if (value === "") {
@@ -837,8 +965,9 @@ function searchPets() {
     }
 
 
+
     /*
-       Buscar SOLO dentro de pets
+    BUSCAR SOLAMENTE PETS
     */
 
     const matches =
@@ -851,19 +980,15 @@ function searchPets() {
         });
 
 
+
     /*
-       Sin resultados
+    SIN RESULTADOS
     */
 
     if (matches.length === 0) {
 
-        results.innerHTML = `
-
-            <div class="no-results">
-                No results found.
-            </div>
-
-        `;
+        results.innerHTML =
+            '<div class="no-results">No results found.</div>';
 
 
         results.style.display =
@@ -875,8 +1000,9 @@ function searchPets() {
     }
 
 
+
     /*
-       Crear resultados
+    MOSTRAR RESULTADOS
     */
 
     matches.forEach(function(pet) {
@@ -894,15 +1020,12 @@ function searchPets() {
             "Pet: " + pet.name;
 
 
-        /*
-           Click en resultado
-        */
 
         result.onclick = function() {
 
 
             /*
-               Abrir Pets
+            ABRIR PÁGINA PETS
             */
 
             const petsPage =
@@ -921,13 +1044,15 @@ function searchPets() {
             petsPage.classList.add("active");
 
 
+
             /*
-               Activar TextButton Pets
+            ACTIVAR BOTÓN PETS
             */
 
             document
                 .querySelectorAll(".text-button")
                 .forEach(function(button) {
+
 
                     button.classList.remove("active");
 
@@ -944,40 +1069,31 @@ function searchPets() {
                 });
 
 
+
             /*
-               Ocultar resultados
+            CERRAR SEARCH
             */
 
             results.style.display =
                 "none";
 
 
-            /*
-               Limpiar buscador
-            */
+            input.value =
+                "";
 
-            input.value = "";
 
 
             /*
-               Obtener ID automático
+            BUSCAR CARD AUTOMÁTICAMENTE
             */
 
             const petId =
                 createPetId(pet.name);
 
 
-            /*
-               Encontrar tarjeta
-            */
-
             const petElement =
                 document.getElementById(petId);
 
-
-            /*
-               Ir hasta la pet
-            */
 
             if (petElement) {
 
@@ -999,15 +1115,17 @@ function searchPets() {
     });
 
 
+
     results.style.display =
         "block";
 
 }
 
 
-/* ==================================================
-   CERRAR SEARCH AL TOCAR AFUERA
-================================================== */
+
+/* =========================
+   CERRAR SEARCH AL TOCAR FUERA
+========================= */
 
 document.addEventListener(
     "click",
@@ -1020,34 +1138,24 @@ document.addEventListener(
             );
 
 
-        const results =
-            document.getElementById(
-                "searchResults"
-            );
-
-
         if (
             !searchContainer.contains(
                 event.target
             )
         ) {
 
-            results.style.display =
-                "none";
+
+            document
+                .getElementById("searchResults")
+                .style.display = "none";
 
         }
 
     }
 );
 
-
-/* ==================================================
-   INICIAR SISTEMA DE PETS
-================================================== */
-
-generatePets();
-
 </script>
+
 
 </body>
 </html>
