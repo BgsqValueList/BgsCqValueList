@@ -1,1 +1,206 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qcaaao's Bgs ValueList</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #111;
+}
+
+header {
+    height: 64px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.menu-button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    background: #eeeeee;
+}
+
+.logo {
+    margin-left: 12px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.search-container {
+    margin-left: auto;
+}
+
+.search {
+    width: 280px;
+    height: 40px;
+    border: 1px solid #d0d0d0;
+    border-radius: 22px;
+    padding: 0 17px;
+    outline: none;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+.search:focus {
+    background: white;
+    border-color: #999;
+}
+
+.sidebar {
+    position: fixed;
+    top: 64px;
+    left: -270px;
+    width: 270px;
+    height: calc(100vh - 64px);
+    background: white;
+    border-right: 1px solid #e2e2e2;
+    padding: 18px 12px;
+    transition: left 0.25s ease;
+    z-index: 90;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.nav-item {
+    padding: 14px 16px;
+    margin-bottom: 4px;
+    border-radius: 9px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: #f0f0f0;
+}
+
+main {
+    padding-top: 64px;
+    min-height: 100vh;
+}
+
+.home {
+    min-height: calc(100vh - 64px);
+    padding: 28px;
+}
+
+.hero {
+    width: 100%;
+    min-height: 300px;
+    background: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #777;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 12px;
+    }
+
+    .logo {
+        margin-left: 8px;
+        font-size: 17px;
+    }
+
+    .search {
+        width: 145px;
+    }
+
+    .home {
+        padding: 16px;
+    }
+
+    .hero {
+        min-height: 250px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    <div class="logo">Qcaaao's Bgs ValueList</div>
+
+    <div class="search-container">
+        <input class="search" type="text" placeholder="Search...">
+    </div>
+</header>
+
+<nav class="sidebar" id="sidebar">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">Explore</div>
+    <div class="nav-item">Pets</div>
+    <div class="nav-item">Values</div>
+    <div class="nav-item">Secrets</div>
+    <div class="nav-item">W/L System</div>
+</nav>
+
+<main>
+    <section class="home">
+        <div class="hero">
+            <div>
+                <h1>Qcaaao's Bgs ValueList</h1>
+                <p>Bubble Gum Simulator</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
+
+</body>
+                  </html>
