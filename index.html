@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qcaaao's Bgs ValueList</title>
+
+<title>Cqaaao Bgs ValueList</title>
 
 <style>
 :root{
@@ -32,6 +33,8 @@ body{
     overflow-x:hidden;
     overflow-y:auto;
 }
+
+/* HEADER */
 
 header{
     position:fixed;
@@ -88,6 +91,8 @@ header{
     background:white;
     color:#222;
 }
+
+/* SEARCH */
 
 .searchResults{
     position:absolute;
@@ -159,6 +164,8 @@ header{
     color:#777;
 }
 
+/* SIDEBAR */
+
 .sidebar{
     position:fixed;
     top:95px;
@@ -201,6 +208,8 @@ header{
     color:white;
 }
 
+/* MAIN */
+
 main{
     width:100%;
     min-height:100vh;
@@ -239,6 +248,8 @@ main{
     font-size:24px;
     line-height:1.5;
 }
+
+/* PET LIST */
 
 .petList{
     width:100%;
@@ -289,6 +300,8 @@ main{
 .petStat b{
     color:#333;
 }
+
+/* VARIANTS */
 
 .variantContainer{
     position:relative;
@@ -361,6 +374,8 @@ main{
     object-fit:contain;
 }
 
+/* EGGS */
+
 .eggGrid{
     width:100%;
     display:grid;
@@ -415,6 +430,8 @@ main{
     background:var(--main-dark);
 }
 
+/* CONFIG */
+
 .configBox{
     background:white;
     border:3px solid var(--main-color);
@@ -440,57 +457,35 @@ main{
     background:white;
 }
 
-@media(min-width:601px) and (max-width:1599px){
-
-    .searchContainer{
-        max-width:45%;
-    }
-
-}
+/* LARGE */
 
 @media(min-width:1600px){
 
     header{
         height:110px;
-        padding:0 40px;
     }
 
     .menuButton{
         width:74px;
         height:74px;
-        font-size:40px;
     }
 
     .logo{
         font-size:42px;
-        margin-left:30px;
     }
 
     .searchContainer{
         width:800px;
-        max-width:none;
-    }
-
-    #searchInput{
-        height:66px;
-        font-size:24px;
     }
 
     .sidebar{
         top:110px;
-        height:calc(100vh - 110px);
         width:470px;
-    }
-
-    .sidebarButton{
-        font-size:26px;
-        padding:22px;
+        height:calc(100vh - 110px);
     }
 
     main{
         padding-top:110px;
-        padding-left:40px;
-        padding-right:40px;
     }
 
     .content{
@@ -499,12 +494,10 @@ main{
 
     .pageTitle{
         font-size:62px;
-        margin-top:45px;
     }
 
     .petCard{
         min-height:260px;
-        padding:22px 28px;
     }
 
     .petImage{
@@ -523,7 +516,6 @@ main{
     .variantButton{
         width:280px;
         min-height:85px;
-        font-size:24px;
     }
 
     .variantButton img{
@@ -533,7 +525,6 @@ main{
 
     .variantMenu{
         width:330px;
-        top:93px;
     }
 
     .variantOption{
@@ -557,8 +548,18 @@ main{
     .eggName{
         font-size:30px;
     }
-
 }
+
+/* MEDIUM */
+
+@media(min-width:601px) and (max-width:1599px){
+
+    .searchContainer{
+        max-width:45%;
+    }
+}
+
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -570,8 +571,8 @@ main{
     .menuButton{
         width:43px;
         height:43px;
-        border-radius:9px;
-        font-size:23px;
+        border-radius:10px;
+        font-size:22px;
     }
 
     .logo{
@@ -585,14 +586,14 @@ main{
     .searchContainer{
         width:150px;
         min-width:120px;
-        margin-left:auto;
+        margin-left:8px;
     }
 
     #searchInput{
         height:38px;
         border-width:2px;
         border-radius:9px;
-        padding:0 8px;
+        padding:0 9px;
         font-size:13px;
     }
 
@@ -602,8 +603,8 @@ main{
     }
 
     .searchItem{
-        padding:8px;
         gap:8px;
+        padding:8px;
     }
 
     .searchItem img{
@@ -627,9 +628,10 @@ main{
     }
 
     .sidebarButton{
-        font-size:16px;
         padding:13px;
         margin-bottom:9px;
+        font-size:16px;
+        border-radius:9px;
     }
 
     main{
@@ -641,12 +643,12 @@ main{
 
     .pageTitle{
         font-size:28px;
-        margin:25px 0 20px;
+        margin:22px 0 18px;
     }
 
     .homeBox{
-        padding:20px;
-        font-size:17px;
+        padding:18px;
+        font-size:16px;
     }
 
     .petList{
@@ -655,8 +657,8 @@ main{
 
     .petCard{
         min-height:120px;
-        padding:10px;
         gap:10px;
+        padding:10px;
         border-width:2px;
         border-radius:12px;
     }
@@ -673,47 +675,45 @@ main{
 
     .petStat{
         font-size:13px;
-        margin:3px 0;
+        margin:4px 0;
     }
 
     .variantButton{
         width:55px;
-        min-width:55px;
         height:55px;
         min-height:55px;
         padding:4px;
-        justify-content:center;
         border-width:2px;
+        border-radius:9px;
+        justify-content:center;
     }
 
     .variantButton img{
-        width:45px;
-        height:45px;
+        width:42px;
+        height:42px;
     }
 
-    .variantButton span:not(.variantArrow){
-        display:none;
-    }
-
-    .variantArrow{
+    .variantButton .variantText,
+    .variantButton .variantArrow{
         display:none;
     }
 
     .variantMenu{
+        top:60px;
         right:0;
-        top:61px;
         width:200px;
         border-width:2px;
     }
 
     .variantOption{
-        font-size:14px;
+        gap:8px;
         padding:8px;
+        font-size:14px;
     }
 
     .variantOption img{
-        width:40px;
-        height:40px;
+        width:42px;
+        height:42px;
     }
 
     .eggGrid{
@@ -724,6 +724,7 @@ main{
     .eggButton{
         min-height:220px;
         padding:15px;
+        border-width:2px;
     }
 
     .eggImage{
@@ -733,28 +734,26 @@ main{
 
     .eggName{
         font-size:20px;
-        margin-top:10px;
     }
 
     .eggBackButton{
+        padding:10px 15px;
         font-size:16px;
-        padding:10px 16px;
-        margin:18px 0 12px;
+        margin:20px 0 15px;
     }
 
     .configBox{
-        padding:20px;
+        padding:18px;
     }
 
     .configTitle{
-        font-size:21px;
+        font-size:20px;
     }
 
     #colorSelect{
         height:45px;
         font-size:16px;
     }
-
 }
 </style>
 </head>
@@ -765,17 +764,15 @@ main{
 
 <button class="menuButton" id="menuButton">☰</button>
 
-<div class="logo">
-Qcaaao's Bgs ValueList
-</div>
+<div class="logo">Cqaaao Bgs ValueList</div>
 
 <div class="searchContainer">
 
 <input
-    type="text"
-    id="searchInput"
-    placeholder="Search pets..."
-    autocomplete="off"
+type="text"
+id="searchInput"
+placeholder="Search pets..."
+autocomplete="off"
 >
 
 <div class="searchResults" id="searchResults"></div>
@@ -791,20 +788,20 @@ Qcaaao's Bgs ValueList
 Home
 </button>
 
-<button class="sidebarButton" data-page="robuxPets">
-Robux Pets
+<button class="sidebarButton" data-page="limitedSecrets">
+Limited Secrets
 </button>
 
 <button class="sidebarButton" data-page="permanentSecrets">
 Permanent Secrets
 </button>
 
-<button class="sidebarButton" data-page="limitedSecrets">
-Limited Secrets
+<button class="sidebarButton" data-page="temporaryPets">
+Temporary Secrets
 </button>
 
-<button class="sidebarButton" data-page="temporaryPets">
-Temporary Pets
+<button class="sidebarButton" data-page="robuxPets">
+Robux Pets
 </button>
 
 <button class="sidebarButton" data-page="config">
@@ -818,16 +815,15 @@ Config
 
 <div class="content">
 
+<!-- HOME -->
 
 <section class="page active" id="home">
 
-<h1 class="pageTitle">
-Home
-</h1>
+<h1 class="pageTitle">Home</h1>
 
 <div class="homeBox">
 
-Welcome to Qcaaao's Bgs ValueList!
+Welcome to Cqaaao Bgs ValueList!
 
 <br><br>
 
@@ -839,31 +835,107 @@ eggs and values.
 </section>
 
 
-<section class="page" id="robuxPets">
+<!-- LIMITED SECRETS -->
 
-<h1 class="pageTitle">
-Robux Pets
-</h1>
+<section class="page" id="limitedSecrets">
 
-<div class="petList" id="robuxPetsList"></div>
+<h1 class="pageTitle">Limited Secrets</h1>
+
+<div class="eggGrid">
+
+<button class="eggButton" id="releaseEggButton">
+
+<img
+class="eggImage"
+src="images/Release_Egg.webp"
+alt="Release Egg"
+>
+
+<div class="eggName">
+Release Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="exoticEggButton">
+
+<img
+class="eggImage"
+src="images/Exotic_Egg.webp"
+alt="Exotic Egg"
+>
+
+<div class="eggName">
+Exotic Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="cosmicEggButton">
+
+<img
+class="eggImage"
+src="images/Cosmic_Egg.webp"
+alt="Cosmic Egg"
+>
+
+<div class="eggName">
+Cosmic Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="royaltyEggButton">
+
+<img
+class="eggImage"
+src="images/Royalty_Egg.webp"
+alt="Royalty Egg"
+>
+
+<div class="eggName">
+Royalty Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="fruityEggButton">
+
+<img
+class="eggImage"
+src="images/Fruity_Egg.webp"
+alt="Fruity Egg"
+>
+
+<div class="eggName">
+Fruity Egg
+</div>
+
+</button>
+
+</div>
 
 </section>
 
 
+<!-- PERMANENT SECRETS -->
+
 <section class="page" id="permanentSecrets">
 
-<h1 class="pageTitle">
-Permanent Secrets
-</h1>
+<h1 class="pageTitle">Permanent Secrets</h1>
 
 <div class="eggGrid">
 
 <button class="eggButton" id="commonEggButton">
 
 <img
-    class="eggImage"
-    src="images/CommonEgg.png"
-    alt="Common Egg"
+class="eggImage"
+src="images/Common_Egg.webp"
+alt="Common Egg"
 >
 
 <div class="eggName">
@@ -872,88 +944,85 @@ Common Egg
 
 </button>
 
-</div>
 
-</section>
-
-
-<section class="page" id="commonEgg">
-
-<button
-    class="eggBackButton"
-    data-back="permanentSecrets"
->
-← Back
-</button>
-
-<h1 class="pageTitle">
-Common Egg
-</h1>
-
-<div class="petList" id="commonEggList"></div>
-
-</section>
-
-
-<section class="page" id="limitedSecrets">
-
-<h1 class="pageTitle">
-Limited Secrets
-</h1>
-
-<div class="eggGrid">
-
-<button class="eggButton" id="exoticEggButton">
+<button class="eggButton" id="lunarEggButton">
 
 <img
-    class="eggImage"
-    src="images/Exotic_Egg.webp"
-    alt="Exotic Egg"
+class="eggImage"
+src="images/Lunar_Egg.webp"
+alt="Lunar Egg"
 >
 
 <div class="eggName">
-Exotic Egg
+Lunar Egg
 </div>
 
 </button>
 
-</div>
 
-</section>
+<button class="eggButton" id="voidEggButton">
 
-
-<section class="page" id="exoticEgg">
-
-<button
-    class="eggBackButton"
-    data-back="limitedSecrets"
+<img
+class="eggImage"
+src="images/Void_Egg.webp"
+alt="Void Egg"
 >
-← Back
+
+<div class="eggName">
+Void Egg
+</div>
+
 </button>
 
-<h1 class="pageTitle">
-Exotic Egg
-</h1>
 
-<div class="petList" id="exoticEggList"></div>
+<button class="eggButton" id="hellEggButton">
+
+<img
+class="eggImage"
+src="images/Hell_Egg.webp"
+alt="Hell Egg"
+>
+
+<div class="eggName">
+Hell Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="nightmareEggButton">
+
+<img
+class="eggImage"
+src="images/Nightmare_Egg.webp"
+alt="Nightmare Egg"
+>
+
+<div class="eggName">
+Nightmare Egg
+</div>
+
+</button>
+
+</div>
 
 </section>
 
+
+<!-- TEMPORARY SECRETS -->
 
 <section class="page" id="temporaryPets">
 
-<h1 class="pageTitle">
-Temporary Pets
-</h1>
+<h1 class="pageTitle">Temporary Secrets</h1>
 
 <div class="eggGrid">
 
 <button class="eggButton" id="shadowEggButton">
 
 <img
-    class="eggImage"
-    src="images/ShadowEgg.png"
-    alt="Shadow Egg"
+class="eggImage"
+src="images/ShadowEgg.png"
+alt="Shadow Egg"
 >
 
 <div class="eggName">
@@ -967,29 +1036,22 @@ Shadow Egg
 </section>
 
 
-<section class="page" id="shadowEgg">
+<!-- ROBUX PETS -->
 
-<button
-    class="eggBackButton"
-    data-back="temporaryPets"
->
-← Back
-</button>
+<section class="page" id="robuxPets">
 
-<h1 class="pageTitle">
-Shadow Egg
-</h1>
+<h1 class="pageTitle">Robux Pets</h1>
 
-<div class="petList" id="shadowEggList"></div>
+<div class="petList" id="robuxPetsList"></div>
 
 </section>
 
 
+<!-- CONFIG -->
+
 <section class="page" id="config">
 
-<h1 class="pageTitle">
-Config
-</h1>
+<h1 class="pageTitle">Config</h1>
 
 <div class="configBox">
 
@@ -1016,6 +1078,171 @@ Choose Color
 </section>
 
 
+<!-- RELEASE EGG -->
+
+<section class="page" id="releaseEgg">
+
+<button class="eggBackButton" data-back="limitedSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Release Egg</h1>
+
+<div class="petList" id="releaseEggList"></div>
+
+</section>
+
+
+<!-- EXOTIC EGG -->
+
+<section class="page" id="exoticEgg">
+
+<button class="eggBackButton" data-back="limitedSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Exotic Egg</h1>
+
+<div class="petList" id="exoticEggList"></div>
+
+</section>
+
+
+<!-- COSMIC EGG -->
+
+<section class="page" id="cosmicEgg">
+
+<button class="eggBackButton" data-back="limitedSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Cosmic Egg</h1>
+
+<div class="petList" id="cosmicEggList"></div>
+
+</section>
+
+
+<!-- ROYALTY EGG -->
+
+<section class="page" id="royaltyEgg">
+
+<button class="eggBackButton" data-back="limitedSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Royalty Egg</h1>
+
+<div class="petList" id="royaltyEggList"></div>
+
+</section>
+
+
+<!-- FRUITY EGG -->
+
+<section class="page" id="fruityEgg">
+
+<button class="eggBackButton" data-back="limitedSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Fruity Egg</h1>
+
+<div class="petList" id="fruityEggList"></div>
+
+</section>
+
+
+<!-- COMMON EGG -->
+
+<section class="page" id="commonEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Common Egg</h1>
+
+<div class="petList" id="commonEggList"></div>
+
+</section>
+
+
+<!-- LUNAR EGG -->
+
+<section class="page" id="lunarEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Lunar Egg</h1>
+
+<div class="petList" id="lunarEggList"></div>
+
+</section>
+
+
+<!-- VOID EGG -->
+
+<section class="page" id="voidEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Void Egg</h1>
+
+<div class="petList" id="voidEggList"></div>
+
+</section>
+
+
+<!-- HELL EGG -->
+
+<section class="page" id="hellEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Hell Egg</h1>
+
+<div class="petList" id="hellEggList"></div>
+
+</section>
+
+
+<!-- NIGHTMARE EGG -->
+
+<section class="page" id="nightmareEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">Nightmare Egg</h1>
+
+<div class="petList" id="nightmareEggList"></div>
+
+</section>
+
+
+<!-- SHADOW EGG -->
+
+<section class="page" id="shadowEgg">
+
+<button class="eggBackButton" data-back="temporaryPets">
+← Back
+</button>
+
+<h1 class="pageTitle">Shadow Egg</h1>
+
+<div class="petList" id="shadowEggList"></div>
+
+</section>
+
+
 </div>
 
 </main>
@@ -1027,19 +1254,50 @@ Choose Color
    VARIANTS
 ========================= */
 
-const variantNames = {
+const limitedVariantNames = {
     normal:"Normal",
     shiny:"Shiny",
     mythic:"Mythic",
     shinyMythic:"Shiny Mythic"
 };
 
-const variantOrder = [
+const limitedVariantOrder = [
     "normal",
     "shiny",
     "mythic",
     "shinyMythic"
 ];
+
+const normalVariantNames = {
+    normal:"Normal",
+    shiny:"Shiny"
+};
+
+const normalVariantOrder = [
+    "normal",
+    "shiny"
+];
+
+function getVariantPetName(originalName,variantKey){
+
+    if(variantKey === "normal"){
+        return originalName;
+    }
+
+    if(variantKey === "shiny"){
+        return "Shiny " + originalName;
+    }
+
+    if(variantKey === "mythic"){
+        return "Mythic " + originalName;
+    }
+
+    if(variantKey === "shinyMythic"){
+        return "Shiny Mythic " + originalName;
+    }
+
+    return originalName;
+}
 
 
 /* =========================
@@ -1047,91 +1305,55 @@ const variantOrder = [
 ========================= */
 
 const pets = [
-    "Shadow One",
-    "Dark Cat",
-    "Crystal Dragon"
+    "Crimson Paladin",
+    "Beta Tv",
+    "Dowodle"
 ];
 
 const petData = {
 
-"Shadow One":{
+"Crimson Paladin":{
     normal:{
-        image:"images/ShadowOne.png",
-        hatched:"100",
-        chance:"1/500",
-        value:"250"
+        image:"images/Crimson_Paladin.webp",
+        hatched:"0",
+        chance:"0",
+        value:"30 R$"
     },
     shiny:{
-        image:"images/ShadowOneShiny.png",
-        hatched:"25",
-        chance:"1/2,500",
-        value:"750"
-    },
-    mythic:{
-        image:"images/ShadowOneMythic.png",
-        hatched:"5",
-        chance:"1/10,000",
-        value:"2,500"
-    },
-    shinyMythic:{
-        image:"images/ShadowOneShinyMythic.png",
-        hatched:"1",
-        chance:"1/50,000",
-        value:"10,000"
+        image:"images/Crimson_Paladin.webp",
+        hatched:"0",
+        chance:"0",
+        value:"30 R$"
     }
 },
 
-"Dark Cat":{
+"Beta Tv":{
     normal:{
-        image:"images/DarkCat.png",
-        hatched:"100",
-        chance:"1/500",
-        value:"150"
+        image:"images/Beta_Tv.webp",
+        hatched:"0",
+        chance:"0",
+        value:"15 R$"
     },
     shiny:{
-        image:"images/DarkCatShiny.png",
-        hatched:"25",
-        chance:"1/2,500",
-        value:"500"
-    },
-    mythic:{
-        image:"images/DarkCatMythic.png",
-        hatched:"5",
-        chance:"1/10,000",
-        value:"1,500"
-    },
-    shinyMythic:{
-        image:"images/DarkCatShinyMythic.png",
-        hatched:"1",
-        chance:"1/50,000",
-        value:"7,500"
+        image:"images/Beta_Tv.webp",
+        hatched:"0",
+        chance:"0",
+        value:"15 R$"
     }
 },
 
-"Crystal Dragon":{
+"Dowodle":{
     normal:{
-        image:"images/CrystalDragon.png",
-        hatched:"75",
-        chance:"1/750",
-        value:"400"
+        image:"images/Dowodle.webp",
+        hatched:"0",
+        chance:"0",
+        value:"15 R$"
     },
     shiny:{
-        image:"images/CrystalDragonShiny.png",
-        hatched:"20",
-        chance:"1/3,000",
-        value:"1,200"
-    },
-    mythic:{
-        image:"images/CrystalDragonMythic.png",
-        hatched:"4",
-        chance:"1/12,000",
-        value:"4,000"
-    },
-    shinyMythic:{
-        image:"images/CrystalDragonShinyMythic.png",
-        hatched:"1",
-        chance:"1/60,000",
-        value:"16,000"
+        image:"images/Dowodle.webp",
+        hatched:"0",
+        chance:"0",
+        value:"15 R$"
     }
 }
 
@@ -1139,7 +1361,7 @@ const petData = {
 
 
 /* =========================
-   COMMON EGG
+   PERMANENT
 ========================= */
 
 const commonEggPets = [
@@ -1160,15 +1382,225 @@ const commonEggData = {
         hatched:"0",
         chance:"0",
         value:"0"
+    }
+}
+
+};
+
+
+const lunarEggPets = [
+    "Lunar Duality"
+];
+
+const lunarEggData = {
+
+"Lunar Duality":{
+    normal:{
+        image:"images/Lunar_Duality.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Lunar_Duality.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+const voidEggPets = [
+    "Void Shard"
+];
+
+const voidEggData = {
+
+"Void Shard":{
+    normal:{
+        image:"images/Void_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Void_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+const hellEggPets = [
+    "Hell Myriad"
+];
+
+const hellEggData = {
+
+"Hell Myriad":{
+    normal:{
+        image:"images/Hell_Myriad.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Hell_Myriad.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+const nightmareEggPets = [
+    "The Overlord"
+];
+
+const nightmareEggData = {
+
+"The Overlord":{
+    normal:{
+        image:"images/The_Overlord.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/The_Overlord.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   RELEASE EGG
+========================= */
+
+const releaseEggPets = [
+
+    "Release Champion",
+    "Release Trophy 2.0",
+    "Release Shard",
+    "Release Robot"
+
+];
+
+const releaseEggData = {
+
+"Release Champion":{
+    normal:{
+        image:"images/Release_Champion.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Release_Champion.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
     },
     mythic:{
-        image:"images/RoyalDoggyMythic.png",
+        image:"images/Release_Champion.webp",
         hatched:"0",
         chance:"0",
         value:"0"
     },
     shinyMythic:{
-        image:"images/RoyalDoggyShinyMythic.png",
+        image:"images/Release_Champion.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Release Trophy 2.0":{
+    normal:{
+        image:"images/Release_Trophy_2.0.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Release_Trophy_2.0.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Release_Trophy_2.0.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Release_Trophy_2.0.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Release Shard":{
+    normal:{
+        image:"images/Release_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Release_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Release_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Release_Shard.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Release Robot":{
+    normal:{
+        image:"images/Release_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Release_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Release_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Release_Robot.webp",
         hatched:"0",
         chance:"0",
         value:"0"
@@ -1183,10 +1615,14 @@ const commonEggData = {
 ========================= */
 
 const exoticEggPets = [
+
     "Electric Basilisk",
     "Air Basilisk",
     "Fire Basilisk",
-    "Ice Basilisk"
+    "Ice Basilisk",
+    "Overlord Plushie",
+    "Ultima"
+
 ];
 
 const exoticEggData = {
@@ -1297,6 +1733,298 @@ const exoticEggData = {
         chance:"0",
         value:"0"
     }
+},
+
+"Overlord Plushie":{
+    normal:{
+        image:"images/Overlord_Plushie.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Overlord_Plushie.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Overlord_Plushie.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Overlord_Plushie.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Ultima":{
+    normal:{
+        image:"images/Ultima.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Ultima.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Ultima.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Ultima.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   COSMIC EGG
+========================= */
+
+const cosmicEggPets = [
+
+    "Eternal Carrot",
+    "Patronus",
+    "Easter Robot"
+
+];
+
+const cosmicEggData = {
+
+"Eternal Carrot":{
+    normal:{
+        image:"images/Eternal_Carrot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Eternal_Carrot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Eternal_Carrot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Eternal_Carrot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Patronus":{
+    normal:{
+        image:"images/Patronus.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Patronus.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Patronus.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Patronus.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Easter Robot":{
+    normal:{
+        image:"images/Easter_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Easter_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Easter_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Easter_Robot.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   ROYALTY EGG
+========================= */
+
+const royaltyEggPets = [
+
+    "Diamond Ring",
+    "King Kitty"
+
+];
+
+const royaltyEggData = {
+
+"Diamond Ring":{
+    normal:{
+        image:"images/Diamond_Ring.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Diamond_Ring.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Diamond_Ring.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Diamond_Ring.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"King Kitty":{
+    normal:{
+        image:"images/King_Kitty.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/King_Kitty.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/King_Kitty.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/King_Kitty.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   FRUITY EGG
+========================= */
+
+const fruityEggPets = [
+
+    "Eternal Cucumber",
+    "Dragonfruit"
+
+];
+
+const fruityEggData = {
+
+"Eternal Cucumber":{
+    normal:{
+        image:"images/Eternal_Cucumber.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Eternal_Cucumber.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Eternal_Cucumber.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Eternal_Cucumber.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Dragonfruit":{
+    normal:{
+        image:"images/Dragonfruit.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Dragonfruit.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Dragonfruit.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Dragonfruit.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
 }
 
 };
@@ -1307,9 +2035,11 @@ const exoticEggData = {
 ========================= */
 
 const shadowEggPets = [
+
     "Shadow One",
     "Shadow Luminance",
     "Shadow Wolflord"
+
 ];
 
 const shadowEggData = {
@@ -1323,18 +2053,6 @@ const shadowEggData = {
     },
     shiny:{
         image:"images/ShadowOneShiny.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/ShadowOneMythic.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/ShadowOneShinyMythic.png",
         hatched:"0",
         chance:"0",
         value:"0"
@@ -1353,18 +2071,6 @@ const shadowEggData = {
         hatched:"0",
         chance:"0",
         value:"0"
-    },
-    mythic:{
-        image:"images/ShadowLuminanceMythic.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/ShadowLuminanceShinyMythic.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
     }
 },
 
@@ -1380,18 +2086,6 @@ const shadowEggData = {
         hatched:"0",
         chance:"0",
         value:"0"
-    },
-    mythic:{
-        image:"images/ShadowWolflordMythic.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/ShadowWolflordShinyMythic.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
     }
 }
 
@@ -1399,413 +2093,64 @@ const shadowEggData = {
 
 
 /* =========================
-   COLORS
+   CREATE PET CARD
 ========================= */
 
-const colors = {
+function createPetCard(petName,data,limited){
 
-blue:{
-    main:"#5865f2",
-    dark:"#4752c4",
-    light:"#eef0ff",
-    hover:"#e1e4ff"
-},
+    const variants = limited
+        ? limitedVariantOrder
+        : normalVariantOrder;
 
-red:{
-    main:"#ed4245",
-    dark:"#c03537",
-    light:"#ffecec",
-    hover:"#ffdede"
-},
+    const variantNames = limited
+        ? limitedVariantNames
+        : normalVariantNames;
 
-green:{
-    main:"#43b581",
-    dark:"#319568",
-    light:"#e8fff5",
-    hover:"#d6f8e9"
-},
+    const card = document.createElement("div");
 
-purple:{
-    main:"#9b59b6",
-    dark:"#7d3f98",
-    light:"#f5eaff",
-    hover:"#ead8f5"
-},
+    card.className = "petCard";
 
-pink:{
-    main:"#e84393",
-    dark:"#c62e79",
-    light:"#ffeaf5",
-    hover:"#ffd8eb"
-},
+    const image = document.createElement("img");
 
-orange:{
-    main:"#e67e22",
-    dark:"#c65f08",
-    light:"#fff0e2",
-    hover:"#ffe2c7"
-},
+    image.className = "petImage";
 
-yellow:{
-    main:"#f1c40f",
-    dark:"#c9a009",
-    light:"#fffbea",
-    hover:"#fff3c7"
-},
+    image.src = data[variants[0]].image;
 
-cyan:{
-    main:"#00bcd4",
-    dark:"#0097a7",
-    light:"#e6fbff",
-    hover:"#d2f7fc"
-},
+    image.alt = petName;
 
-black:{
-    main:"#222222",
-    dark:"#000000",
-    light:"#eeeeee",
-    hover:"#dddddd"
-}
+    const info = document.createElement("div");
 
-};
+    info.className = "petInfo";
 
+    const name = document.createElement("div");
 
-function applyColor(name){
+    name.className = "petName";
 
-    const color =
-        colors[name];
+    name.textContent = petName;
 
-    if(!color) return;
+    const hatched = document.createElement("div");
 
-    document.documentElement.style.setProperty(
-        "--main-color",
-        color.main
-    );
-
-    document.documentElement.style.setProperty(
-        "--main-dark",
-        color.dark
-    );
-
-    document.documentElement.style.setProperty(
-        "--main-light",
-        color.light
-    );
-
-    document.documentElement.style.setProperty(
-        "--main-hover",
-        color.hover
-    );
-
-    localStorage.setItem(
-        "bgsColor",
-        name
-    );
-}
-
-
-const savedColor =
-    localStorage.getItem("bgsColor") || "blue";
-
-document.getElementById(
-    "colorSelect"
-).value = savedColor;
-
-applyColor(savedColor);
-
-
-document.getElementById(
-    "colorSelect"
-).addEventListener(
-    "change",
-    function(){
-
-        applyColor(
-            this.value
-        );
-
-    }
-);
-
-
-/* =========================
-   PAGE SYSTEM
-========================= */
-
-const sidebar =
-    document.getElementById(
-        "sidebar"
-    );
-
-const menuButton =
-    document.getElementById(
-        "menuButton"
-    );
-
-let currentPage =
-    localStorage.getItem(
-        "currentPage"
-    ) || "home";
-
-
-function openPage(pageName){
-
-    document
-        .querySelectorAll(".page")
-        .forEach(page=>{
-
-            page.classList.remove(
-                "active"
-            );
-
-        });
-
-
-    const page =
-        document.getElementById(
-            pageName
-        );
-
-    if(page){
-
-        page.classList.add(
-            "active"
-        );
-
-    }
-
-
-    document
-        .querySelectorAll(".sidebarButton")
-        .forEach(button=>{
-
-            button.classList.remove(
-                "active"
-            );
-
-            if(
-                button.dataset.page ===
-                pageName
-            ){
-
-                button.classList.add(
-                    "active"
-                );
-
-            }
-
-        });
-
-
-    currentPage =
-        pageName;
-
-    localStorage.setItem(
-        "currentPage",
-        pageName
-    );
-
-
-    sidebar.classList.remove(
-        "open"
-    );
-
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
-
-}
-
-
-/* =========================
-   SIDEBAR
-========================= */
-
-menuButton.addEventListener(
-    "click",
-    function(event){
-
-        event.stopPropagation();
-
-        sidebar.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-document
-    .querySelectorAll(".sidebarButton")
-    .forEach(button=>{
-
-        button.addEventListener(
-            "click",
-            function(){
-
-                openPage(
-                    this.dataset.page
-                );
-
-            }
-        );
-
-    });
-
-
-/* =========================
-   VARIANT NAME
-========================= */
-
-function getVariantPetName(
-    originalName,
-    variantKey
-){
-
-    if(
-        variantKey ===
-        "normal"
-    ){
-
-        return originalName;
-
-    }
-
-    if(
-        variantKey ===
-        "shiny"
-    ){
-
-        return "Shiny " +
-            originalName;
-
-    }
-
-    if(
-        variantKey ===
-        "mythic"
-    ){
-
-        return "Mythic " +
-            originalName;
-
-    }
-
-    if(
-        variantKey ===
-        "shinyMythic"
-    ){
-
-        return "Shiny Mythic " +
-            originalName;
-
-    }
-
-    return originalName;
-}
-
-
-/* =========================
-   PET CARD
-========================= */
-
-function createPetCard(
-    petName,
-    data
-){
-
-    const card =
-        document.createElement(
-            "div"
-        );
-
-    card.className =
-        "petCard";
-
-
-    const firstVariant =
-        data.normal;
-
-
-    const image =
-        document.createElement(
-            "img"
-        );
-
-    image.className =
-        "petImage";
-
-    image.src =
-        firstVariant.image;
-
-    image.alt =
-        petName;
-
-
-    const info =
-        document.createElement(
-            "div"
-        );
-
-    info.className =
-        "petInfo";
-
-
-    const name =
-        document.createElement(
-            "div"
-        );
-
-    name.className =
-        "petName";
-
-    name.textContent =
-        getVariantPetName(
-            petName,
-            "normal"
-        );
-
-
-    const hatched =
-        document.createElement(
-            "div"
-        );
-
-    hatched.className =
-        "petStat";
+    hatched.className = "petStat";
 
     hatched.innerHTML =
         "<b>Hatched:</b> " +
-        firstVariant.hatched;
+        data[variants[0]].hatched;
 
+    const chance = document.createElement("div");
 
-    const chance =
-        document.createElement(
-            "div"
-        );
-
-    chance.className =
-        "petStat";
+    chance.className = "petStat";
 
     chance.innerHTML =
         "<b>Chance:</b> " +
-        firstVariant.chance;
+        data[variants[0]].chance;
 
+    const value = document.createElement("div");
 
-    const value =
-        document.createElement(
-            "div"
-        );
-
-    value.className =
-        "petStat";
+    value.className = "petStat";
 
     value.innerHTML =
         "<b>Value:</b> " +
-        firstVariant.value;
-
+        data[variants[0]].value;
 
     info.appendChild(name);
     info.appendChild(hatched);
@@ -1814,235 +2159,155 @@ function createPetCard(
 
 
     const variantContainer =
-        document.createElement(
-            "div"
-        );
+        document.createElement("div");
 
     variantContainer.className =
         "variantContainer";
 
 
     const variantButton =
-        document.createElement(
-            "button"
-        );
+        document.createElement("button");
 
     variantButton.className =
         "variantButton";
 
 
     const variantImage =
-        document.createElement(
-            "img"
-        );
+        document.createElement("img");
 
     variantImage.src =
-        firstVariant.image;
+        data[variants[0]].image;
 
 
     const variantText =
-        document.createElement(
-            "span"
-        );
+        document.createElement("span");
+
+    variantText.className =
+        "variantText";
 
     variantText.textContent =
-        variantNames.normal;
+        variantNames[variants[0]];
 
 
     const arrow =
-        document.createElement(
-            "span"
-        );
+        document.createElement("span");
 
     arrow.className =
         "variantArrow";
 
-    arrow.textContent =
-        "▼";
+    arrow.textContent = "▼";
 
 
-    variantButton.appendChild(
-        variantImage
-    );
-
-    variantButton.appendChild(
-        variantText
-    );
-
-    variantButton.appendChild(
-        arrow
-    );
+    variantButton.appendChild(variantImage);
+    variantButton.appendChild(variantText);
+    variantButton.appendChild(arrow);
 
 
-    const menu =
-        document.createElement(
-            "div"
-        );
+    const variantMenu =
+        document.createElement("div");
 
-    menu.className =
+    variantMenu.className =
         "variantMenu";
 
 
-    variantOrder.forEach(
-        variantKey=>{
+    variants.forEach(function(variantKey){
 
-            const variant =
+        const option =
+            document.createElement("div");
+
+        option.className =
+            "variantOption";
+
+
+        const optionImage =
+            document.createElement("img");
+
+        optionImage.src =
+            data[variantKey].image;
+
+
+        const optionText =
+            document.createElement("span");
+
+        optionText.textContent =
+            variantNames[variantKey];
+
+
+        option.appendChild(optionImage);
+        option.appendChild(optionText);
+
+
+        option.addEventListener("click",function(){
+
+            const variantData =
                 data[variantKey];
 
-            if(!variant) return;
+            image.src =
+                variantData.image;
 
+            variantImage.src =
+                variantData.image;
 
-            const option =
-                document.createElement(
-                    "div"
-                );
+            variantText.textContent =
+                variantNames[variantKey];
 
-            option.className =
-                "variantOption";
-
-
-            const optionImage =
-                document.createElement(
-                    "img"
-                );
-
-            optionImage.src =
-                variant.image;
-
-
-            const optionText =
-                document.createElement(
-                    "span"
-                );
-
-            optionText.textContent =
-                variantNames[
+            name.textContent =
+                getVariantPetName(
+                    petName,
                     variantKey
-                ];
-
-
-            option.appendChild(
-                optionImage
-            );
-
-            option.appendChild(
-                optionText
-            );
-
-
-            option.addEventListener(
-                "click",
-                function(event){
-
-                    event.stopPropagation();
-
-
-                    image.src =
-                        variant.image;
-
-                    variantImage.src =
-                        variant.image;
-
-
-                    variantText.textContent =
-                        variantNames[
-                            variantKey
-                        ];
-
-
-                    name.textContent =
-                        getVariantPetName(
-                            petName,
-                            variantKey
-                        );
-
-
-                    hatched.innerHTML =
-                        "<b>Hatched:</b> " +
-                        variant.hatched;
-
-                    chance.innerHTML =
-                        "<b>Chance:</b> " +
-                        variant.chance;
-
-                    value.innerHTML =
-                        "<b>Value:</b> " +
-                        variant.value;
-
-
-                    menu.classList.remove(
-                        "open"
-                    );
-
-                }
-            );
-
-
-            menu.appendChild(
-                option
-            );
-
-        }
-    );
-
-
-    variantButton.addEventListener(
-        "click",
-        function(event){
-
-            event.stopPropagation();
-
-
-            document
-                .querySelectorAll(
-                    ".variantMenu"
-                )
-                .forEach(
-                    other=>{
-
-                        if(
-                            other !==
-                            menu
-                        ){
-
-                            other.classList.remove(
-                                "open"
-                            );
-
-                        }
-
-                    }
                 );
 
+            hatched.innerHTML =
+                "<b>Hatched:</b> " +
+                variantData.hatched;
 
-            menu.classList.toggle(
-                "open"
-            );
+            chance.innerHTML =
+                "<b>Chance:</b> " +
+                variantData.chance;
 
-        }
-    );
+            value.innerHTML =
+                "<b>Value:</b> " +
+                variantData.value;
 
+            variantMenu.classList.remove("open");
 
-    variantContainer.appendChild(
-        variantButton
-    );
-
-    variantContainer.appendChild(
-        menu
-    );
+        });
 
 
-    card.appendChild(
-        image
-    );
+        variantMenu.appendChild(option);
 
-    card.appendChild(
-        info
-    );
+    });
 
-    card.appendChild(
-        variantContainer
-    );
+
+    variantButton.addEventListener("click",function(event){
+
+        event.stopPropagation();
+
+        document
+            .querySelectorAll(".variantMenu")
+            .forEach(function(menu){
+
+                if(menu !== variantMenu){
+                    menu.classList.remove("open");
+                }
+
+            });
+
+        variantMenu.classList.toggle("open");
+
+    });
+
+
+    variantContainer.appendChild(variantButton);
+
+    variantContainer.appendChild(variantMenu);
+
+
+    card.appendChild(image);
+
+    card.appendChild(info);
+
+    card.appendChild(variantContainer);
 
 
     return card;
@@ -2056,127 +2321,229 @@ function createPetCard(
 function renderList(
     list,
     data,
-    containerId
+    containerId,
+    limited
 ){
 
     const container =
-        document.getElementById(
-            containerId
-        );
+        document.getElementById(containerId);
 
-    if(!container) return;
+    if(!container){
+        return;
+    }
 
+    container.innerHTML = "";
 
-    container.innerHTML =
-        "";
+    list.forEach(function(petName){
 
-
-    list.forEach(
-        petName=>{
-
-            const card =
-                createPetCard(
-                    petName,
-                    data[petName]
-                );
-
-            container.appendChild(
-                card
+        const card =
+            createPetCard(
+                petName,
+                data[petName],
+                limited
             );
 
-        }
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+const colors = {
+
+    blue:{
+        main:"#5865f2",
+        dark:"#4752c4",
+        light:"#eef0ff",
+        hover:"#e1e4ff"
+    },
+
+    red:{
+        main:"#ed4245",
+        dark:"#c93639",
+        light:"#ffe8e8",
+        hover:"#ffdada"
+    },
+
+    green:{
+        main:"#43a047",
+        dark:"#2e7d32",
+        light:"#e8f5e9",
+        hover:"#d4edd7"
+    },
+
+    purple:{
+        main:"#9c27b0",
+        dark:"#7b1fa2",
+        light:"#f6e7fa",
+        hover:"#ecd2f2"
+    },
+
+    pink:{
+        main:"#e91e63",
+        dark:"#c2185b",
+        light:"#fde7ef",
+        hover:"#f9d0df"
+    },
+
+    orange:{
+        main:"#f57c00",
+        dark:"#e65100",
+        light:"#fff0df",
+        hover:"#ffe1bd"
+    },
+
+    yellow:{
+        main:"#d6a800",
+        dark:"#a98200",
+        light:"#fff8d9",
+        hover:"#fff0aa"
+    },
+
+    cyan:{
+        main:"#00a6b2",
+        dark:"#00838f",
+        light:"#e0f8fa",
+        hover:"#c9f0f3"
+    },
+
+    black:{
+        main:"#222222",
+        dark:"#000000",
+        light:"#eeeeee",
+        hover:"#dddddd"
+    }
+
+};
+
+
+function applyColor(name){
+
+    const color =
+        colors[name];
+
+    if(!color){
+        return;
+    }
+
+    document.documentElement.style
+        .setProperty(
+            "--main-color",
+            color.main
+        );
+
+    document.documentElement.style
+        .setProperty(
+            "--main-dark",
+            color.dark
+        );
+
+    document.documentElement.style
+        .setProperty(
+            "--main-light",
+            color.light
+        );
+
+    document.documentElement.style
+        .setProperty(
+            "--main-hover",
+            color.hover
+        );
+
+    localStorage.setItem(
+        "bgsColor",
+        name
     );
 
 }
 
 
-renderList(
-    pets,
-    petData,
-    "robuxPetsList"
-);
-
-renderList(
-    commonEggPets,
-    commonEggData,
-    "commonEggList"
-);
-
-renderList(
-    exoticEggPets,
-    exoticEggData,
-    "exoticEggList"
-);
-
-renderList(
-    shadowEggPets,
-    shadowEggData,
-    "shadowEggList"
-);
-
-
 /* =========================
-   EGG BUTTONS
+   PAGE SYSTEM
 ========================= */
 
-document.getElementById(
-    "commonEggButton"
-).addEventListener(
-    "click",
-    function(){
+function openPage(pageName){
 
-        openPage(
-            "commonEgg"
-        );
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page){
 
+            page.classList.remove("active");
+
+        });
+
+
+    const target =
+        document.getElementById(pageName);
+
+    if(target){
+        target.classList.add("active");
     }
-);
 
 
-document.getElementById(
-    "exoticEggButton"
-).addEventListener(
-    "click",
-    function(){
+    document
+        .querySelectorAll(".sidebarButton")
+        .forEach(function(button){
 
-        openPage(
-            "exoticEgg"
-        );
+            button.classList.toggle(
+                "active",
+                button.dataset.page === pageName
+            );
 
-    }
-);
+        });
 
 
-document.getElementById(
-    "shadowEggButton"
-).addEventListener(
-    "click",
-    function(){
+    localStorage.setItem(
+        "currentPage",
+        pageName
+    );
 
-        openPage(
-            "shadowEgg"
-        );
 
-    }
-);
+    document
+        .getElementById("sidebar")
+        .classList.remove("open");
+
+
+    window.scrollTo(0,0);
+
+}
 
 
 /* =========================
-   BACK BUTTONS
+   MENU
 ========================= */
 
 document
-    .querySelectorAll(
-        ".eggBackButton"
-    )
-    .forEach(button=>{
+    .getElementById("menuButton")
+    .addEventListener(
+        "click",
+        function(event){
+
+            event.stopPropagation();
+
+            document
+                .getElementById("sidebar")
+                .classList.toggle("open");
+
+        }
+    );
+
+
+document
+    .querySelectorAll(".sidebarButton")
+    .forEach(function(button){
 
         button.addEventListener(
             "click",
             function(){
 
                 openPage(
-                    this.dataset.back
+                    button.dataset.page
                 );
 
             }
@@ -2186,109 +2553,301 @@ document
 
 
 /* =========================
-   SEARCH
+   EGG BUTTONS
 ========================= */
 
-const searchInput =
-    document.getElementById(
-        "searchInput"
+document
+    .getElementById("releaseEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("releaseEgg");
+        }
     );
 
-const searchResults =
-    document.getElementById(
-        "searchResults"
+
+document
+    .getElementById("exoticEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("exoticEgg");
+        }
     );
 
+
+document
+    .getElementById("cosmicEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("cosmicEgg");
+        }
+    );
+
+
+document
+    .getElementById("royaltyEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("royaltyEgg");
+        }
+    );
+
+
+document
+    .getElementById("fruityEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("fruityEgg");
+        }
+    );
+
+
+document
+    .getElementById("commonEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("commonEgg");
+        }
+    );
+
+
+document
+    .getElementById("lunarEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("lunarEgg");
+        }
+    );
+
+
+document
+    .getElementById("voidEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("voidEgg");
+        }
+    );
+
+
+document
+    .getElementById("hellEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("hellEgg");
+        }
+    );
+
+
+document
+    .getElementById("nightmareEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("nightmareEgg");
+        }
+    );
+
+
+document
+    .getElementById("shadowEggButton")
+    .addEventListener(
+        "click",
+        function(){
+            openPage("shadowEgg");
+        }
+    );
+
+
+/* =========================
+   BACK BUTTONS
+========================= */
+
+document
+    .querySelectorAll(".eggBackButton")
+    .forEach(function(button){
+
+        button.addEventListener(
+            "click",
+            function(){
+
+                openPage(
+                    button.dataset.back
+                );
+
+            }
+        );
+
+    });
+
+
+/* =========================
+   SEARCH DATA
+========================= */
 
 const searchData = [];
 
 
-pets.forEach(
-    petName=>{
+pets.forEach(function(petName){
 
-        searchData.push({
+    searchData.push({
+        name:petName,
+        page:"robuxPets",
+        image:petData[petName].normal.image,
+        type:"Robux Pets"
+    });
 
-            name:petName,
-
-            variant:"Robux Pet",
-
-            image:
-                petData[
-                    petName
-                ].normal.image,
-
-            page:"robuxPets"
-
-        });
-
-    }
-);
+});
 
 
-commonEggPets.forEach(
-    petName=>{
+commonEggPets.forEach(function(petName){
 
-        searchData.push({
+    searchData.push({
+        name:petName,
+        page:"commonEgg",
+        image:commonEggData[petName].normal.image,
+        type:"Common Egg"
+    });
 
-            name:petName,
-
-            variant:"Common Egg",
-
-            image:
-                commonEggData[
-                    petName
-                ].normal.image,
-
-            page:"commonEgg"
-
-        });
-
-    }
-);
+});
 
 
-exoticEggPets.forEach(
-    petName=>{
+lunarEggPets.forEach(function(petName){
 
-        searchData.push({
+    searchData.push({
+        name:petName,
+        page:"lunarEgg",
+        image:lunarEggData[petName].normal.image,
+        type:"Lunar Egg"
+    });
 
-            name:petName,
-
-            variant:"Exotic Egg",
-
-            image:
-                exoticEggData[
-                    petName
-                ].normal.image,
-
-            page:"exoticEgg"
-
-        });
-
-    }
-);
+});
 
 
-shadowEggPets.forEach(
-    petName=>{
+voidEggPets.forEach(function(petName){
 
-        searchData.push({
+    searchData.push({
+        name:petName,
+        page:"voidEgg",
+        image:voidEggData[petName].normal.image,
+        type:"Void Egg"
+    });
 
-            name:petName,
+});
 
-            variant:"Shadow Egg",
 
-            image:
-                shadowEggData[
-                    petName
-                ].normal.image,
+hellEggPets.forEach(function(petName){
 
-            page:"shadowEgg"
+    searchData.push({
+        name:petName,
+        page:"hellEgg",
+        image:hellEggData[petName].normal.image,
+        type:"Hell Egg"
+    });
 
-        });
+});
 
-    }
-);
+
+nightmareEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"nightmareEgg",
+        image:nightmareEggData[petName].normal.image,
+        type:"Nightmare Egg"
+    });
+
+});
+
+
+releaseEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"releaseEgg",
+        image:releaseEggData[petName].normal.image,
+        type:"Release Egg"
+    });
+
+});
+
+
+exoticEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"exoticEgg",
+        image:exoticEggData[petName].normal.image,
+        type:"Exotic Egg"
+    });
+
+});
+
+
+cosmicEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"cosmicEgg",
+        image:cosmicEggData[petName].normal.image,
+        type:"Cosmic Egg"
+    });
+
+});
+
+
+royaltyEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"royaltyEgg",
+        image:royaltyEggData[petName].normal.image,
+        type:"Royalty Egg"
+    });
+
+});
+
+
+fruityEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"fruityEgg",
+        image:fruityEggData[petName].normal.image,
+        type:"Fruity Egg"
+    });
+
+});
+
+
+shadowEggPets.forEach(function(petName){
+
+    searchData.push({
+        name:petName,
+        page:"shadowEgg",
+        image:shadowEggData[petName].normal.image,
+        type:"Shadow Egg"
+    });
+
+});
+
+
+/* =========================
+   SEARCH
+========================= */
+
+const searchInput =
+    document.getElementById("searchInput");
+
+const searchResults =
+    document.getElementById("searchResults");
 
 
 searchInput.addEventListener(
@@ -2296,16 +2855,15 @@ searchInput.addEventListener(
     function(){
 
         const query =
-            this.value
+            searchInput.value
                 .trim()
                 .toLowerCase();
 
 
-        searchResults.innerHTML =
-            "";
+        searchResults.innerHTML = "";
 
 
-        if(!query){
+        if(query === ""){
 
             searchResults.style.display =
                 "none";
@@ -2316,23 +2874,19 @@ searchInput.addEventListener(
 
 
         const results =
-            searchData.filter(
-                item =>
-                    item.name
-                        .toLowerCase()
-                        .includes(query)
-            );
+            searchData.filter(function(item){
+
+                return item.name
+                    .toLowerCase()
+                    .includes(query);
+
+            });
 
 
-        if(
-            results.length ===
-            0
-        ){
+        if(results.length === 0){
 
             const noResults =
-                document.createElement(
-                    "div"
-                );
+                document.createElement("div");
 
             noResults.className =
                 "noResults";
@@ -2352,102 +2906,79 @@ searchInput.addEventListener(
         }
 
 
-        results.forEach(
-            item=>{
+        results.forEach(function(item){
 
-                const result =
-                    document.createElement(
-                        "div"
-                    );
+            const searchItem =
+                document.createElement("div");
 
-                result.className =
-                    "searchItem";
+            searchItem.className =
+                "searchItem";
 
 
-                const image =
-                    document.createElement(
-                        "img"
-                    );
+            const img =
+                document.createElement("img");
 
-                image.src =
-                    item.image;
+            img.src =
+                item.image;
 
-
-                const info =
-                    document.createElement(
-                        "div"
-                    );
-
-                info.className =
-                    "searchInfo";
+            img.alt =
+                item.name;
 
 
-                const petName =
-                    document.createElement(
-                        "div"
-                    );
+            const info =
+                document.createElement("div");
 
-                petName.className =
-                    "searchPetName";
-
-                petName.textContent =
-                    item.name;
+            info.className =
+                "searchInfo";
 
 
-                const variant =
-                    document.createElement(
-                        "div"
-                    );
+            const name =
+                document.createElement("div");
 
-                variant.className =
-                    "searchVariant";
+            name.className =
+                "searchPetName";
 
-                variant.textContent =
-                    item.variant;
+            name.textContent =
+                item.name;
 
 
-                info.appendChild(
-                    petName
-                );
+            const type =
+                document.createElement("div");
 
-                info.appendChild(
-                    variant
-                );
+            type.className =
+                "searchVariant";
 
-
-                result.appendChild(
-                    image
-                );
-
-                result.appendChild(
-                    info
-                );
+            type.textContent =
+                item.type;
 
 
-                result.addEventListener(
-                    "click",
-                    function(){
+            info.appendChild(name);
+            info.appendChild(type);
 
-                        openPage(
-                            item.page
-                        );
-
-                        searchResults.style.display =
-                            "none";
-
-                        searchInput.value =
-                            "";
-
-                    }
-                );
+            searchItem.appendChild(img);
+            searchItem.appendChild(info);
 
 
-                searchResults.appendChild(
-                    result
-                );
+            searchItem.addEventListener(
+                "click",
+                function(){
 
-            }
-        );
+                    openPage(item.page);
+
+                    searchInput.value = "";
+
+                    searchResults.style.display =
+                        "none";
+
+                }
+            );
+
+
+            searchResults.appendChild(
+                searchItem
+            );
+
+        });
 
 
         searchResults.style.display =
@@ -2458,57 +2989,192 @@ searchInput.addEventListener(
 
 
 /* =========================
-   CLICK OUTSIDE
+   OUTSIDE CLICK
 ========================= */
 
 document.addEventListener(
     "click",
-    function(){
+    function(event){
 
-        document
-            .querySelectorAll(
-                ".variantMenu"
+        if(
+            !event.target.closest(
+                ".variantContainer"
             )
-            .forEach(
-                menu=>{
+        ){
+
+            document
+                .querySelectorAll(".variantMenu")
+                .forEach(function(menu){
 
                     menu.classList.remove(
                         "open"
                     );
 
-                }
-            );
+                });
+
+        }
 
 
-        searchResults.style.display =
-            "none";
+        if(
+            !event.target.closest(
+                ".searchContainer"
+            )
+        ){
+
+            searchResults.style.display =
+                "none";
+
+        }
 
 
-        sidebar.classList.remove(
-            "open"
+        if(
+            !event.target.closest(
+                ".sidebar"
+            ) &&
+            !event.target.closest(
+                ".menuButton"
+            )
+        ){
+
+            document
+                .getElementById("sidebar")
+                .classList.remove("open");
+
+        }
+
+    }
+);
+
+
+/* =========================
+   CONFIG
+========================= */
+
+const colorSelect =
+    document.getElementById("colorSelect");
+
+
+colorSelect.addEventListener(
+    "change",
+    function(){
+
+        applyColor(
+            colorSelect.value
         );
 
     }
 );
 
 
-searchResults.addEventListener(
-    "click",
-    function(event){
+const savedColor =
+    localStorage.getItem("bgsColor")
+    || "blue";
 
-        event.stopPropagation();
 
-    }
+colorSelect.value =
+    savedColor;
+
+
+applyColor(savedColor);
+
+
+/* =========================
+   RENDER EVERYTHING
+========================= */
+
+renderList(
+    pets,
+    petData,
+    "robuxPetsList",
+    false
 );
 
 
-searchInput.addEventListener(
-    "click",
-    function(event){
+renderList(
+    commonEggPets,
+    commonEggData,
+    "commonEggList",
+    false
+);
 
-        event.stopPropagation();
 
-    }
+renderList(
+    lunarEggPets,
+    lunarEggData,
+    "lunarEggList",
+    false
+);
+
+
+renderList(
+    voidEggPets,
+    voidEggData,
+    "voidEggList",
+    false
+);
+
+
+renderList(
+    hellEggPets,
+    hellEggData,
+    "hellEggList",
+    false
+);
+
+
+renderList(
+    nightmareEggPets,
+    nightmareEggData,
+    "nightmareEggList",
+    false
+);
+
+
+renderList(
+    releaseEggPets,
+    releaseEggData,
+    "releaseEggList",
+    true
+);
+
+
+renderList(
+    exoticEggPets,
+    exoticEggData,
+    "exoticEggList",
+    true
+);
+
+
+renderList(
+    cosmicEggPets,
+    cosmicEggData,
+    "cosmicEggList",
+    true
+);
+
+
+renderList(
+    royaltyEggPets,
+    royaltyEggData,
+    "royaltyEggList",
+    true
+);
+
+
+renderList(
+    fruityEggPets,
+    fruityEggData,
+    "fruityEggList",
+    true
+);
+
+
+renderList(
+    shadowEggPets,
+    shadowEggData,
+    "shadowEggList",
+    false
 );
 
 
@@ -2516,59 +3182,20 @@ searchInput.addEventListener(
    RESTORE PAGE
 ========================= */
 
+const savedPage =
+    localStorage.getItem("currentPage")
+    || "home";
+
+
 if(
-    document.getElementById(
-        currentPage
-    )
+    document.getElementById(savedPage)
 ){
 
-    document
-        .querySelectorAll(".page")
-        .forEach(
-            page=>{
+    openPage(savedPage);
 
-                page.classList.remove(
-                    "active"
-                );
+}else{
 
-            }
-        );
-
-
-    document
-        .getElementById(
-            currentPage
-        )
-        .classList.add(
-            "active"
-        );
-
-
-    document
-        .querySelectorAll(
-            ".sidebarButton"
-        )
-        .forEach(
-            button=>{
-
-                button.classList.remove(
-                    "active"
-                );
-
-
-                if(
-                    button.dataset.page ===
-                    currentPage
-                ){
-
-                    button.classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
+    openPage("home");
 
 }
 
