@@ -1,29 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Qcaaao's Bgs ValueList</title>
 
 <style>
-
-/* =====================================================
-   COLORS
-===================================================== */
-
 :root{
     --main-color:#5865f2;
     --main-dark:#4752c4;
     --main-light:#eef0ff;
     --main-hover:#e1e4ff;
 }
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
     box-sizing:border-box;
@@ -37,1415 +25,995 @@ html{
 body{
     margin:0;
     padding:0;
-
     min-height:100vh;
-
     font-family:Arial,sans-serif;
-
     background:#f5f5f5;
     color:#222;
-
-    /*
-       MUY IMPORTANTE:
-       El body es el que hace el scroll.
-    */
     overflow-x:hidden;
     overflow-y:auto;
 }
 
-
-/* =====================================================
-   HEADER
-===================================================== */
-
 header{
     position:fixed;
-
     top:0;
     left:0;
-
     width:100%;
     height:95px;
-
     background:var(--main-color);
-
     color:white;
-
     display:flex;
     align-items:center;
-
     padding:0 30px;
-
     z-index:1000;
-
     box-shadow:0 3px 12px rgba(0,0,0,.2);
 }
-
 
 .menuButton{
     width:64px;
     height:64px;
-
     border:none;
     border-radius:15px;
-
     background:var(--main-dark);
-
     color:white;
-
     font-size:34px;
     font-weight:bold;
-
     cursor:pointer;
-
     flex-shrink:0;
 }
-
 
 .logo{
     font-size:34px;
     font-weight:bold;
-
     margin-left:25px;
-
     white-space:nowrap;
+    flex-shrink:0;
 }
-
-
-/* =====================================================
-   SEARCH
-===================================================== */
 
 .searchContainer{
     position:relative;
-
     width:650px;
-
     margin-left:auto;
+    flex-shrink:1;
+    min-width:220px;
 }
-
 
 #searchInput{
     width:100%;
     height:58px;
-
     border:3px solid white;
     border-radius:14px;
-
     padding:0 20px;
-
     font-size:21px;
-
     outline:none;
-
     background:white;
     color:#222;
 }
 
-
 .searchResults{
     position:absolute;
-
     top:66px;
     left:0;
-
     width:100%;
-
     max-height:420px;
-
     overflow-y:auto;
-
     background:white;
-
     border-radius:12px;
-
     box-shadow:0 5px 20px rgba(0,0,0,.25);
-
     display:none;
-
     z-index:1500;
+    scrollbar-width:thin;
+    scrollbar-color:var(--main-color) var(--main-light);
 }
 
+.searchResults::-webkit-scrollbar{
+    width:8px;
+}
+
+.searchResults::-webkit-scrollbar-track{
+    background:var(--main-light);
+}
+
+.searchResults::-webkit-scrollbar-thumb{
+    background:var(--main-color);
+    border-radius:10px;
+}
 
 .searchItem{
     display:flex;
     align-items:center;
-
     gap:15px;
-
     padding:12px 16px;
-
     cursor:pointer;
-
     color:#222;
 }
-
 
 .searchItem:hover{
     background:var(--main-light);
 }
 
-
 .searchItem img{
     width:55px;
     height:55px;
-
     object-fit:contain;
-
     flex-shrink:0;
 }
-
 
 .searchInfo{
     display:flex;
     flex-direction:column;
 }
 
-
 .searchPetName{
     font-size:18px;
     font-weight:bold;
 }
-
 
 .searchVariant{
     font-size:14px;
     color:#777;
 }
 
-
 .noResults{
     padding:20px;
-
     text-align:center;
-
     color:#777;
 }
 
-
-/* =====================================================
-   SIDEBAR
-===================================================== */
-
 .sidebar{
     position:fixed;
-
     top:95px;
     left:0;
-
     width:400px;
-
     height:calc(100vh - 95px);
-
     background:white;
-
     border-right:3px solid var(--main-color);
-
     padding:25px 20px;
-
     transform:translateX(-100%);
-
     transition:transform .2s ease;
-
     z-index:900;
-
     overflow-y:auto;
 }
-
 
 .sidebar.open{
     transform:translateX(0);
 }
 
-
 .sidebarButton{
     width:100%;
-
     padding:18px;
-
     margin-bottom:14px;
-
     border:none;
     border-radius:12px;
-
     background:var(--main-light);
-
     color:var(--main-color);
-
     font-size:22px;
     font-weight:bold;
-
     cursor:pointer;
-
     text-align:left;
 }
-
 
 .sidebarButton:hover{
     background:var(--main-hover);
 }
 
-
 .sidebarButton.active{
     background:var(--main-color);
-
     color:white;
 }
 
-
-/* =====================================================
-   MAIN
-===================================================== */
-
 main{
-
-    /*
-       NO position:fixed
-       NO position:absolute
-       NO height fija
-       NO overflow:auto
-
-       Esto permite que el documento crezca.
-    */
-
     width:100%;
-
     min-height:100vh;
-
     padding-top:95px;
-
     padding-left:30px;
     padding-right:30px;
-
-    padding-bottom:120px;
+    padding-bottom:80px;
 }
-
 
 .content{
     width:100%;
-
     max-width:2200px;
-
     margin:0 auto;
 }
 
-
 .page{
     display:none;
-
-    /*
-       Cada página ocupa su altura real.
-    */
     width:100%;
 }
-
 
 .page.active{
     display:block;
 }
 
-
 .pageTitle{
     font-size:50px;
-
     margin:35px 0 30px;
-
     color:var(--main-color);
 }
-
-
-/* =====================================================
-   HOME
-===================================================== */
 
 .homeBox{
     background:white;
-
     border:3px solid var(--main-color);
-
     border-radius:18px;
-
     padding:35px;
-
     font-size:24px;
-
     line-height:1.5;
 }
 
-
-/* =====================================================
-   PET LIST
-===================================================== */
-
 .petList{
-
-    /*
-       Esto es MUY importante.
-
-       No tiene height.
-       No tiene max-height.
-       No tiene overflow.
-
-       Por lo tanto cada card aumenta
-       la altura total de la página.
-    */
-
     width:100%;
-
     display:flex;
-
     flex-direction:column;
-
     gap:20px;
-
     padding-bottom:20px;
 }
 
-
-/* =====================================================
-   PET CARD
-===================================================== */
-
 .petCard{
-
     width:100%;
-
     min-height:210px;
-
     flex:0 0 auto;
-
     background:white;
-
     border:3px solid var(--main-color);
-
     border-radius:18px;
-
     display:flex;
-
     align-items:center;
-
     gap:25px;
-
     padding:18px 22px;
 }
 
-
 .petImage{
-
     width:170px;
     height:170px;
-
     object-fit:contain;
-
     flex-shrink:0;
 }
 
-
 .petInfo{
-
     flex:1;
-
     min-width:0;
 }
 
-
 .petName{
-
     font-size:30px;
-
     font-weight:bold;
-
     color:var(--main-color);
-
     margin-bottom:12px;
-
     word-break:break-word;
 }
 
-
 .petStat{
-
     font-size:21px;
-
     margin:7px 0;
 }
-
 
 .petStat b{
     color:#333;
 }
 
-
-/* =====================================================
-   VARIANT SELECTOR
-===================================================== */
-
 .variantContainer{
-
     position:relative;
-
     flex-shrink:0;
 }
 
-
 .variantButton{
-
     width:220px;
     min-height:70px;
-
     background:white;
-
     border:3px solid var(--main-color);
-
     border-radius:12px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     padding:8px 12px;
-
     cursor:pointer;
-
     font-size:20px;
-
     font-weight:bold;
-
     color:#222;
 }
 
-
 .variantButton img{
-
     width:50px;
     height:50px;
-
     object-fit:contain;
 }
 
-
 .variantArrow{
-
     font-size:20px;
-
     color:var(--main-color);
-
     margin-left:8px;
 }
 
-
 .variantMenu{
-
     position:absolute;
-
     right:0;
     top:78px;
-
     width:270px;
-
     background:white;
-
     border:3px solid var(--main-color);
-
     border-radius:12px;
-
     box-shadow:0 8px 25px rgba(0,0,0,.25);
-
     overflow:hidden;
-
     display:none;
-
     z-index:800;
 }
-
 
 .variantMenu.open{
     display:block;
 }
 
-
 .variantOption{
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     padding:12px;
-
     cursor:pointer;
-
     font-size:18px;
-
     color:#222;
 }
 
-
 .variantOption:hover{
-
     background:var(--main-light);
 }
 
-
 .variantOption img{
-
     width:55px;
     height:55px;
-
     object-fit:contain;
 }
 
-
-/* =====================================================
-   CONFIG
-===================================================== */
-
-.configBox{
-
-    background:white;
-
-    border:3px solid var(--main-color);
-
-    border-radius:18px;
-
-    padding:30px;
-
-    max-width:800px;
-}
-
-
-.configTitle{
-
-    font-size:28px;
-
-    font-weight:bold;
-
-    margin-bottom:15px;
-}
-
-
-#colorSelect{
-
+.eggGrid{
     width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    gap:25px;
+    padding-bottom:30px;
+}
 
-    height:55px;
-
+.eggButton{
     border:3px solid var(--main-color);
-
-    border-radius:10px;
-
-    padding:0 15px;
-
-    font-size:20px;
-
-    outline:none;
-
+    border-radius:18px;
     background:white;
-}
-
-
-/* =====================================================
-   SCROLL BUTTONS
-===================================================== */
-
-.scrollButtons{
-
-    position:fixed;
-
-    right:18px;
-    bottom:25px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-    z-index:2000;
-}
-
-
-.scrollButton{
-
-    width:58px;
-    height:58px;
-
-    border:3px solid white;
-
-    border-radius:15px;
-
-    background:var(--main-color);
-
-    color:white;
-
-    font-size:28px;
-
-    font-weight:bold;
-
+    padding:20px;
     cursor:pointer;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
-
     display:flex;
-
+    flex-direction:column;
     align-items:center;
     justify-content:center;
-
-    padding:0;
+    min-height:280px;
 }
 
+.eggButton:hover{
+    background:var(--main-light);
+}
 
-.scrollButton:hover{
+.eggImage{
+    width:190px;
+    height:190px;
+    object-fit:contain;
+}
 
+.eggName{
+    margin-top:15px;
+    font-size:25px;
+    font-weight:bold;
+    color:var(--main-color);
+}
+
+.eggBackButton{
+    border:none;
+    background:var(--main-color);
+    color:white;
+    padding:14px 22px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:30px 0 20px;
+}
+
+.eggBackButton:hover{
     background:var(--main-dark);
 }
 
-
-.scrollButton:active{
-
-    transform:scale(.94);
+.configBox{
+    background:white;
+    border:3px solid var(--main-color);
+    border-radius:18px;
+    padding:30px;
+    max-width:800px;
 }
 
+.configTitle{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
 
-/* =====================================================
-   LARGE DESKTOP
-===================================================== */
+#colorSelect{
+    width:100%;
+    height:55px;
+    border:3px solid var(--main-color);
+    border-radius:10px;
+    padding:0 15px;
+    font-size:20px;
+    outline:none;
+    background:white;
+}
+
+@media(min-width:601px) and (max-width:1599px){
+
+    .searchContainer{
+        max-width:45%;
+    }
+
+}
 
 @media(min-width:1600px){
 
     header{
-
         height:110px;
-
         padding:0 40px;
     }
 
-
     .menuButton{
-
         width:74px;
         height:74px;
-
         font-size:40px;
     }
 
-
     .logo{
-
         font-size:42px;
-
         margin-left:30px;
     }
 
-
     .searchContainer{
-
         width:800px;
+        max-width:none;
     }
 
-
     #searchInput{
-
         height:66px;
-
         font-size:24px;
     }
 
-
     .sidebar{
-
         top:110px;
-
         height:calc(100vh - 110px);
-
         width:470px;
     }
 
-
     .sidebarButton{
-
         font-size:26px;
-
         padding:22px;
     }
 
-
     main{
-
         padding-top:110px;
-
         padding-left:40px;
         padding-right:40px;
     }
 
-
     .content{
-
         max-width:2500px;
     }
 
-
     .pageTitle{
-
         font-size:62px;
-
         margin-top:45px;
     }
 
-
     .petCard{
-
         min-height:260px;
-
         padding:22px 28px;
     }
 
-
     .petImage{
-
         width:215px;
         height:215px;
     }
 
-
     .petName{
-
         font-size:38px;
     }
 
-
     .petStat{
-
         font-size:25px;
     }
 
-
     .variantButton{
-
         width:280px;
-
         min-height:85px;
-
         font-size:24px;
     }
 
-
     .variantButton img{
-
         width:65px;
         height:65px;
     }
 
-
     .variantMenu{
-
         width:330px;
-
         top:93px;
     }
 
-
     .variantOption{
-
         font-size:22px;
     }
 
-
     .variantOption img{
-
         width:65px;
         height:65px;
     }
 
+    .eggImage{
+        width:230px;
+        height:230px;
+    }
 
-    .scrollButton{
+    .eggButton{
+        min-height:330px;
+    }
 
-        width:70px;
-        height:70px;
-
-        font-size:34px;
+    .eggName{
+        font-size:30px;
     }
 
 }
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
 
 @media(max-width:600px){
 
     header{
-
         height:60px;
-
         padding:0 8px;
     }
 
-
     .menuButton{
-
         width:43px;
         height:43px;
-
         border-radius:9px;
-
         font-size:23px;
     }
 
-
     .logo{
-
         font-size:15px;
-
         margin-left:8px;
+        min-width:0;
+        overflow:hidden;
+        text-overflow:ellipsis;
     }
 
-
     .searchContainer{
-
         width:150px;
-
+        min-width:120px;
         margin-left:auto;
     }
 
-
     #searchInput{
-
         height:38px;
-
         border-width:2px;
-
         border-radius:9px;
-
         padding:0 8px;
-
         font-size:13px;
     }
 
-
     .searchResults{
-
         top:44px;
-
         max-height:300px;
     }
 
-
     .searchItem{
-
         padding:8px;
-
         gap:8px;
     }
 
-
     .searchItem img{
-
         width:40px;
         height:40px;
     }
 
-
     .searchPetName{
-
         font-size:14px;
     }
 
-
     .searchVariant{
-
         font-size:11px;
     }
 
-
     .sidebar{
-
         top:60px;
-
         width:240px;
-
         height:calc(100vh - 60px);
-
         padding:15px 12px;
     }
 
-
     .sidebarButton{
-
         font-size:16px;
-
         padding:13px;
-
         margin-bottom:9px;
     }
 
-
     main{
-
         padding-top:60px;
-
         padding-left:12px;
         padding-right:12px;
-
-        padding-bottom:120px;
+        padding-bottom:80px;
     }
 
-
     .pageTitle{
-
         font-size:28px;
-
         margin:25px 0 20px;
     }
 
-
     .homeBox{
-
         padding:20px;
-
         font-size:17px;
     }
 
-
     .petList{
-
         gap:12px;
     }
 
-
     .petCard{
-
         min-height:120px;
-
         padding:10px;
-
         gap:10px;
-
         border-width:2px;
-
         border-radius:12px;
     }
 
-
     .petImage{
-
         width:75px;
         height:75px;
     }
 
-
     .petName{
-
         font-size:17px;
-
         margin-bottom:6px;
     }
 
-
     .petStat{
-
         font-size:13px;
-
         margin:3px 0;
     }
 
-
     .variantButton{
-
         width:55px;
         min-width:55px;
-
         height:55px;
         min-height:55px;
-
         padding:4px;
-
         justify-content:center;
-
         border-width:2px;
     }
 
-
     .variantButton img{
-
         width:45px;
         height:45px;
     }
 
-
     .variantButton span:not(.variantArrow){
-
         display:none;
     }
-
 
     .variantArrow{
-
         display:none;
     }
 
-
     .variantMenu{
-
         right:0;
-
         top:61px;
-
         width:200px;
-
         border-width:2px;
     }
 
-
     .variantOption{
-
         font-size:14px;
-
         padding:8px;
     }
 
-
     .variantOption img{
-
         width:40px;
         height:40px;
     }
 
+    .eggGrid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .eggButton{
+        min-height:220px;
+        padding:15px;
+    }
+
+    .eggImage{
+        width:150px;
+        height:150px;
+    }
+
+    .eggName{
+        font-size:20px;
+        margin-top:10px;
+    }
+
+    .eggBackButton{
+        font-size:16px;
+        padding:10px 16px;
+        margin:18px 0 12px;
+    }
 
     .configBox{
-
         padding:20px;
     }
 
-
     .configTitle{
-
         font-size:21px;
     }
 
-
     #colorSelect{
-
         height:45px;
-
         font-size:16px;
     }
 
-
-    .scrollButtons{
-
-        right:8px;
-
-        bottom:15px;
-
-        gap:7px;
-    }
-
-
-    .scrollButton{
-
-        width:45px;
-        height:45px;
-
-        border-radius:10px;
-
-        font-size:22px;
-    }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
-    <button
-        class="menuButton"
-        id="menuButton"
-    >
-        ☰
-    </button>
+<button class="menuButton" id="menuButton">☰</button>
 
+<div class="logo">
+Qcaaao's Bgs ValueList
+</div>
 
-    <div class="logo">
-        Qcaaao's Bgs ValueList
-    </div>
+<div class="searchContainer">
 
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search pets..."
+    autocomplete="off"
+>
 
-    <div class="searchContainer">
+<div class="searchResults" id="searchResults"></div>
 
-        <input
-            id="searchInput"
-            type="text"
-            placeholder="Search pets..."
-            autocomplete="off"
-        >
-
-
-        <div
-            class="searchResults"
-            id="searchResults"
-        ></div>
-
-    </div>
+</div>
 
 </header>
 
 
-<!-- =====================================================
-     SIDEBAR
-===================================================== -->
+<div class="sidebar" id="sidebar">
 
-<div
-    class="sidebar"
-    id="sidebar"
->
+<button class="sidebarButton active" data-page="home">
+Home
+</button>
 
-    <button
-        class="sidebarButton active"
-        data-page="home"
-    >
-        Home
-    </button>
+<button class="sidebarButton" data-page="robuxPets">
+Robux Pets
+</button>
 
+<button class="sidebarButton" data-page="permanentSecrets">
+Permanent Secrets
+</button>
 
-    <button
-        class="sidebarButton"
-        data-page="explore"
-    >
-        Explore
-    </button>
+<button class="sidebarButton" data-page="limitedSecrets">
+Limited Secrets
+</button>
 
+<button class="sidebarButton" data-page="temporaryPets">
+Temporary Pets
+</button>
 
-    <button
-        class="sidebarButton"
-        data-page="pets"
-    >
-        Pets
-    </button>
-
-
-    <button
-        class="sidebarButton"
-        data-page="values"
-    >
-        Values
-    </button>
-
-
-    <button
-        class="sidebarButton"
-        data-page="secrets"
-    >
-        Secrets
-    </button>
-
-
-    <button
-        class="sidebarButton"
-        data-page="config"
-    >
-        Config
-    </button>
+<button class="sidebarButton" data-page="config">
+Config
+</button>
 
 </div>
 
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
 
 <main>
 
 <div class="content">
 
 
-    <!-- HOME -->
+<section class="page active" id="home">
 
-    <section
-        id="home"
-        class="page active"
-    >
+<h1 class="pageTitle">
+Home
+</h1>
 
-        <h1 class="pageTitle">
-            Home
-        </h1>
+<div class="homeBox">
 
+Welcome to Qcaaao's Bgs ValueList!
 
-        <div class="homeBox">
+<br><br>
 
-            Welcome to
-            <b>Qcaaao's Bgs ValueList</b>!
+Use the menu on the left to browse pets,
+eggs and values.
 
-            <br><br>
+</div>
 
-            Search for pets and check their
-            variants, hatched amount, chance
-            and value.
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- EXPLORE -->
+<section class="page" id="robuxPets">
 
-    <section
-        id="explore"
-        class="page"
-    >
+<h1 class="pageTitle">
+Robux Pets
+</h1>
 
-        <h1 class="pageTitle">
-            Explore
-        </h1>
+<div class="petList" id="robuxPetsList"></div>
 
-
-        <div class="homeBox">
-
-            Explore the different pets and
-            secrets available in the list.
-
-        </div>
-
-    </section>
+</section>
 
 
-    <!-- PETS -->
+<section class="page" id="permanentSecrets">
 
-    <section
-        id="pets"
-        class="page"
-    >
+<h1 class="pageTitle">
+Permanent Secrets
+</h1>
 
-        <h1 class="pageTitle">
-            Pets
-        </h1>
+<div class="eggGrid">
 
+<button class="eggButton" id="commonEggButton">
 
-        <div
-            class="petList"
-            id="petsList"
-        ></div>
+<img
+    class="eggImage"
+    src="images/CommonEgg.png"
+    alt="Common Egg"
+>
 
-    </section>
+<div class="eggName">
+Common Egg
+</div>
 
+</button>
 
-    <!-- VALUES -->
+</div>
 
-    <section
-        id="values"
-        class="page"
-    >
-
-        <h1 class="pageTitle">
-            Values
-        </h1>
+</section>
 
 
-        <div class="homeBox">
+<section class="page" id="commonEgg">
 
-            Pet values are displayed on every
-            pet card.
+<button
+    class="eggBackButton"
+    data-back="permanentSecrets"
+>
+← Back
+</button>
 
-        </div>
+<h1 class="pageTitle">
+Common Egg
+</h1>
 
-    </section>
+<div class="petList" id="commonEggList"></div>
 
-
-    <!-- SECRETS -->
-
-    <section
-        id="secrets"
-        class="page"
-    >
-
-        <h1 class="pageTitle">
-            Secrets
-        </h1>
+</section>
 
 
-        <div
-            class="petList"
-            id="secretsList"
-        ></div>
+<section class="page" id="limitedSecrets">
 
-    </section>
+<h1 class="pageTitle">
+Limited Secrets
+</h1>
+
+<div class="eggGrid">
+
+<button class="eggButton" id="exoticEggButton">
+
+<img
+    class="eggImage"
+    src="images/Exotic_Egg.webp"
+    alt="Exotic Egg"
+>
+
+<div class="eggName">
+Exotic Egg
+</div>
+
+</button>
+
+</div>
+
+</section>
 
 
-    <!-- CONFIG -->
+<section class="page" id="exoticEgg">
 
-    <section
-        id="config"
-        class="page"
-    >
+<button
+    class="eggBackButton"
+    data-back="limitedSecrets"
+>
+← Back
+</button>
 
-        <h1 class="pageTitle">
-            Config
-        </h1>
+<h1 class="pageTitle">
+Exotic Egg
+</h1>
+
+<div class="petList" id="exoticEggList"></div>
+
+</section>
 
 
-        <div class="configBox">
+<section class="page" id="temporaryPets">
 
-            <div class="configTitle">
-                GUI Color
-            </div>
+<h1 class="pageTitle">
+Temporary Pets
+</h1>
+
+<div class="eggGrid">
+
+<button class="eggButton" id="shadowEggButton">
+
+<img
+    class="eggImage"
+    src="images/ShadowEgg.png"
+    alt="Shadow Egg"
+>
+
+<div class="eggName">
+Shadow Egg
+</div>
+
+</button>
+
+</div>
+
+</section>
 
 
-            <select id="colorSelect">
+<section class="page" id="shadowEgg">
 
-                <option value="Blue">
-                    Blue
-                </option>
+<button
+    class="eggBackButton"
+    data-back="temporaryPets"
+>
+← Back
+</button>
 
-                <option value="Red">
-                    Red
-                </option>
+<h1 class="pageTitle">
+Shadow Egg
+</h1>
 
-                <option value="Green">
-                    Green
-                </option>
+<div class="petList" id="shadowEggList"></div>
 
-                <option value="Purple">
-                    Purple
-                </option>
+</section>
 
-                <option value="Pink">
-                    Pink
-                </option>
 
-                <option value="Orange">
-                    Orange
-                </option>
+<section class="page" id="config">
 
-                <option value="Yellow">
-                    Yellow
-                </option>
+<h1 class="pageTitle">
+Config
+</h1>
 
-                <option value="Cyan">
-                    Cyan
-                </option>
+<div class="configBox">
 
-                <option value="Black">
-                    Black
-                </option>
+<div class="configTitle">
+Choose Color
+</div>
 
-            </select>
+<select id="colorSelect">
 
-        </div>
+<option value="blue">Blue</option>
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="purple">Purple</option>
+<option value="pink">Pink</option>
+<option value="orange">Orange</option>
+<option value="yellow">Yellow</option>
+<option value="cyan">Cyan</option>
+<option value="black">Black</option>
 
-    </section>
+</select>
+
+</div>
+
+</section>
 
 
 </div>
@@ -1453,366 +1021,495 @@ main{
 </main>
 
 
-<!-- =====================================================
-     SCROLL BUTTONS
-===================================================== -->
-
-<div class="scrollButtons">
-
-    <button
-        class="scrollButton"
-        id="scrollUp"
-        aria-label="Scroll up"
-    >
-        ▲
-    </button>
-
-
-    <button
-        class="scrollButton"
-        id="scrollDown"
-        aria-label="Scroll down"
-    >
-        ▼
-    </button>
-
-</div>
-
-
 <script>
 
-
-/* =====================================================
-   PET NAMES
-   SOLO NOMBRES
-===================================================== */
-
-const pets = [
-
-    "Shadow One",
-
-    "Dark Cat",
-
-    "Crystal Dragon"
-
-];
-
-
-/* =====================================================
-   PET DATA
-===================================================== */
-
-const petData = {
-
-    "Shadow One":{
-
-        normal:{
-            image:"images/ShadowOne.png",
-            hatched:"100",
-            chance:"1/500",
-            value:"250"
-        },
-
-        shiny:{
-            image:"images/ShadowOneShiny.png",
-            hatched:"25",
-            chance:"1/2,500",
-            value:"750"
-        },
-
-        mythic:{
-            image:"images/ShadowOneMythic.png",
-            hatched:"5",
-            chance:"1/10,000",
-            value:"2,500"
-        },
-
-        shinyMythic:{
-            image:"images/ShadowOneShinyMythic.png",
-            hatched:"1",
-            chance:"1/50,000",
-            value:"10,000"
-        }
-
-    },
-
-
-    "Dark Cat":{
-
-        normal:{
-            image:"images/DarkCat.png",
-            hatched:"100",
-            chance:"1/500",
-            value:"150"
-        },
-
-        shiny:{
-            image:"images/DarkCatShiny.png",
-            hatched:"25",
-            chance:"1/2,500",
-            value:"500"
-        },
-
-        mythic:{
-            image:"images/DarkCatMythic.png",
-            hatched:"5",
-            chance:"1/10,000",
-            value:"1,500"
-        },
-
-        shinyMythic:{
-            image:"images/DarkCatShinyMythic.png",
-            hatched:"1",
-            chance:"1/50,000",
-            value:"7,500"
-        }
-
-    },
-
-
-    "Crystal Dragon":{
-
-        normal:{
-            image:"images/CrystalDragon.png",
-            hatched:"75",
-            chance:"1/750",
-            value:"400"
-        },
-
-        shiny:{
-            image:"images/CrystalDragonShiny.png",
-            hatched:"20",
-            chance:"1/3,000",
-            value:"1,200"
-        },
-
-        mythic:{
-            image:"images/CrystalDragonMythic.png",
-            hatched:"4",
-            chance:"1/12,000",
-            value:"4,000"
-        },
-
-        shinyMythic:{
-            image:"images/CrystalDragonShinyMythic.png",
-            hatched:"1",
-            chance:"1/60,000",
-            value:"16,000"
-        }
-
-    }
-
-};
-
-
-/* =====================================================
-   SECRETS
-===================================================== */
-
-const secrets = [
-
-    "Secret One"
-
-];
-
-
-const secretData = {
-
-    "Secret One":{
-
-        normal:{
-            image:"images/SecretOne.png",
-            hatched:"10",
-            chance:"1/100,000",
-            value:"5,000"
-        },
-
-        shiny:{
-            image:"images/SecretOneShiny.png",
-            hatched:"3",
-            chance:"1/300,000",
-            value:"15,000"
-        },
-
-        mythic:{
-            image:"images/SecretOneMythic.png",
-            hatched:"1",
-            chance:"1/1,000,000",
-            value:"50,000"
-        },
-
-        shinyMythic:{
-            image:"images/SecretOneShinyMythic.png",
-            hatched:"1",
-            chance:"1/5,000,000",
-            value:"200,000"
-        }
-
-    }
-
-};
-
-
-/* =====================================================
+/* =========================
    VARIANTS
-===================================================== */
+========================= */
 
 const variantNames = {
-
     normal:"Normal",
-
     shiny:"Shiny",
-
     mythic:"Mythic",
-
     shinyMythic:"Shiny Mythic"
-
 };
 
-
 const variantOrder = [
-
     "normal",
     "shiny",
     "mythic",
     "shinyMythic"
-
 ];
 
 
-/* =====================================================
-   COLORS
-===================================================== */
+/* =========================
+   ROBUX PETS
+========================= */
 
-const colors = {
+const pets = [
+    "Shadow One",
+    "Dark Cat",
+    "Crystal Dragon"
+];
 
-    Blue:{
-        main:"#5865f2",
-        dark:"#4752c4",
-        light:"#eef0ff",
-        hover:"#e1e4ff"
+const petData = {
+
+"Shadow One":{
+    normal:{
+        image:"images/ShadowOne.png",
+        hatched:"100",
+        chance:"1/500",
+        value:"250"
     },
-
-    Red:{
-        main:"#ef4444",
-        dark:"#dc2626",
-        light:"#fee2e2",
-        hover:"#fecaca"
+    shiny:{
+        image:"images/ShadowOneShiny.png",
+        hatched:"25",
+        chance:"1/2,500",
+        value:"750"
     },
-
-    Green:{
-        main:"#22c55e",
-        dark:"#16a34a",
-        light:"#dcfce7",
-        hover:"#bbf7d0"
+    mythic:{
+        image:"images/ShadowOneMythic.png",
+        hatched:"5",
+        chance:"1/10,000",
+        value:"2,500"
     },
-
-    Purple:{
-        main:"#8b5cf6",
-        dark:"#7c3aed",
-        light:"#ede9fe",
-        hover:"#ddd6fe"
-    },
-
-    Pink:{
-        main:"#ec4899",
-        dark:"#db2777",
-        light:"#fce7f3",
-        hover:"#fbcfe8"
-    },
-
-    Orange:{
-        main:"#f97316",
-        dark:"#ea580c",
-        light:"#ffedd5",
-        hover:"#fed7aa"
-    },
-
-    Yellow:{
-        main:"#eab308",
-        dark:"#ca8a04",
-        light:"#fef9c3",
-        hover:"#fef08a"
-    },
-
-    Cyan:{
-        main:"#06b6d4",
-        dark:"#0891b2",
-        light:"#cffafe",
-        hover:"#a5f3fc"
-    },
-
-    Black:{
-        main:"#111827",
-        dark:"#030712",
-        light:"#e5e7eb",
-        hover:"#d1d5db"
+    shinyMythic:{
+        image:"images/ShadowOneShinyMythic.png",
+        hatched:"1",
+        chance:"1/50,000",
+        value:"10,000"
     }
+},
+
+"Dark Cat":{
+    normal:{
+        image:"images/DarkCat.png",
+        hatched:"100",
+        chance:"1/500",
+        value:"150"
+    },
+    shiny:{
+        image:"images/DarkCatShiny.png",
+        hatched:"25",
+        chance:"1/2,500",
+        value:"500"
+    },
+    mythic:{
+        image:"images/DarkCatMythic.png",
+        hatched:"5",
+        chance:"1/10,000",
+        value:"1,500"
+    },
+    shinyMythic:{
+        image:"images/DarkCatShinyMythic.png",
+        hatched:"1",
+        chance:"1/50,000",
+        value:"7,500"
+    }
+},
+
+"Crystal Dragon":{
+    normal:{
+        image:"images/CrystalDragon.png",
+        hatched:"75",
+        chance:"1/750",
+        value:"400"
+    },
+    shiny:{
+        image:"images/CrystalDragonShiny.png",
+        hatched:"20",
+        chance:"1/3,000",
+        value:"1,200"
+    },
+    mythic:{
+        image:"images/CrystalDragonMythic.png",
+        hatched:"4",
+        chance:"1/12,000",
+        value:"4,000"
+    },
+    shinyMythic:{
+        image:"images/CrystalDragonShinyMythic.png",
+        hatched:"1",
+        chance:"1/60,000",
+        value:"16,000"
+    }
+}
 
 };
 
 
-/* =====================================================
-   APPLY COLOR
-===================================================== */
+/* =========================
+   COMMON EGG
+========================= */
+
+const commonEggPets = [
+    "Royal Doggy"
+];
+
+const commonEggData = {
+
+"Royal Doggy":{
+    normal:{
+        image:"images/RoyalDoggy.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/RoyalDoggyShiny.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/RoyalDoggyMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/RoyalDoggyShinyMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   EXOTIC EGG
+========================= */
+
+const exoticEggPets = [
+    "Electric Basilisk",
+    "Air Basilisk",
+    "Fire Basilisk",
+    "Ice Basilisk"
+];
+
+const exoticEggData = {
+
+"Electric Basilisk":{
+    normal:{
+        image:"images/Electric_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Electric_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Electric_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Electric_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Air Basilisk":{
+    normal:{
+        image:"images/Air_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Air_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Air_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Air_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Fire Basilisk":{
+    normal:{
+        image:"images/Fire_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Fire_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Fire_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Fire_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Ice Basilisk":{
+    normal:{
+        image:"images/Ice_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/Ice_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/Ice_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/Ice_Basilisk.webp",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   SHADOW EGG
+========================= */
+
+const shadowEggPets = [
+    "Shadow One",
+    "Shadow Luminance",
+    "Shadow Wolflord"
+];
+
+const shadowEggData = {
+
+"Shadow One":{
+    normal:{
+        image:"images/ShadowOne.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/ShadowOneShiny.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/ShadowOneMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/ShadowOneShinyMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Shadow Luminance":{
+    normal:{
+        image:"images/ShadowLuminance.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/ShadowLuminanceShiny.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/ShadowLuminanceMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/ShadowLuminanceShinyMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+},
+
+"Shadow Wolflord":{
+    normal:{
+        image:"images/ShadowWolflord.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shiny:{
+        image:"images/ShadowWolflordShiny.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    mythic:{
+        image:"images/ShadowWolflordMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    },
+    shinyMythic:{
+        image:"images/ShadowWolflordShinyMythic.png",
+        hatched:"0",
+        chance:"0",
+        value:"0"
+    }
+}
+
+};
+
+
+/* =========================
+   COLORS
+========================= */
+
+const colors = {
+
+blue:{
+    main:"#5865f2",
+    dark:"#4752c4",
+    light:"#eef0ff",
+    hover:"#e1e4ff"
+},
+
+red:{
+    main:"#ed4245",
+    dark:"#c03537",
+    light:"#ffecec",
+    hover:"#ffdede"
+},
+
+green:{
+    main:"#43b581",
+    dark:"#319568",
+    light:"#e8fff5",
+    hover:"#d6f8e9"
+},
+
+purple:{
+    main:"#9b59b6",
+    dark:"#7d3f98",
+    light:"#f5eaff",
+    hover:"#ead8f5"
+},
+
+pink:{
+    main:"#e84393",
+    dark:"#c62e79",
+    light:"#ffeaf5",
+    hover:"#ffd8eb"
+},
+
+orange:{
+    main:"#e67e22",
+    dark:"#c65f08",
+    light:"#fff0e2",
+    hover:"#ffe2c7"
+},
+
+yellow:{
+    main:"#f1c40f",
+    dark:"#c9a009",
+    light:"#fffbea",
+    hover:"#fff3c7"
+},
+
+cyan:{
+    main:"#00bcd4",
+    dark:"#0097a7",
+    light:"#e6fbff",
+    hover:"#d2f7fc"
+},
+
+black:{
+    main:"#222222",
+    dark:"#000000",
+    light:"#eeeeee",
+    hover:"#dddddd"
+}
+
+};
+
 
 function applyColor(name){
 
-    const color = colors[name];
+    const color =
+        colors[name];
 
     if(!color) return;
 
-
-    document.documentElement
-    .style
-    .setProperty(
+    document.documentElement.style.setProperty(
         "--main-color",
         color.main
     );
 
-
-    document.documentElement
-    .style
-    .setProperty(
+    document.documentElement.style.setProperty(
         "--main-dark",
         color.dark
     );
 
-
-    document.documentElement
-    .style
-    .setProperty(
+    document.documentElement.style.setProperty(
         "--main-light",
         color.light
     );
 
-
-    document.documentElement
-    .style
-    .setProperty(
+    document.documentElement.style.setProperty(
         "--main-hover",
         color.hover
     );
 
-
     localStorage.setItem(
-        "guiColor",
+        "bgsColor",
         name
     );
-
 }
 
 
 const savedColor =
-    localStorage.getItem(
-        "guiColor"
-    ) || "Blue";
-
+    localStorage.getItem("bgsColor") || "blue";
 
 document.getElementById(
     "colorSelect"
 ).value = savedColor;
-
 
 applyColor(savedColor);
 
@@ -1831,59 +1528,37 @@ document.getElementById(
 );
 
 
-/* =====================================================
-   SIDEBAR
-===================================================== */
+/* =========================
+   PAGE SYSTEM
+========================= */
 
 const sidebar =
     document.getElementById(
         "sidebar"
     );
 
-
 const menuButton =
     document.getElementById(
         "menuButton"
     );
 
-
-menuButton.addEventListener(
-    "click",
-    function(e){
-
-        e.stopPropagation();
-
-        sidebar.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-/* =====================================================
-   PAGE SYSTEM
-===================================================== */
-
-const sidebarButtons =
-    document.querySelectorAll(
-        ".sidebarButton"
-    );
+let currentPage =
+    localStorage.getItem(
+        "currentPage"
+    ) || "home";
 
 
 function openPage(pageName){
 
     document
-    .querySelectorAll(".page")
-    .forEach(
-        page => {
+        .querySelectorAll(".page")
+        .forEach(page=>{
 
             page.classList.remove(
                 "active"
             );
 
-        }
-    );
+        });
 
 
     const page =
@@ -1891,28 +1566,39 @@ function openPage(pageName){
             pageName
         );
 
+    if(page){
 
-    if(!page) return;
+        page.classList.add(
+            "active"
+        );
+
+    }
 
 
-    page.classList.add(
-        "active"
-    );
+    document
+        .querySelectorAll(".sidebarButton")
+        .forEach(button=>{
 
-
-    sidebarButtons.forEach(
-        button => {
-
-            button.classList.toggle(
-                "active",
-
-                button.dataset.page ===
-                pageName
+            button.classList.remove(
+                "active"
             );
 
-        }
-    );
+            if(
+                button.dataset.page ===
+                pageName
+            ){
 
+                button.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+
+    currentPage =
+        pageName;
 
     localStorage.setItem(
         "currentPage",
@@ -1925,23 +1611,35 @@ function openPage(pageName){
     );
 
 
-    closeAllMenus();
-
-
-    /*
-       Scroll real del documento.
-    */
-
-    window.scrollTo(
-        0,
-        0
-    );
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
 
-sidebarButtons.forEach(
-    button => {
+/* =========================
+   SIDEBAR
+========================= */
+
+menuButton.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+        sidebar.classList.toggle(
+            "open"
+        );
+
+    }
+);
+
+
+document
+    .querySelectorAll(".sidebarButton")
+    .forEach(button=>{
 
         button.addEventListener(
             "click",
@@ -1954,13 +1652,64 @@ sidebarButtons.forEach(
             }
         );
 
+    });
+
+
+/* =========================
+   VARIANT NAME
+========================= */
+
+function getVariantPetName(
+    originalName,
+    variantKey
+){
+
+    if(
+        variantKey ===
+        "normal"
+    ){
+
+        return originalName;
+
     }
-);
+
+    if(
+        variantKey ===
+        "shiny"
+    ){
+
+        return "Shiny " +
+            originalName;
+
+    }
+
+    if(
+        variantKey ===
+        "mythic"
+    ){
+
+        return "Mythic " +
+            originalName;
+
+    }
+
+    if(
+        variantKey ===
+        "shinyMythic"
+    ){
+
+        return "Shiny Mythic " +
+            originalName;
+
+    }
+
+    return originalName;
+}
 
 
-/* =====================================================
-   CREATE PET CARD
-===================================================== */
+/* =========================
+   PET CARD
+========================= */
 
 function createPetCard(
     petName,
@@ -1972,9 +1721,12 @@ function createPetCard(
             "div"
         );
 
-
     card.className =
         "petCard";
+
+
+    const firstVariant =
+        data.normal;
 
 
     const image =
@@ -1982,16 +1734,20 @@ function createPetCard(
             "img"
         );
 
-
     image.className =
         "petImage";
+
+    image.src =
+        firstVariant.image;
+
+    image.alt =
+        petName;
 
 
     const info =
         document.createElement(
             "div"
         );
-
 
     info.className =
         "petInfo";
@@ -2002,13 +1758,14 @@ function createPetCard(
             "div"
         );
 
-
     name.className =
         "petName";
 
-
     name.textContent =
-        petName;
+        getVariantPetName(
+            petName,
+            "normal"
+        );
 
 
     const hatched =
@@ -2016,9 +1773,12 @@ function createPetCard(
             "div"
         );
 
-
     hatched.className =
         "petStat";
+
+    hatched.innerHTML =
+        "<b>Hatched:</b> " +
+        firstVariant.hatched;
 
 
     const chance =
@@ -2026,9 +1786,12 @@ function createPetCard(
             "div"
         );
 
-
     chance.className =
         "petStat";
+
+    chance.innerHTML =
+        "<b>Chance:</b> " +
+        firstVariant.chance;
 
 
     const value =
@@ -2036,29 +1799,24 @@ function createPetCard(
             "div"
         );
 
-
     value.className =
         "petStat";
 
+    value.innerHTML =
+        "<b>Value:</b> " +
+        firstVariant.value;
+
 
     info.appendChild(name);
-
     info.appendChild(hatched);
-
     info.appendChild(chance);
-
     info.appendChild(value);
 
-
-    /* =================================================
-       VARIANT CONTAINER
-    ================================================= */
 
     const variantContainer =
         document.createElement(
             "div"
         );
-
 
     variantContainer.className =
         "variantContainer";
@@ -2069,13 +1827,8 @@ function createPetCard(
             "button"
         );
 
-
     variantButton.className =
         "variantButton";
-
-
-    variantButton.type =
-        "button";
 
 
     const variantImage =
@@ -2083,11 +1836,17 @@ function createPetCard(
             "img"
         );
 
+    variantImage.src =
+        firstVariant.image;
+
 
     const variantText =
         document.createElement(
             "span"
         );
+
+    variantText.textContent =
+        variantNames.normal;
 
 
     const arrow =
@@ -2095,10 +1854,8 @@ function createPetCard(
             "span"
         );
 
-
     arrow.className =
         "variantArrow";
-
 
     arrow.textContent =
         "▼";
@@ -2108,43 +1865,37 @@ function createPetCard(
         variantImage
     );
 
-
     variantButton.appendChild(
         variantText
     );
-
 
     variantButton.appendChild(
         arrow
     );
 
 
-    const variantMenu =
+    const menu =
         document.createElement(
             "div"
         );
 
-
-    variantMenu.className =
+    menu.className =
         "variantMenu";
 
 
-    /* =================================================
-       VARIANT OPTIONS
-    ================================================= */
-
     variantOrder.forEach(
-        variant => {
+        variantKey=>{
 
-            if(!data[variant])
-                return;
+            const variant =
+                data[variantKey];
+
+            if(!variant) return;
 
 
             const option =
                 document.createElement(
                     "div"
                 );
-
 
             option.className =
                 "variantOption";
@@ -2155,29 +1906,24 @@ function createPetCard(
                     "img"
                 );
 
+            optionImage.src =
+                variant.image;
+
 
             const optionText =
                 document.createElement(
                     "span"
                 );
 
-
-            optionImage.src =
-                data[variant].image;
-
-
-            optionImage.alt =
-                variantNames[variant];
-
-
             optionText.textContent =
-                variantNames[variant];
+                variantNames[
+                    variantKey
+                ];
 
 
             option.appendChild(
                 optionImage
             );
-
 
             option.appendChild(
                 optionText
@@ -2186,17 +1932,45 @@ function createPetCard(
 
             option.addEventListener(
                 "click",
-                function(e){
+                function(event){
 
-                    e.stopPropagation();
-
-
-                    setVariant(
-                        variant
-                    );
+                    event.stopPropagation();
 
 
-                    variantMenu.classList.remove(
+                    image.src =
+                        variant.image;
+
+                    variantImage.src =
+                        variant.image;
+
+
+                    variantText.textContent =
+                        variantNames[
+                            variantKey
+                        ];
+
+
+                    name.textContent =
+                        getVariantPetName(
+                            petName,
+                            variantKey
+                        );
+
+
+                    hatched.innerHTML =
+                        "<b>Hatched:</b> " +
+                        variant.hatched;
+
+                    chance.innerHTML =
+                        "<b>Chance:</b> " +
+                        variant.chance;
+
+                    value.innerHTML =
+                        "<b>Value:</b> " +
+                        variant.value;
+
+
+                    menu.classList.remove(
                         "open"
                     );
 
@@ -2204,7 +1978,7 @@ function createPetCard(
             );
 
 
-            variantMenu.appendChild(
+            menu.appendChild(
                 option
             );
 
@@ -2212,72 +1986,36 @@ function createPetCard(
     );
 
 
-    /* =================================================
-       CHANGE VARIANT
-    ================================================= */
-
-    function setVariant(
-        variant
-    ){
-
-        const selected =
-            data[variant];
-
-
-        if(!selected)
-            return;
-
-
-        image.src =
-            selected.image;
-
-
-        image.alt =
-            petName;
-
-
-        variantImage.src =
-            selected.image;
-
-
-        variantText.textContent =
-            variantNames[variant];
-
-
-        hatched.innerHTML =
-            "<b>Hatched:</b> " +
-            selected.hatched;
-
-
-        chance.innerHTML =
-            "<b>Chance:</b> " +
-            selected.chance;
-
-
-        value.innerHTML =
-            "<b>Value:</b> " +
-            selected.value;
-
-    }
-
-
-    /* =================================================
-       VARIANT BUTTON
-    ================================================= */
-
     variantButton.addEventListener(
         "click",
-        function(e){
+        function(event){
 
-            e.stopPropagation();
-
-
-            closeOtherVariantMenus(
-                variantMenu
-            );
+            event.stopPropagation();
 
 
-            variantMenu.classList.toggle(
+            document
+                .querySelectorAll(
+                    ".variantMenu"
+                )
+                .forEach(
+                    other=>{
+
+                        if(
+                            other !==
+                            menu
+                        ){
+
+                            other.classList.remove(
+                                "open"
+                            );
+
+                        }
+
+                    }
+                );
+
+
+            menu.classList.toggle(
                 "open"
             );
 
@@ -2289,9 +2027,8 @@ function createPetCard(
         variantButton
     );
 
-
     variantContainer.appendChild(
-        variantMenu
+        menu
     );
 
 
@@ -2299,181 +2036,163 @@ function createPetCard(
         image
     );
 
-
     card.appendChild(
         info
     );
-
 
     card.appendChild(
         variantContainer
     );
 
 
-    /*
-       Todas las pets comienzan en Normal.
-    */
-
-    setVariant(
-        "normal"
-    );
-
-
     return card;
-
 }
 
 
-/* =====================================================
-   RENDER PETS
-===================================================== */
+/* =========================
+   RENDER LIST
+========================= */
 
-function renderPets(){
-
-    const container =
-        document.getElementById(
-            "petsList"
-        );
-
-
-    container.innerHTML = "";
-
-
-    pets.forEach(
-        petName => {
-
-            if(!petData[petName])
-                return;
-
-
-            const card =
-                createPetCard(
-                    petName,
-                    petData[petName]
-                );
-
-
-            container.appendChild(
-                card
-            );
-
-        }
-    );
-
-}
-
-
-/* =====================================================
-   RENDER SECRETS
-===================================================== */
-
-function renderSecrets(){
-
-    const container =
-        document.getElementById(
-            "secretsList"
-        );
-
-
-    container.innerHTML = "";
-
-
-    secrets.forEach(
-        petName => {
-
-            if(!secretData[petName])
-                return;
-
-
-            const card =
-                createPetCard(
-                    petName,
-                    secretData[petName]
-                );
-
-
-            container.appendChild(
-                card
-            );
-
-        }
-    );
-
-}
-
-
-/* =====================================================
-   RENDER EVERYTHING
-===================================================== */
-
-renderPets();
-
-renderSecrets();
-
-
-/* =====================================================
-   CLOSE VARIANT MENUS
-===================================================== */
-
-function closeOtherVariantMenus(
-    except
+function renderList(
+    list,
+    data,
+    containerId
 ){
 
-    document
+    const container =
+        document.getElementById(
+            containerId
+        );
+
+    if(!container) return;
+
+
+    container.innerHTML =
+        "";
+
+
+    list.forEach(
+        petName=>{
+
+            const card =
+                createPetCard(
+                    petName,
+                    data[petName]
+                );
+
+            container.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+renderList(
+    pets,
+    petData,
+    "robuxPetsList"
+);
+
+renderList(
+    commonEggPets,
+    commonEggData,
+    "commonEggList"
+);
+
+renderList(
+    exoticEggPets,
+    exoticEggData,
+    "exoticEggList"
+);
+
+renderList(
+    shadowEggPets,
+    shadowEggData,
+    "shadowEggList"
+);
+
+
+/* =========================
+   EGG BUTTONS
+========================= */
+
+document.getElementById(
+    "commonEggButton"
+).addEventListener(
+    "click",
+    function(){
+
+        openPage(
+            "commonEgg"
+        );
+
+    }
+);
+
+
+document.getElementById(
+    "exoticEggButton"
+).addEventListener(
+    "click",
+    function(){
+
+        openPage(
+            "exoticEgg"
+        );
+
+    }
+);
+
+
+document.getElementById(
+    "shadowEggButton"
+).addEventListener(
+    "click",
+    function(){
+
+        openPage(
+            "shadowEgg"
+        );
+
+    }
+);
+
+
+/* =========================
+   BACK BUTTONS
+========================= */
+
+document
     .querySelectorAll(
-        ".variantMenu"
+        ".eggBackButton"
     )
-    .forEach(
-        menu => {
+    .forEach(button=>{
 
-            if(menu !== except){
+        button.addEventListener(
+            "click",
+            function(){
 
-                menu.classList.remove(
-                    "open"
+                openPage(
+                    this.dataset.back
                 );
 
             }
+        );
 
-        }
-    );
-
-}
+    });
 
 
-function closeAllMenus(){
-
-    document
-    .querySelectorAll(
-        ".variantMenu"
-    )
-    .forEach(
-        menu => {
-
-            menu.classList.remove(
-                "open"
-            );
-
-        }
-    );
-
-
-    document.getElementById(
-        "searchResults"
-    ).style.display =
-        "none";
-
-}
-
-
-/* =====================================================
+/* =========================
    SEARCH
-===================================================== */
+========================= */
 
 const searchInput =
     document.getElementById(
         "searchInput"
     );
-
 
 const searchResults =
     document.getElementById(
@@ -2481,403 +2200,289 @@ const searchResults =
     );
 
 
-function searchPets(){
-
-    const query =
-        searchInput.value
-        .trim()
-        .toLowerCase();
+const searchData = [];
 
 
-    searchResults.innerHTML =
-        "";
+pets.forEach(
+    petName=>{
 
+        searchData.push({
 
-    if(query === ""){
+            name:petName,
 
-        searchResults.style.display =
-            "none";
+            variant:"Robux Pet",
 
-        return;
+            image:
+                petData[
+                    petName
+                ].normal.image,
+
+            page:"robuxPets"
+
+        });
 
     }
+);
 
 
-    const results = [];
+commonEggPets.forEach(
+    petName=>{
+
+        searchData.push({
+
+            name:petName,
+
+            variant:"Common Egg",
+
+            image:
+                commonEggData[
+                    petName
+                ].normal.image,
+
+            page:"commonEgg"
+
+        });
+
+    }
+);
 
 
-    /* =================================================
-       NORMAL PETS
-    ================================================= */
+exoticEggPets.forEach(
+    petName=>{
 
-    pets.forEach(
-        petName => {
+        searchData.push({
 
-            const data =
-                petData[petName];
+            name:petName,
 
+            variant:"Exotic Egg",
 
-            if(!data)
-                return;
+            image:
+                exoticEggData[
+                    petName
+                ].normal.image,
 
+            page:"exoticEgg"
 
-            variantOrder.forEach(
-                variant => {
+        });
 
-                    if(!data[variant])
-                        return;
-
-
-                    const searchable =
-                        (
-                            petName +
-                            " " +
-                            variantNames[variant]
-                        ).toLowerCase();
+    }
+);
 
 
-                    if(
-                        searchable.includes(
-                            query
-                        )
-                    ){
+shadowEggPets.forEach(
+    petName=>{
 
-                        results.push({
+        searchData.push({
 
-                            pet:petName,
+            name:petName,
 
-                            variant:variant,
+            variant:"Shadow Egg",
 
-                            data:data[variant],
+            image:
+                shadowEggData[
+                    petName
+                ].normal.image,
 
-                            page:"pets"
+            page:"shadowEgg"
 
-                        });
+        });
 
-                    }
-
-                }
-            );
-
-        }
-    );
+    }
+);
 
 
-    /* =================================================
-       SECRETS
-    ================================================= */
+searchInput.addEventListener(
+    "input",
+    function(){
 
-    secrets.forEach(
-        petName => {
-
-            const data =
-                secretData[petName];
-
-
-            if(!data)
-                return;
+        const query =
+            this.value
+                .trim()
+                .toLowerCase();
 
 
-            variantOrder.forEach(
-                variant => {
-
-                    if(!data[variant])
-                        return;
+        searchResults.innerHTML =
+            "";
 
 
-                    const searchable =
-                        (
-                            petName +
-                            " " +
-                            variantNames[variant]
-                        ).toLowerCase();
+        if(!query){
 
+            searchResults.style.display =
+                "none";
 
-                    if(
-                        searchable.includes(
-                            query
-                        )
-                    ){
-
-                        results.push({
-
-                            pet:petName,
-
-                            variant:variant,
-
-                            data:data[variant],
-
-                            page:"secrets"
-
-                        });
-
-                    }
-
-                }
-            );
+            return;
 
         }
-    );
 
 
-    /* =================================================
-       NO RESULTS
-    ================================================= */
-
-    if(results.length === 0){
-
-        const no =
-            document.createElement(
-                "div"
+        const results =
+            searchData.filter(
+                item =>
+                    item.name
+                        .toLowerCase()
+                        .includes(query)
             );
 
 
-        no.className =
-            "noResults";
+        if(
+            results.length ===
+            0
+        ){
+
+            const noResults =
+                document.createElement(
+                    "div"
+                );
+
+            noResults.className =
+                "noResults";
+
+            noResults.textContent =
+                "No pets found.";
+
+            searchResults.appendChild(
+                noResults
+            );
+
+            searchResults.style.display =
+                "block";
+
+            return;
+
+        }
 
 
-        no.textContent =
-            "No results found.";
+        results.forEach(
+            item=>{
+
+                const result =
+                    document.createElement(
+                        "div"
+                    );
+
+                result.className =
+                    "searchItem";
 
 
-        searchResults.appendChild(
-            no
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+                image.src =
+                    item.image;
+
+
+                const info =
+                    document.createElement(
+                        "div"
+                    );
+
+                info.className =
+                    "searchInfo";
+
+
+                const petName =
+                    document.createElement(
+                        "div"
+                    );
+
+                petName.className =
+                    "searchPetName";
+
+                petName.textContent =
+                    item.name;
+
+
+                const variant =
+                    document.createElement(
+                        "div"
+                    );
+
+                variant.className =
+                    "searchVariant";
+
+                variant.textContent =
+                    item.variant;
+
+
+                info.appendChild(
+                    petName
+                );
+
+                info.appendChild(
+                    variant
+                );
+
+
+                result.appendChild(
+                    image
+                );
+
+                result.appendChild(
+                    info
+                );
+
+
+                result.addEventListener(
+                    "click",
+                    function(){
+
+                        openPage(
+                            item.page
+                        );
+
+                        searchResults.style.display =
+                            "none";
+
+                        searchInput.value =
+                            "";
+
+                    }
+                );
+
+
+                searchResults.appendChild(
+                    result
+                );
+
+            }
         );
 
 
         searchResults.style.display =
             "block";
 
-
-        return;
-
     }
+);
 
 
-    /* =================================================
-       SHOW RESULTS
-    ================================================= */
+/* =========================
+   CLICK OUTSIDE
+========================= */
 
-    results.forEach(
-        result => {
+document.addEventListener(
+    "click",
+    function(){
 
-            const item =
-                document.createElement(
-                    "div"
-                );
+        document
+            .querySelectorAll(
+                ".variantMenu"
+            )
+            .forEach(
+                menu=>{
 
-
-            item.className =
-                "searchItem";
-
-
-            const img =
-                document.createElement(
-                    "img"
-                );
-
-
-            img.src =
-                result.data.image;
-
-
-            const info =
-                document.createElement(
-                    "div"
-                );
-
-
-            info.className =
-                "searchInfo";
-
-
-            const petName =
-                document.createElement(
-                    "div"
-                );
-
-
-            petName.className =
-                "searchPetName";
-
-
-            petName.textContent =
-                result.pet;
-
-
-            const variant =
-                document.createElement(
-                    "div"
-                );
-
-
-            variant.className =
-                "searchVariant";
-
-
-            variant.textContent =
-                variantNames[
-                    result.variant
-                ];
-
-
-            info.appendChild(
-                petName
-            );
-
-
-            info.appendChild(
-                variant
-            );
-
-
-            item.appendChild(
-                img
-            );
-
-
-            item.appendChild(
-                info
-            );
-
-
-            item.addEventListener(
-                "click",
-                function(e){
-
-                    e.stopPropagation();
-
-
-                    openPage(
-                        result.page
-                    );
-
-
-                    searchInput.value =
-                        "";
-
-
-                    searchResults.style.display =
-                        "none";
-
-
-                    setTimeout(
-                        function(){
-
-                            const list =
-                                result.page === "pets"
-
-                                ? document.getElementById(
-                                    "petsList"
-                                )
-
-                                : document.getElementById(
-                                    "secretsList"
-                                );
-
-
-                            const cards =
-                                list.querySelectorAll(
-                                    ".petCard"
-                                );
-
-
-                            cards.forEach(
-                                card => {
-
-                                    const nameElement =
-                                        card.querySelector(
-                                            ".petName"
-                                        );
-
-
-                                    if(
-                                        !nameElement
-                                    )
-                                        return;
-
-
-                                    if(
-                                        nameElement.textContent !==
-                                        result.pet
-                                    )
-                                        return;
-
-
-                                    card.scrollIntoView({
-
-                                        behavior:"smooth",
-
-                                        block:"center"
-
-                                    });
-
-
-                                    /*
-                                       Abrimos el selector
-                                       para seleccionar
-                                       la variante buscada.
-                                    */
-
-                                    const options =
-                                        card.querySelectorAll(
-                                            ".variantOption"
-                                        );
-
-
-                                    const index =
-                                        variantOrder.indexOf(
-                                            result.variant
-                                        );
-
-
-                                    if(options[index]){
-
-                                        options[index].click();
-
-                                    }
-
-                                }
-                            );
-
-
-                        },
-                        100
+                    menu.classList.remove(
+                        "open"
                     );
 
                 }
             );
 
 
-            searchResults.appendChild(
-                item
-            );
+        searchResults.style.display =
+            "none";
 
-        }
-    );
-
-
-    searchResults.style.display =
-        "block";
-
-}
-
-
-searchInput.addEventListener(
-    "input",
-    searchPets
-);
-
-
-/* =====================================================
-   CLOSE OUTSIDE
-===================================================== */
-
-document.addEventListener(
-    "click",
-    function(){
-
-        closeAllMenus();
 
         sidebar.classList.remove(
             "open"
@@ -2887,114 +2492,87 @@ document.addEventListener(
 );
 
 
-document
-.querySelector(".searchContainer")
-.addEventListener(
+searchResults.addEventListener(
     "click",
-    function(e){
+    function(event){
 
-        e.stopPropagation();
+        event.stopPropagation();
 
     }
 );
 
 
-document
-.querySelector(".sidebar")
-.addEventListener(
+searchInput.addEventListener(
     "click",
-    function(e){
+    function(event){
 
-        e.stopPropagation();
+        event.stopPropagation();
 
     }
 );
 
 
-/* =====================================================
-   SCROLL UP
-===================================================== */
-
-document
-.getElementById("scrollUp")
-.addEventListener(
-    "click",
-    function(e){
-
-        e.preventDefault();
-
-        e.stopPropagation();
-
-
-        window.scrollBy({
-
-            top:
-                -(window.innerHeight * 0.8),
-
-            left:0,
-
-            behavior:"smooth"
-
-        });
-
-    }
-);
-
-
-/* =====================================================
-   SCROLL DOWN
-===================================================== */
-
-document
-.getElementById("scrollDown")
-.addEventListener(
-    "click",
-    function(e){
-
-        e.preventDefault();
-
-        e.stopPropagation();
-
-
-        window.scrollBy({
-
-            top:
-                window.innerHeight * 0.8,
-
-            left:0,
-
-            behavior:"smooth"
-
-        });
-
-    }
-);
-
-
-/* =====================================================
+/* =========================
    RESTORE PAGE
-===================================================== */
-
-const savedPage =
-    localStorage.getItem(
-        "currentPage"
-    );
-
+========================= */
 
 if(
-    savedPage &&
     document.getElementById(
-        savedPage
+        currentPage
     )
 ){
 
-    openPage(
-        savedPage
-    );
+    document
+        .querySelectorAll(".page")
+        .forEach(
+            page=>{
+
+                page.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+
+    document
+        .getElementById(
+            currentPage
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    document
+        .querySelectorAll(
+            ".sidebarButton"
+        )
+        .forEach(
+            button=>{
+
+                button.classList.remove(
+                    "active"
+                );
+
+
+                if(
+                    button.dataset.page ===
+                    currentPage
+                ){
+
+                    button.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
 
 }
 
 </script>
 
 </body>
-                    </html>
+        </html>
