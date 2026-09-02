@@ -7,6 +7,7 @@
 <title>Cqaaao Bgs ValueList</title>
 
 <style>
+
 :root{
     --main-color:#5865f2;
     --main-dark:#4752c4;
@@ -412,6 +413,7 @@ main{
     font-size:25px;
     font-weight:bold;
     color:var(--main-color);
+    text-align:center;
 }
 
 .eggBackButton{
@@ -479,8 +481,8 @@ main{
     }
 
     .sidebar{
-        top:110px;
         width:470px;
+        top:110px;
         height:calc(100vh - 110px);
     }
 
@@ -586,7 +588,7 @@ main{
     .searchContainer{
         width:150px;
         min-width:120px;
-        margin-left:8px;
+        margin-left:auto;
     }
 
     #searchInput{
@@ -631,7 +633,6 @@ main{
         padding:13px;
         margin-bottom:9px;
         font-size:16px;
-        border-radius:9px;
     }
 
     main{
@@ -643,16 +644,12 @@ main{
 
     .pageTitle{
         font-size:28px;
-        margin:22px 0 18px;
+        margin:25px 0 20px;
     }
 
     .homeBox{
-        padding:18px;
-        font-size:16px;
-    }
-
-    .petList{
-        gap:12px;
+        padding:20px;
+        font-size:17px;
     }
 
     .petCard{
@@ -660,7 +657,6 @@ main{
         gap:10px;
         padding:10px;
         border-width:2px;
-        border-radius:12px;
     }
 
     .petImage{
@@ -682,10 +678,9 @@ main{
         width:55px;
         height:55px;
         min-height:55px;
-        padding:4px;
-        border-width:2px;
-        border-radius:9px;
+        padding:5px;
         justify-content:center;
+        border-width:2px;
     }
 
     .variantButton img{
@@ -693,8 +688,11 @@ main{
         height:42px;
     }
 
-    .variantButton .variantText,
-    .variantButton .variantArrow{
+    .variantButton span:not(.variantArrow){
+        display:none;
+    }
+
+    .variantArrow{
         display:none;
     }
 
@@ -702,11 +700,9 @@ main{
         top:60px;
         right:0;
         width:200px;
-        border-width:2px;
     }
 
     .variantOption{
-        gap:8px;
         padding:8px;
         font-size:14px;
     }
@@ -724,7 +720,6 @@ main{
     .eggButton{
         min-height:220px;
         padding:15px;
-        border-width:2px;
     }
 
     .eggImage{
@@ -737,24 +732,24 @@ main{
     }
 
     .eggBackButton{
-        padding:10px 15px;
         font-size:16px;
-        margin:20px 0 15px;
+        padding:11px 17px;
     }
 
     .configBox{
-        padding:18px;
+        padding:20px;
     }
 
     .configTitle{
-        font-size:20px;
+        font-size:22px;
     }
 
     #colorSelect{
-        height:45px;
+        height:48px;
         font-size:16px;
     }
 }
+
 </style>
 </head>
 
@@ -764,7 +759,9 @@ main{
 
 <button class="menuButton" id="menuButton">☰</button>
 
-<div class="logo">Cqaaao Bgs ValueList</div>
+<div class="logo">
+Cqaaao Bgs ValueList
+</div>
 
 <div class="searchContainer">
 
@@ -775,7 +772,10 @@ placeholder="Search pets..."
 autocomplete="off"
 >
 
-<div class="searchResults" id="searchResults"></div>
+<div
+class="searchResults"
+id="searchResults">
+</div>
 
 </div>
 
@@ -815,11 +815,14 @@ Config
 
 <div class="content">
 
+
 <!-- HOME -->
 
 <section class="page active" id="home">
 
-<h1 class="pageTitle">Home</h1>
+<h1 class="pageTitle">
+Home
+</h1>
 
 <div class="homeBox">
 
@@ -839,239 +842,46 @@ eggs and values.
 
 <section class="page" id="limitedSecrets">
 
-<h1 class="pageTitle">Limited Secrets</h1>
+<h1 class="pageTitle">
+Limited Secrets
+</h1>
 
 <div class="eggGrid">
 
 <button class="eggButton" id="releaseEggButton">
-
-<img
-class="eggImage"
+<img class="eggImage"
 src="images/Release_Egg.webp"
-alt="Release Egg"
->
-
-<div class="eggName">
-Release Egg
-</div>
-
+alt="Release Egg">
+<div class="eggName">Release Egg</div>
 </button>
-
 
 <button class="eggButton" id="exoticEggButton">
-
-<img
-class="eggImage"
+<img class="eggImage"
 src="images/Exotic_Egg.webp"
-alt="Exotic Egg"
->
-
-<div class="eggName">
-Exotic Egg
-</div>
-
+alt="Exotic Egg">
+<div class="eggName">Exotic Egg</div>
 </button>
-
 
 <button class="eggButton" id="cosmicEggButton">
-
-<img
-class="eggImage"
+<img class="eggImage"
 src="images/Cosmic_Egg.webp"
-alt="Cosmic Egg"
->
-
-<div class="eggName">
-Cosmic Egg
-</div>
-
+alt="Cosmic Egg">
+<div class="eggName">Cosmic Egg</div>
 </button>
-
 
 <button class="eggButton" id="royaltyEggButton">
-
-<img
-class="eggImage"
+<img class="eggImage"
 src="images/Royalty_Egg.webp"
-alt="Royalty Egg"
->
-
-<div class="eggName">
-Royalty Egg
-</div>
-
+alt="Royalty Egg">
+<div class="eggName">Royalty Egg</div>
 </button>
-
 
 <button class="eggButton" id="fruityEggButton">
-
-<img
-class="eggImage"
+<img class="eggImage"
 src="images/Fruity_Egg.webp"
-alt="Fruity Egg"
->
-
-<div class="eggName">
-Fruity Egg
-</div>
-
+alt="Fruity Egg">
+<div class="eggName">Fruity Egg</div>
 </button>
-
-</div>
-
-</section>
-
-
-<!-- PERMANENT SECRETS -->
-
-<section class="page" id="permanentSecrets">
-
-<h1 class="pageTitle">Permanent Secrets</h1>
-
-<div class="eggGrid">
-
-<button class="eggButton" id="commonEggButton">
-
-<img
-class="eggImage"
-src="images/Common_Egg.webp"
-alt="Common Egg"
->
-
-<div class="eggName">
-Common Egg
-</div>
-
-</button>
-
-
-<button class="eggButton" id="lunarEggButton">
-
-<img
-class="eggImage"
-src="images/Lunar_Egg.webp"
-alt="Lunar Egg"
->
-
-<div class="eggName">
-Lunar Egg
-</div>
-
-</button>
-
-
-<button class="eggButton" id="voidEggButton">
-
-<img
-class="eggImage"
-src="images/Void_Egg.webp"
-alt="Void Egg"
->
-
-<div class="eggName">
-Void Egg
-</div>
-
-</button>
-
-
-<button class="eggButton" id="hellEggButton">
-
-<img
-class="eggImage"
-src="images/Hell_Egg.webp"
-alt="Hell Egg"
->
-
-<div class="eggName">
-Hell Egg
-</div>
-
-</button>
-
-
-<button class="eggButton" id="nightmareEggButton">
-
-<img
-class="eggImage"
-src="images/Nightmare_Egg.webp"
-alt="Nightmare Egg"
->
-
-<div class="eggName">
-Nightmare Egg
-</div>
-
-</button>
-
-</div>
-
-</section>
-
-
-<!-- TEMPORARY SECRETS -->
-
-<section class="page" id="temporaryPets">
-
-<h1 class="pageTitle">Temporary Secrets</h1>
-
-<div class="eggGrid">
-
-<button class="eggButton" id="shadowEggButton">
-
-<img
-class="eggImage"
-src="images/ShadowEgg.png"
-alt="Shadow Egg"
->
-
-<div class="eggName">
-Shadow Egg
-</div>
-
-</button>
-
-</div>
-
-</section>
-
-
-<!-- ROBUX PETS -->
-
-<section class="page" id="robuxPets">
-
-<h1 class="pageTitle">Robux Pets</h1>
-
-<div class="petList" id="robuxPetsList"></div>
-
-</section>
-
-
-<!-- CONFIG -->
-
-<section class="page" id="config">
-
-<h1 class="pageTitle">Config</h1>
-
-<div class="configBox">
-
-<div class="configTitle">
-Choose Color
-</div>
-
-<select id="colorSelect">
-
-<option value="blue">Blue</option>
-<option value="red">Red</option>
-<option value="green">Green</option>
-<option value="purple">Purple</option>
-<option value="pink">Pink</option>
-<option value="orange">Orange</option>
-<option value="yellow">Yellow</option>
-<option value="cyan">Cyan</option>
-<option value="black">Black</option>
-
-</select>
 
 </div>
 
@@ -1086,7 +896,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Release Egg</h1>
+<h1 class="pageTitle">
+Release Egg
+</h1>
 
 <div class="petList" id="releaseEggList"></div>
 
@@ -1101,7 +913,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Exotic Egg</h1>
+<h1 class="pageTitle">
+Exotic Egg
+</h1>
 
 <div class="petList" id="exoticEggList"></div>
 
@@ -1116,7 +930,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Cosmic Egg</h1>
+<h1 class="pageTitle">
+Cosmic Egg
+</h1>
 
 <div class="petList" id="cosmicEggList"></div>
 
@@ -1131,7 +947,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Royalty Egg</h1>
+<h1 class="pageTitle">
+Royalty Egg
+</h1>
 
 <div class="petList" id="royaltyEggList"></div>
 
@@ -1146,9 +964,157 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Fruity Egg</h1>
+<h1 class="pageTitle">
+Fruity Egg
+</h1>
 
 <div class="petList" id="fruityEggList"></div>
+
+</section>
+
+
+<!-- PERMANENT SECRETS -->
+
+<section class="page" id="permanentSecrets">
+
+<h1 class="pageTitle">
+Permanent Secrets
+</h1>
+
+<div class="eggGrid">
+
+
+<button class="eggButton" id="commonEggButton">
+
+<img class="eggImage"
+src="images/Common_Egg.webp"
+alt="Common Egg">
+
+<div class="eggName">
+Common Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="lunarEggButton">
+
+<img class="eggImage"
+src="images/Lunar_Egg.webp"
+alt="Lunar Egg">
+
+<div class="eggName">
+Lunar Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="voidEggButton">
+
+<img class="eggImage"
+src="images/Void_Egg.webp"
+alt="Void Egg">
+
+<div class="eggName">
+Void Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="hellEggButton">
+
+<img class="eggImage"
+src="images/Hell_Egg.webp"
+alt="Hell Egg">
+
+<div class="eggName">
+Hell Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="nightmareEggButton">
+
+<img class="eggImage"
+src="images/Nightmare_Egg.webp"
+alt="Nightmare Egg">
+
+<div class="eggName">
+Nightmare Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="djEggButton">
+
+<img class="eggImage"
+src="images/DJ_Egg.webp"
+alt="DJ Egg">
+
+<div class="eggName">
+DJ Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="sandcastleEggButton">
+
+<img class="eggImage"
+src="images/Sandcastle_Egg.webp"
+alt="Sandcastle Egg">
+
+<div class="eggName">
+Sandcastle Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="cyborgEggButton">
+
+<img class="eggImage"
+src="images/Cyborg_Egg.webp"
+alt="Cyborg Egg">
+
+<div class="eggName">
+Cyborg Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="shadowEggPermanentButton">
+
+<img class="eggImage"
+src="images/Shadow_Egg.webp"
+alt="Shadow Egg">
+
+<div class="eggName">
+Shadow Egg
+</div>
+
+</button>
+
+
+<button class="eggButton" id="soulFlyEggButton">
+
+<img class="eggImage"
+src="images/SoulFly_Egg.webp"
+alt="SoulFly Egg">
+
+<div class="eggName">
+SoulFly Egg
+</div>
+
+</button>
+
+
+</div>
 
 </section>
 
@@ -1161,7 +1127,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Common Egg</h1>
+<h1 class="pageTitle">
+Common Egg
+</h1>
 
 <div class="petList" id="commonEggList"></div>
 
@@ -1176,7 +1144,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Lunar Egg</h1>
+<h1 class="pageTitle">
+Lunar Egg
+</h1>
 
 <div class="petList" id="lunarEggList"></div>
 
@@ -1191,7 +1161,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Void Egg</h1>
+<h1 class="pageTitle">
+Void Egg
+</h1>
 
 <div class="petList" id="voidEggList"></div>
 
@@ -1206,7 +1178,9 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Hell Egg</h1>
+<h1 class="pageTitle">
+Hell Egg
+</h1>
 
 <div class="petList" id="hellEggList"></div>
 
@@ -1221,14 +1195,128 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Nightmare Egg</h1>
+<h1 class="pageTitle">
+Nightmare Egg
+</h1>
 
 <div class="petList" id="nightmareEggList"></div>
 
 </section>
 
 
-<!-- SHADOW EGG -->
+<!-- DJ EGG -->
+
+<section class="page" id="djEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">
+DJ Egg
+</h1>
+
+<div class="petList" id="djEggList"></div>
+
+</section>
+
+
+<!-- SANDCASTLE EGG -->
+
+<section class="page" id="sandcastleEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">
+Sandcastle Egg
+</h1>
+
+<div class="petList" id="sandcastleEggList"></div>
+
+</section>
+
+
+<!-- CYBORG EGG -->
+
+<section class="page" id="cyborgEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">
+Cyborg Egg
+</h1>
+
+<div class="petList" id="cyborgEggList"></div>
+
+</section>
+
+
+<!-- PERMANENT SHADOW EGG -->
+
+<section class="page" id="shadowEggPermanent">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">
+Shadow Egg
+</h1>
+
+<div class="petList" id="shadowEggPermanentList"></div>
+
+</section>
+
+
+<!-- SOULFLY EGG -->
+
+<section class="page" id="soulFlyEgg">
+
+<button class="eggBackButton" data-back="permanentSecrets">
+← Back
+</button>
+
+<h1 class="pageTitle">
+SoulFly Egg
+</h1>
+
+<div class="petList" id="soulFlyEggList"></div>
+
+</section>
+
+
+<!-- TEMPORARY SECRETS -->
+
+<section class="page" id="temporaryPets">
+
+<h1 class="pageTitle">
+Temporary Secrets
+</h1>
+
+<div class="eggGrid">
+
+<button class="eggButton" id="shadowEggButton">
+
+<img class="eggImage"
+src="images/ShadowEgg.png"
+alt="Shadow Egg">
+
+<div class="eggName">
+Shadow Egg
+</div>
+
+</button>
+
+</div>
+
+</section>
+
+
+<!-- TEMPORARY SHADOW EGG -->
 
 <section class="page" id="shadowEgg">
 
@@ -1236,9 +1324,83 @@ Choose Color
 ← Back
 </button>
 
-<h1 class="pageTitle">Shadow Egg</h1>
+<h1 class="pageTitle">
+Shadow Egg
+</h1>
 
 <div class="petList" id="shadowEggList"></div>
+
+</section>
+
+
+<!-- ROBUX PETS -->
+
+<section class="page" id="robuxPets">
+
+<h1 class="pageTitle">
+Robux Pets
+</h1>
+
+<div class="petList" id="robuxPetsList"></div>
+
+</section>
+
+
+<!-- CONFIG -->
+
+<section class="page" id="config">
+
+<h1 class="pageTitle">
+Config
+</h1>
+
+<div class="configBox">
+
+<div class="configTitle">
+GUI Color
+</div>
+
+<select id="colorSelect">
+
+<option value="blue">
+Blue
+</option>
+
+<option value="red">
+Red
+</option>
+
+<option value="green">
+Green
+</option>
+
+<option value="purple">
+Purple
+</option>
+
+<option value="pink">
+Pink
+</option>
+
+<option value="orange">
+Orange
+</option>
+
+<option value="yellow">
+Yellow
+</option>
+
+<option value="cyan">
+Cyan
+</option>
+
+<option value="black">
+Black
+</option>
+
+</select>
+
+</div>
 
 </section>
 
@@ -1249,1106 +1411,6 @@ Choose Color
 
 
 <script>
-
-/* =========================
-   VARIANTS
-========================= */
-
-const limitedVariantNames = {
-    normal:"Normal",
-    shiny:"Shiny",
-    mythic:"Mythic",
-    shinyMythic:"Shiny Mythic"
-};
-
-const limitedVariantOrder = [
-    "normal",
-    "shiny",
-    "mythic",
-    "shinyMythic"
-];
-
-const normalVariantNames = {
-    normal:"Normal",
-    shiny:"Shiny"
-};
-
-const normalVariantOrder = [
-    "normal",
-    "shiny"
-];
-
-function getVariantPetName(originalName,variantKey){
-
-    if(variantKey === "normal"){
-        return originalName;
-    }
-
-    if(variantKey === "shiny"){
-        return "Shiny " + originalName;
-    }
-
-    if(variantKey === "mythic"){
-        return "Mythic " + originalName;
-    }
-
-    if(variantKey === "shinyMythic"){
-        return "Shiny Mythic " + originalName;
-    }
-
-    return originalName;
-}
-
-
-/* =========================
-   ROBUX PETS
-========================= */
-
-const pets = [
-    "Crimson Paladin",
-    "Beta Tv",
-    "Dowodle"
-];
-
-const petData = {
-
-"Crimson Paladin":{
-    normal:{
-        image:"images/Crimson_Paladin.webp",
-        hatched:"0",
-        chance:"0",
-        value:"30 R$"
-    },
-    shiny:{
-        image:"images/Crimson_Paladin.webp",
-        hatched:"0",
-        chance:"0",
-        value:"30 R$"
-    }
-},
-
-"Beta Tv":{
-    normal:{
-        image:"images/Beta_Tv.webp",
-        hatched:"0",
-        chance:"0",
-        value:"15 R$"
-    },
-    shiny:{
-        image:"images/Beta_Tv.webp",
-        hatched:"0",
-        chance:"0",
-        value:"15 R$"
-    }
-},
-
-"Dowodle":{
-    normal:{
-        image:"images/Dowodle.webp",
-        hatched:"0",
-        chance:"0",
-        value:"15 R$"
-    },
-    shiny:{
-        image:"images/Dowodle.webp",
-        hatched:"0",
-        chance:"0",
-        value:"15 R$"
-    }
-}
-
-};
-
-
-/* =========================
-   PERMANENT
-========================= */
-
-const commonEggPets = [
-    "Royal Doggy"
-];
-
-const commonEggData = {
-
-"Royal Doggy":{
-    normal:{
-        image:"images/RoyalDoggy.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/RoyalDoggyShiny.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-const lunarEggPets = [
-    "Lunar Duality"
-];
-
-const lunarEggData = {
-
-"Lunar Duality":{
-    normal:{
-        image:"images/Lunar_Duality.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Lunar_Duality.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-const voidEggPets = [
-    "Void Shard"
-];
-
-const voidEggData = {
-
-"Void Shard":{
-    normal:{
-        image:"images/Void_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Void_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-const hellEggPets = [
-    "Hell Myriad"
-];
-
-const hellEggData = {
-
-"Hell Myriad":{
-    normal:{
-        image:"images/Hell_Myriad.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Hell_Myriad.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-const nightmareEggPets = [
-    "The Overlord"
-];
-
-const nightmareEggData = {
-
-"The Overlord":{
-    normal:{
-        image:"images/The_Overlord.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/The_Overlord.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   RELEASE EGG
-========================= */
-
-const releaseEggPets = [
-
-    "Release Champion",
-    "Release Trophy 2.0",
-    "Release Shard",
-    "Release Robot"
-
-];
-
-const releaseEggData = {
-
-"Release Champion":{
-    normal:{
-        image:"images/Release_Champion.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Release_Champion.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Release_Champion.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Release_Champion.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Release Trophy 2.0":{
-    normal:{
-        image:"images/Release_Trophy_2.0.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Release_Trophy_2.0.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Release_Trophy_2.0.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Release_Trophy_2.0.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Release Shard":{
-    normal:{
-        image:"images/Release_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Release_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Release_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Release_Shard.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Release Robot":{
-    normal:{
-        image:"images/Release_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Release_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Release_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Release_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   EXOTIC EGG
-========================= */
-
-const exoticEggPets = [
-
-    "Electric Basilisk",
-    "Air Basilisk",
-    "Fire Basilisk",
-    "Ice Basilisk",
-    "Overlord Plushie",
-    "Ultima"
-
-];
-
-const exoticEggData = {
-
-"Electric Basilisk":{
-    normal:{
-        image:"images/Electric_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Electric_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Electric_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Electric_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Air Basilisk":{
-    normal:{
-        image:"images/Air_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Air_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Air_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Air_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Fire Basilisk":{
-    normal:{
-        image:"images/Fire_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Fire_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Fire_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Fire_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Ice Basilisk":{
-    normal:{
-        image:"images/Ice_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Ice_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Ice_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Ice_Basilisk.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Overlord Plushie":{
-    normal:{
-        image:"images/Overlord_Plushie.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Overlord_Plushie.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Overlord_Plushie.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Overlord_Plushie.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Ultima":{
-    normal:{
-        image:"images/Ultima.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Ultima.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Ultima.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Ultima.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   COSMIC EGG
-========================= */
-
-const cosmicEggPets = [
-
-    "Eternal Carrot",
-    "Patronus",
-    "Easter Robot"
-
-];
-
-const cosmicEggData = {
-
-"Eternal Carrot":{
-    normal:{
-        image:"images/Eternal_Carrot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Eternal_Carrot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Eternal_Carrot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Eternal_Carrot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Patronus":{
-    normal:{
-        image:"images/Patronus.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Patronus.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Patronus.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Patronus.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Easter Robot":{
-    normal:{
-        image:"images/Easter_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Easter_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Easter_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Easter_Robot.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   ROYALTY EGG
-========================= */
-
-const royaltyEggPets = [
-
-    "Diamond Ring",
-    "King Kitty"
-
-];
-
-const royaltyEggData = {
-
-"Diamond Ring":{
-    normal:{
-        image:"images/Diamond_Ring.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Diamond_Ring.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Diamond_Ring.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Diamond_Ring.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"King Kitty":{
-    normal:{
-        image:"images/King_Kitty.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/King_Kitty.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/King_Kitty.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/King_Kitty.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   FRUITY EGG
-========================= */
-
-const fruityEggPets = [
-
-    "Eternal Cucumber",
-    "Dragonfruit"
-
-];
-
-const fruityEggData = {
-
-"Eternal Cucumber":{
-    normal:{
-        image:"images/Eternal_Cucumber.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Eternal_Cucumber.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Eternal_Cucumber.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Eternal_Cucumber.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Dragonfruit":{
-    normal:{
-        image:"images/Dragonfruit.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/Dragonfruit.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    mythic:{
-        image:"images/Dragonfruit.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shinyMythic:{
-        image:"images/Dragonfruit.webp",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   SHADOW EGG
-========================= */
-
-const shadowEggPets = [
-
-    "Shadow One",
-    "Shadow Luminance",
-    "Shadow Wolflord"
-
-];
-
-const shadowEggData = {
-
-"Shadow One":{
-    normal:{
-        image:"images/ShadowOne.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/ShadowOneShiny.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Shadow Luminance":{
-    normal:{
-        image:"images/ShadowLuminance.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/ShadowLuminanceShiny.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-},
-
-"Shadow Wolflord":{
-    normal:{
-        image:"images/ShadowWolflord.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    },
-    shiny:{
-        image:"images/ShadowWolflordShiny.png",
-        hatched:"0",
-        chance:"0",
-        value:"0"
-    }
-}
-
-};
-
-
-/* =========================
-   CREATE PET CARD
-========================= */
-
-function createPetCard(petName,data,limited){
-
-    const variants = limited
-        ? limitedVariantOrder
-        : normalVariantOrder;
-
-    const variantNames = limited
-        ? limitedVariantNames
-        : normalVariantNames;
-
-    const card = document.createElement("div");
-
-    card.className = "petCard";
-
-    const image = document.createElement("img");
-
-    image.className = "petImage";
-
-    image.src = data[variants[0]].image;
-
-    image.alt = petName;
-
-    const info = document.createElement("div");
-
-    info.className = "petInfo";
-
-    const name = document.createElement("div");
-
-    name.className = "petName";
-
-    name.textContent = petName;
-
-    const hatched = document.createElement("div");
-
-    hatched.className = "petStat";
-
-    hatched.innerHTML =
-        "<b>Hatched:</b> " +
-        data[variants[0]].hatched;
-
-    const chance = document.createElement("div");
-
-    chance.className = "petStat";
-
-    chance.innerHTML =
-        "<b>Chance:</b> " +
-        data[variants[0]].chance;
-
-    const value = document.createElement("div");
-
-    value.className = "petStat";
-
-    value.innerHTML =
-        "<b>Value:</b> " +
-        data[variants[0]].value;
-
-    info.appendChild(name);
-    info.appendChild(hatched);
-    info.appendChild(chance);
-    info.appendChild(value);
-
-
-    const variantContainer =
-        document.createElement("div");
-
-    variantContainer.className =
-        "variantContainer";
-
-
-    const variantButton =
-        document.createElement("button");
-
-    variantButton.className =
-        "variantButton";
-
-
-    const variantImage =
-        document.createElement("img");
-
-    variantImage.src =
-        data[variants[0]].image;
-
-
-    const variantText =
-        document.createElement("span");
-
-    variantText.className =
-        "variantText";
-
-    variantText.textContent =
-        variantNames[variants[0]];
-
-
-    const arrow =
-        document.createElement("span");
-
-    arrow.className =
-        "variantArrow";
-
-    arrow.textContent = "▼";
-
-
-    variantButton.appendChild(variantImage);
-    variantButton.appendChild(variantText);
-    variantButton.appendChild(arrow);
-
-
-    const variantMenu =
-        document.createElement("div");
-
-    variantMenu.className =
-        "variantMenu";
-
-
-    variants.forEach(function(variantKey){
-
-        const option =
-            document.createElement("div");
-
-        option.className =
-            "variantOption";
-
-
-        const optionImage =
-            document.createElement("img");
-
-        optionImage.src =
-            data[variantKey].image;
-
-
-        const optionText =
-            document.createElement("span");
-
-        optionText.textContent =
-            variantNames[variantKey];
-
-
-        option.appendChild(optionImage);
-        option.appendChild(optionText);
-
-
-        option.addEventListener("click",function(){
-
-            const variantData =
-                data[variantKey];
-
-            image.src =
-                variantData.image;
-
-            variantImage.src =
-                variantData.image;
-
-            variantText.textContent =
-                variantNames[variantKey];
-
-            name.textContent =
-                getVariantPetName(
-                    petName,
-                    variantKey
-                );
-
-            hatched.innerHTML =
-                "<b>Hatched:</b> " +
-                variantData.hatched;
-
-            chance.innerHTML =
-                "<b>Chance:</b> " +
-                variantData.chance;
-
-            value.innerHTML =
-                "<b>Value:</b> " +
-                variantData.value;
-
-            variantMenu.classList.remove("open");
-
-        });
-
-
-        variantMenu.appendChild(option);
-
-    });
-
-
-    variantButton.addEventListener("click",function(event){
-
-        event.stopPropagation();
-
-        document
-            .querySelectorAll(".variantMenu")
-            .forEach(function(menu){
-
-                if(menu !== variantMenu){
-                    menu.classList.remove("open");
-                }
-
-            });
-
-        variantMenu.classList.toggle("open");
-
-    });
-
-
-    variantContainer.appendChild(variantButton);
-
-    variantContainer.appendChild(variantMenu);
-
-
-    card.appendChild(image);
-
-    card.appendChild(info);
-
-    card.appendChild(variantContainer);
-
-
-    return card;
-}
-
-
-/* =========================
-   RENDER LIST
-========================= */
-
-function renderList(
-    list,
-    data,
-    containerId,
-    limited
-){
-
-    const container =
-        document.getElementById(containerId);
-
-    if(!container){
-        return;
-    }
-
-    container.innerHTML = "";
-
-    list.forEach(function(petName){
-
-        const card =
-            createPetCard(
-                petName,
-                data[petName],
-                limited
-            );
-
-        container.appendChild(card);
-
-    });
-
-}
-
 
 /* =========================
    COLORS
@@ -2424,41 +1486,969 @@ const colors = {
 
 function applyColor(name){
 
-    const color =
-        colors[name];
+    const color = colors[name] || colors.blue;
 
-    if(!color){
-        return;
-    }
+    document.documentElement.style.setProperty(
+        "--main-color",
+        color.main
+    );
 
-    document.documentElement.style
-        .setProperty(
-            "--main-color",
-            color.main
-        );
+    document.documentElement.style.setProperty(
+        "--main-dark",
+        color.dark
+    );
 
-    document.documentElement.style
-        .setProperty(
-            "--main-dark",
-            color.dark
-        );
+    document.documentElement.style.setProperty(
+        "--main-light",
+        color.light
+    );
 
-    document.documentElement.style
-        .setProperty(
-            "--main-light",
-            color.light
-        );
-
-    document.documentElement.style
-        .setProperty(
-            "--main-hover",
-            color.hover
-        );
+    document.documentElement.style.setProperty(
+        "--main-hover",
+        color.hover
+    );
 
     localStorage.setItem(
         "bgsColor",
         name
     );
+
+    document.getElementById("colorSelect").value = name;
+}
+
+
+const savedColor =
+    localStorage.getItem("bgsColor") || "blue";
+
+applyColor(savedColor);
+
+
+document
+.getElementById("colorSelect")
+.addEventListener("change",function(){
+
+    applyColor(this.value);
+
+});
+
+
+/* =========================
+   VARIANTS
+========================= */
+
+const limitedVariantNames = {
+
+    normal:"Normal",
+    shiny:"Shiny",
+    mythic:"Mythic",
+    shinyMythic:"Shiny Mythic"
+
+};
+
+
+const limitedVariantOrder = [
+
+    "normal",
+    "shiny",
+    "mythic",
+    "shinyMythic"
+
+];
+
+
+const normalVariantNames = {
+
+    normal:"Normal",
+    shiny:"Shiny"
+
+};
+
+
+const normalVariantOrder = [
+
+    "normal",
+    "shiny"
+
+];
+
+
+function getVariantPetName(
+    originalName,
+    variantKey
+){
+
+    if(variantKey === "normal")
+        return originalName;
+
+    if(variantKey === "shiny")
+        return "Shiny " + originalName;
+
+    if(variantKey === "mythic")
+        return "Mythic " + originalName;
+
+    if(variantKey === "shinyMythic")
+        return "Shiny Mythic " + originalName;
+
+    return originalName;
+}
+
+
+/* =========================
+   DATA
+========================= */
+
+
+/* LIMITED */
+
+const releaseEggPets = [
+
+    "Release Champion",
+    "Release Trophy 2.0",
+    "Release Shard",
+    "Release Robot"
+
+];
+
+
+const releaseEggData = {
+
+    "Release Champion":{
+        normal:{
+            image:"images/1198-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1198-removebg-preview.png"
+        },
+        mythic:{
+            image:"images/1199-removebg-preview.png"
+        },
+        shinyMythic:{
+            image:"images/1199-removebg-preview.png"
+        }
+    },
+
+    "Release Trophy 2.0":{
+        normal:{
+            image:"images/1194-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1194-removebg-preview.png"
+        },
+        mythic:{
+            image:"images/1195-removebg-preview.png"
+        },
+        shinyMythic:{
+            image:"images/1195-removebg-preview.png"
+        }
+    },
+
+    "Release Shard":{
+        normal:{
+            image:"images/1196-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1196-removebg-preview.png"
+        },
+        mythic:{
+            image:"images/1197-removebg-preview.png"
+        },
+        shinyMythic:{
+            image:"images/1197-removebg-preview.png"
+        }
+    },
+
+    "Release Robot":{
+        normal:{
+            image:"images/1192-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1192-removebg-preview.png"
+        },
+        mythic:{
+            image:"images/1193-removebg-preview.png"
+        },
+        shinyMythic:{
+            image:"images/1193-removebg-preview.png"
+        }
+    }
+
+};
+
+
+const exoticEggPets = [
+
+    "Electric Basilisk",
+    "Air Basilisk",
+    "Fire Basilisk",
+    "Ice Basilisk",
+    "Overlord Plushie",
+    "Ultima"
+
+];
+
+
+const exoticEggData = {
+
+    "Electric Basilisk":{
+        normal:{image:"images/Electric_Basilisk.webp"},
+        shiny:{image:"images/Electric_Basilisk.webp"},
+        mythic:{image:"images/Electric_Basilisk.webp"},
+        shinyMythic:{image:"images/Electric_Basilisk.webp"}
+    },
+
+    "Air Basilisk":{
+        normal:{image:"images/Air_Basilisk.webp"},
+        shiny:{image:"images/Air_Basilisk.webp"},
+        mythic:{image:"images/Air_Basilisk.webp"},
+        shinyMythic:{image:"images/Air_Basilisk.webp"}
+    },
+
+    "Fire Basilisk":{
+        normal:{image:"images/Fire_Basilisk.webp"},
+        shiny:{image:"images/Fire_Basilisk.webp"},
+        mythic:{image:"images/Fire_Basilisk.webp"},
+        shinyMythic:{image:"images/Fire_Basilisk.webp"}
+    },
+
+    "Ice Basilisk":{
+        normal:{image:"images/Ice_Basilisk.webp"},
+        shiny:{image:"images/Ice_Basilisk.webp"},
+        mythic:{image:"images/Ice_Basilisk.webp"},
+        shinyMythic:{image:"images/Ice_Basilisk.webp"}
+    },
+
+    "Overlord Plushie":{
+        normal:{image:"images/Overlord_Plushie.webp"},
+        shiny:{image:"images/Overlord_Plushie.webp"},
+        mythic:{image:"images/Overlord_Plushie.webp"},
+        shinyMythic:{image:"images/Overlord_Plushie.webp"}
+    },
+
+    "Ultima":{
+        normal:{image:"images/Ultima.webp"},
+        shiny:{image:"images/Ultima.webp"},
+        mythic:{image:"images/Ultima.webp"},
+        shinyMythic:{image:"images/Ultima.webp"}
+    }
+
+};
+
+
+const cosmicEggPets = [
+
+    "Eternal Carrot",
+    "Patronus",
+    "Easter Robot"
+
+];
+
+
+const cosmicEggData = {
+
+    "Eternal Carrot":{
+        normal:{image:"images/Eternal_Carrot.webp"},
+        shiny:{image:"images/Eternal_Carrot.webp"},
+        mythic:{image:"images/Eternal_Carrot.webp"},
+        shinyMythic:{image:"images/Eternal_Carrot.webp"}
+    },
+
+    "Patronus":{
+        normal:{image:"images/Patronus.webp"},
+        shiny:{image:"images/Patronus.webp"},
+        mythic:{image:"images/Patronus.webp"},
+        shinyMythic:{image:"images/Patronus.webp"}
+    },
+
+    "Easter Robot":{
+        normal:{image:"images/Easter_Robot.webp"},
+        shiny:{image:"images/Easter_Robot.webp"},
+        mythic:{image:"images/Easter_Robot.webp"},
+        shinyMythic:{image:"images/Easter_Robot.webp"}
+    }
+
+};
+
+
+const royaltyEggPets = [
+
+    "Diamond Ring",
+    "King Kitty"
+
+];
+
+
+const royaltyEggData = {
+
+    "Diamond Ring":{
+        normal:{image:"images/Diamond_Ring.webp"},
+        shiny:{image:"images/Diamond_Ring.webp"},
+        mythic:{image:"images/Diamond_Ring.webp"},
+        shinyMythic:{image:"images/Diamond_Ring.webp"}
+    },
+
+    "King Kitty":{
+        normal:{image:"images/King_Kitty.webp"},
+        shiny:{image:"images/King_Kitty.webp"},
+        mythic:{image:"images/King_Kitty.webp"},
+        shinyMythic:{image:"images/King_Kitty.webp"}
+    }
+
+};
+
+
+const fruityEggPets = [
+
+    "Eternal Cucumber",
+    "Dragonfruit"
+
+];
+
+
+const fruityEggData = {
+
+    "Eternal Cucumber":{
+        normal:{image:"images/Eternal_Cucumber.webp"},
+        shiny:{image:"images/Eternal_Cucumber.webp"},
+        mythic:{image:"images/Eternal_Cucumber.webp"},
+        shinyMythic:{image:"images/Eternal_Cucumber.webp"}
+    },
+
+    "Dragonfruit":{
+        normal:{image:"images/Dragonfruit.webp"},
+        shiny:{image:"images/Dragonfruit.webp"},
+        mythic:{image:"images/Dragonfruit.webp"},
+        shinyMythic:{image:"images/Dragonfruit.webp"}
+    }
+
+};
+
+
+/* =========================
+   PERMANENT
+========================= */
+
+const commonEggPets = [
+    "Royal Doggy"
+];
+
+const commonEggData = {
+
+    "Royal Doggy":{
+        normal:{image:"images/RoyalDoggy.png"},
+        shiny:{image:"images/RoyalDoggyShiny.png"}
+    }
+
+};
+
+
+const lunarEggPets = [
+    "Lunar Duality"
+];
+
+const lunarEggData = {
+
+    "Lunar Duality":{
+        normal:{image:"images/Lunar_Duality.webp"},
+        shiny:{image:"images/Lunar_Duality.webp"}
+    }
+
+};
+
+
+const voidEggPets = [
+    "Void Shard"
+];
+
+const voidEggData = {
+
+    "Void Shard":{
+        normal:{image:"images/Void_Shard.webp"},
+        shiny:{image:"images/Void_Shard.webp"}
+    }
+
+};
+
+
+const hellEggPets = [
+    "Hell Myriad"
+];
+
+const hellEggData = {
+
+    "Hell Myriad":{
+        normal:{image:"images/Hell_Myriad.webp"},
+        shiny:{image:"images/Hell_Myriad.webp"}
+    }
+
+};
+
+
+const nightmareEggPets = [
+    "The Overlord"
+];
+
+const nightmareEggData = {
+
+    "The Overlord":{
+        normal:{image:"images/The_Overlord.webp"},
+        shiny:{image:"images/The_Overlord.webp"}
+    }
+
+};
+
+
+/* NEW PERMANENT EGGS */
+
+const djEggPets = [
+    "DJ Plasma"
+];
+
+const djEggData = {
+
+    "DJ Plasma":{
+        normal:{
+            image:"images/1224-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1224-removebg-preview.png"
+        }
+    }
+
+};
+
+
+const sandcastleEggPets = [
+    "Sandcastle Defender"
+];
+
+const sandcastleEggData = {
+
+    "Sandcastle Defender":{
+        normal:{
+            image:"images/1217-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1217-removebg-preview.png"
+        }
+    }
+
+};
+
+
+const cyborgEggPets = [
+    "Robotic Lord"
+];
+
+const cyborgEggData = {
+
+    "Robotic Lord":{
+        normal:{
+            image:"images/1223-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1223-removebg-preview.png"
+        }
+    }
+
+};
+
+
+const shadowEggPermanentPets = [
+
+    "Shadow Emperor",
+    "Galactus"
+
+];
+
+const shadowEggPermanentData = {
+
+    "Shadow Emperor":{
+        normal:{
+            image:"images/1219-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1219-removebg-preview.png"
+        }
+    },
+
+    "Galactus":{
+        normal:{
+            image:"images/1220-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1220-removebg-preview.png"
+        }
+    }
+
+};
+
+
+const soulFlyEggPets = [
+
+    "SoulFly",
+    "Soul Inu",
+    "Divine Heart"
+
+];
+
+const soulFlyEggData = {
+
+    "SoulFly":{
+        normal:{
+            image:"images/1225-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1225-removebg-preview.png"
+        }
+    },
+
+    "Soul Inu":{
+        normal:{
+            image:"images/1222-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1222-removebg-preview.png"
+        }
+    },
+
+    "Divine Heart":{
+        normal:{
+            image:"images/1221-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1221-removebg-preview.png"
+        }
+    }
+
+};
+
+
+/* =========================
+   ROBUX PETS
+========================= */
+
+const pets = [
+
+    "Crimson Paladin",
+    "Beta Tv",
+    "Dowodle"
+
+];
+
+
+const petData = {
+
+    "Crimson Paladin":{
+        normal:{
+            image:"images/1218-removebg-preview.png",
+            value:"30 R$"
+        },
+        shiny:{
+            image:"images/1218-removebg-preview.png",
+            value:"30 R$"
+        }
+    },
+
+    "Beta Tv":{
+        normal:{
+            image:"images/Beta_Tv.webp",
+            value:"15 R$"
+        },
+        shiny:{
+            image:"images/Beta_Tv.webp",
+            value:"15 R$"
+        }
+    },
+
+    "Dowodle":{
+        normal:{
+            image:"images/Dowodle.webp",
+            value:"15 R$"
+        },
+        shiny:{
+            image:"images/Dowodle.webp",
+            value:"15 R$"
+        }
+    }
+
+};
+
+
+/* =========================
+   TEMPORARY
+========================= */
+
+const shadowEggPets = [
+
+    "Shadow One",
+    "Shadow Luminance",
+    "Shadow Wolflord"
+
+];
+
+
+const shadowEggData = {
+
+    "Shadow One":{
+        normal:{
+            image:"images/1135-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1135-removebg-preview.png"
+        }
+    },
+
+    "Shadow Luminance":{
+        normal:{
+            image:"images/1136-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1136-removebg-preview.png"
+        }
+    },
+
+    "Shadow Wolflord":{
+        normal:{
+            image:"images/1137-removebg-preview.png"
+        },
+        shiny:{
+            image:"images/1137-removebg-preview.png"
+        }
+    }
+
+};
+
+
+/* =========================
+   PET CARD
+========================= */
+
+function createPetCard(
+    petName,
+    data,
+    limited
+){
+
+    const variants =
+        limited
+        ? limitedVariantOrder
+        : normalVariantOrder;
+
+    const names =
+        limited
+        ? limitedVariantNames
+        : normalVariantNames;
+
+    let currentVariant = variants[0];
+
+    const card =
+        document.createElement("div");
+
+    card.className = "petCard";
+
+
+    const image =
+        document.createElement("img");
+
+    image.className = "petImage";
+
+
+    const info =
+        document.createElement("div");
+
+    info.className = "petInfo";
+
+
+    const name =
+        document.createElement("div");
+
+    name.className = "petName";
+
+
+    const hatched =
+        document.createElement("div");
+
+    hatched.className = "petStat";
+
+
+    const chance =
+        document.createElement("div");
+
+    chance.className = "petStat";
+
+
+    const value =
+        document.createElement("div");
+
+    value.className = "petStat";
+
+
+    const variantContainer =
+        document.createElement("div");
+
+    variantContainer.className =
+        "variantContainer";
+
+
+    const variantButton =
+        document.createElement("button");
+
+    variantButton.className =
+        "variantButton";
+
+
+    const variantImage =
+        document.createElement("img");
+
+
+    const variantText =
+        document.createElement("span");
+
+    variantText.textContent =
+        names[currentVariant];
+
+
+    const arrow =
+        document.createElement("span");
+
+    arrow.className =
+        "variantArrow";
+
+    arrow.textContent = "▼";
+
+
+    const variantMenu =
+        document.createElement("div");
+
+    variantMenu.className =
+        "variantMenu";
+
+
+    variantButton.appendChild(
+        variantImage
+    );
+
+    variantButton.appendChild(
+        variantText
+    );
+
+    variantButton.appendChild(
+        arrow
+    );
+
+
+    variants.forEach(function(variant){
+
+        const option =
+            document.createElement("div");
+
+        option.className =
+            "variantOption";
+
+
+        const optionImage =
+            document.createElement("img");
+
+        optionImage.src =
+            data[variant].image;
+
+
+        const optionText =
+            document.createElement("span");
+
+        optionText.textContent =
+            names[variant];
+
+
+        option.appendChild(
+            optionImage
+        );
+
+        option.appendChild(
+            optionText
+        );
+
+
+        option.addEventListener(
+            "click",
+            function(event){
+
+                event.stopPropagation();
+
+                currentVariant =
+                    variant;
+
+                updateCard();
+
+                variantMenu.classList.remove(
+                    "open"
+                );
+
+            }
+        );
+
+
+        variantMenu.appendChild(
+            option
+        );
+
+    });
+
+
+    variantButton.addEventListener(
+        "click",
+        function(event){
+
+            event.stopPropagation();
+
+            document
+            .querySelectorAll(".variantMenu")
+            .forEach(function(menu){
+
+                if(menu !== variantMenu){
+                    menu.classList.remove("open");
+                }
+
+            });
+
+            variantMenu.classList.toggle(
+                "open"
+            );
+
+        }
+    );
+
+
+    function updateCard(){
+
+        const variantData =
+            data[currentVariant];
+
+        image.src =
+            variantData.image;
+
+        variantImage.src =
+            variantData.image;
+
+        name.textContent =
+            getVariantPetName(
+                petName,
+                currentVariant
+            );
+
+        variantText.textContent =
+            names[currentVariant];
+
+
+        hatched.innerHTML =
+            "<b>Hatched:</b> " +
+            (
+                variantData.hatched ||
+                "—"
+            );
+
+
+        chance.innerHTML =
+            "<b>Chance:</b> " +
+            (
+                variantData.chance ||
+                "—"
+            );
+
+
+        value.innerHTML =
+            "<b>Value:</b> " +
+            (
+                variantData.value ||
+                "—"
+            );
+
+    }
+
+
+    info.appendChild(
+        name
+    );
+
+    info.appendChild(
+        hatched
+    );
+
+    info.appendChild(
+        chance
+    );
+
+    info.appendChild(
+        value
+    );
+
+
+    variantContainer.appendChild(
+        variantButton
+    );
+
+    variantContainer.appendChild(
+        variantMenu
+    );
+
+
+    card.appendChild(
+        image
+    );
+
+    card.appendChild(
+        info
+    );
+
+    card.appendChild(
+        variantContainer
+    );
+
+
+    updateCard();
+
+
+    return card;
+
+}
+
+
+/* =========================
+   RENDER
+========================= */
+
+function renderList(
+    list,
+    data,
+    containerId,
+    limited
+){
+
+    const container =
+        document.getElementById(
+            containerId
+        );
+
+    if(!container)
+        return;
+
+    container.innerHTML = "";
+
+
+    list.forEach(function(petName){
+
+        const card =
+            createPetCard(
+                petName,
+                data[petName],
+                limited
+            );
+
+        container.appendChild(
+            card
+        );
+
+    });
 
 }
 
@@ -2469,33 +2459,56 @@ function applyColor(name){
 
 function openPage(pageName){
 
-    document
-        .querySelectorAll(".page")
-        .forEach(function(page){
-
-            page.classList.remove("active");
-
-        });
+    const currentPage =
+        document.querySelector(".page.active");
 
 
-    const target =
-        document.getElementById(pageName);
+    if(currentPage){
 
-    if(target){
-        target.classList.add("active");
+        localStorage.setItem(
+            "scroll_" + currentPage.id,
+            window.scrollY
+        );
+
     }
 
 
     document
-        .querySelectorAll(".sidebarButton")
-        .forEach(function(button){
+    .querySelectorAll(".page")
+    .forEach(function(page){
 
-            button.classList.toggle(
-                "active",
-                button.dataset.page === pageName
-            );
+        page.classList.remove(
+            "active"
+        );
 
-        });
+    });
+
+
+    const target =
+        document.getElementById(
+            pageName
+        );
+
+
+    if(target){
+
+        target.classList.add(
+            "active"
+        );
+
+    }
+
+
+    document
+    .querySelectorAll(".sidebarButton")
+    .forEach(function(button){
+
+        button.classList.toggle(
+            "active",
+            button.dataset.page === pageName
+        );
+
+    });
 
 
     localStorage.setItem(
@@ -2505,51 +2518,68 @@ function openPage(pageName){
 
 
     document
-        .getElementById("sidebar")
-        .classList.remove("open");
+    .getElementById("sidebar")
+    .classList.remove(
+        "open"
+    );
 
 
-    window.scrollTo(0,0);
+    const savedScroll =
+        localStorage.getItem(
+            "scroll_" + pageName
+        );
+
+
+    setTimeout(function(){
+
+        window.scrollTo(
+            0,
+            savedScroll
+            ? Number(savedScroll)
+            : 0
+        );
+
+    },0);
 
 }
 
 
 /* =========================
-   MENU
+   SIDEBAR
 ========================= */
 
 document
-    .getElementById("menuButton")
-    .addEventListener(
+.getElementById("menuButton")
+.addEventListener(
+    "click",
+    function(event){
+
+        event.stopPropagation();
+
+        document
+        .getElementById("sidebar")
+        .classList.toggle("open");
+
+    }
+);
+
+
+document
+.querySelectorAll(".sidebarButton")
+.forEach(function(button){
+
+    button.addEventListener(
         "click",
-        function(event){
+        function(){
 
-            event.stopPropagation();
-
-            document
-                .getElementById("sidebar")
-                .classList.toggle("open");
+            openPage(
+                button.dataset.page
+            );
 
         }
     );
 
-
-document
-    .querySelectorAll(".sidebarButton")
-    .forEach(function(button){
-
-        button.addEventListener(
-            "click",
-            function(){
-
-                openPage(
-                    button.dataset.page
-                );
-
-            }
-        );
-
-    });
+});
 
 
 /* =========================
@@ -2557,113 +2587,163 @@ document
 ========================= */
 
 document
-    .getElementById("releaseEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("releaseEgg");
-        }
-    );
+.getElementById("releaseEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("releaseEgg");
+    }
+);
 
 
 document
-    .getElementById("exoticEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("exoticEgg");
-        }
-    );
+.getElementById("exoticEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("exoticEgg");
+    }
+);
 
 
 document
-    .getElementById("cosmicEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("cosmicEgg");
-        }
-    );
+.getElementById("cosmicEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("cosmicEgg");
+    }
+);
 
 
 document
-    .getElementById("royaltyEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("royaltyEgg");
-        }
-    );
+.getElementById("royaltyEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("royaltyEgg");
+    }
+);
 
 
 document
-    .getElementById("fruityEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("fruityEgg");
-        }
-    );
+.getElementById("fruityEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("fruityEgg");
+    }
+);
 
 
 document
-    .getElementById("commonEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("commonEgg");
-        }
-    );
+.getElementById("commonEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("commonEgg");
+    }
+);
 
 
 document
-    .getElementById("lunarEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("lunarEgg");
-        }
-    );
+.getElementById("lunarEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("lunarEgg");
+    }
+);
 
 
 document
-    .getElementById("voidEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("voidEgg");
-        }
-    );
+.getElementById("voidEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("voidEgg");
+    }
+);
 
 
 document
-    .getElementById("hellEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("hellEgg");
-        }
-    );
+.getElementById("hellEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("hellEgg");
+    }
+);
 
 
 document
-    .getElementById("nightmareEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("nightmareEgg");
-        }
-    );
+.getElementById("nightmareEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("nightmareEgg");
+    }
+);
 
 
 document
-    .getElementById("shadowEggButton")
-    .addEventListener(
-        "click",
-        function(){
-            openPage("shadowEgg");
-        }
-    );
+.getElementById("djEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("djEgg");
+    }
+);
+
+
+document
+.getElementById("sandcastleEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("sandcastleEgg");
+    }
+);
+
+
+document
+.getElementById("cyborgEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("cyborgEgg");
+    }
+);
+
+
+document
+.getElementById("shadowEggPermanentButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("shadowEggPermanent");
+    }
+);
+
+
+document
+.getElementById("soulFlyEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("soulFlyEgg");
+    }
+);
+
+
+document
+.getElementById("shadowEggButton")
+.addEventListener(
+    "click",
+    function(){
+        openPage("shadowEgg");
+    }
+);
 
 
 /* =========================
@@ -2671,21 +2751,21 @@ document
 ========================= */
 
 document
-    .querySelectorAll(".eggBackButton")
-    .forEach(function(button){
+.querySelectorAll(".eggBackButton")
+.forEach(function(button){
 
-        button.addEventListener(
-            "click",
-            function(){
+    button.addEventListener(
+        "click",
+        function(){
 
-                openPage(
-                    button.dataset.back
-                );
+            openPage(
+                button.dataset.back
+            );
 
-            }
-        );
+        }
+    );
 
-    });
+});
 
 
 /* =========================
@@ -2695,148 +2775,169 @@ document
 const searchData = [];
 
 
-pets.forEach(function(petName){
+function addSearchData(
+    list,
+    data,
+    page,
+    type
+){
 
-    searchData.push({
-        name:petName,
-        page:"robuxPets",
-        image:petData[petName].normal.image,
-        type:"Robux Pets"
+    list.forEach(function(petName){
+
+        const pet =
+            data[petName];
+
+        if(!pet)
+            return;
+
+
+        searchData.push({
+
+            name:petName,
+
+            image:
+                pet.normal.image,
+
+            type:type,
+
+            page:page
+
+        });
+
     });
 
-});
+}
 
 
-commonEggPets.forEach(function(petName){
+/* ROBUX */
 
-    searchData.push({
-        name:petName,
-        page:"commonEgg",
-        image:commonEggData[petName].normal.image,
-        type:"Common Egg"
-    });
-
-});
+addSearchData(
+    pets,
+    petData,
+    "robuxPets",
+    "Robux Pets"
+);
 
 
-lunarEggPets.forEach(function(petName){
+/* PERMANENT */
 
-    searchData.push({
-        name:petName,
-        page:"lunarEgg",
-        image:lunarEggData[petName].normal.image,
-        type:"Lunar Egg"
-    });
+addSearchData(
+    commonEggPets,
+    commonEggData,
+    "commonEgg",
+    "Common Egg"
+);
 
-});
+addSearchData(
+    lunarEggPets,
+    lunarEggData,
+    "lunarEgg",
+    "Lunar Egg"
+);
 
+addSearchData(
+    voidEggPets,
+    voidEggData,
+    "voidEgg",
+    "Void Egg"
+);
 
-voidEggPets.forEach(function(petName){
+addSearchData(
+    hellEggPets,
+    hellEggData,
+    "hellEgg",
+    "Hell Egg"
+);
 
-    searchData.push({
-        name:petName,
-        page:"voidEgg",
-        image:voidEggData[petName].normal.image,
-        type:"Void Egg"
-    });
+addSearchData(
+    nightmareEggPets,
+    nightmareEggData,
+    "nightmareEgg",
+    "Nightmare Egg"
+);
 
-});
+addSearchData(
+    djEggPets,
+    djEggData,
+    "djEgg",
+    "DJ Egg"
+);
 
+addSearchData(
+    sandcastleEggPets,
+    sandcastleEggData,
+    "sandcastleEgg",
+    "Sandcastle Egg"
+);
 
-hellEggPets.forEach(function(petName){
+addSearchData(
+    cyborgEggPets,
+    cyborgEggData,
+    "cyborgEgg",
+    "Cyborg Egg"
+);
 
-    searchData.push({
-        name:petName,
-        page:"hellEgg",
-        image:hellEggData[petName].normal.image,
-        type:"Hell Egg"
-    });
+addSearchData(
+    shadowEggPermanentPets,
+    shadowEggPermanentData,
+    "shadowEggPermanent",
+    "Shadow Egg"
+);
 
-});
-
-
-nightmareEggPets.forEach(function(petName){
-
-    searchData.push({
-        name:petName,
-        page:"nightmareEgg",
-        image:nightmareEggData[petName].normal.image,
-        type:"Nightmare Egg"
-    });
-
-});
-
-
-releaseEggPets.forEach(function(petName){
-
-    searchData.push({
-        name:petName,
-        page:"releaseEgg",
-        image:releaseEggData[petName].normal.image,
-        type:"Release Egg"
-    });
-
-});
-
-
-exoticEggPets.forEach(function(petName){
-
-    searchData.push({
-        name:petName,
-        page:"exoticEgg",
-        image:exoticEggData[petName].normal.image,
-        type:"Exotic Egg"
-    });
-
-});
-
-
-cosmicEggPets.forEach(function(petName){
-
-    searchData.push({
-        name:petName,
-        page:"cosmicEgg",
-        image:cosmicEggData[petName].normal.image,
-        type:"Cosmic Egg"
-    });
-
-});
+addSearchData(
+    soulFlyEggPets,
+    soulFlyEggData,
+    "soulFlyEgg",
+    "SoulFly Egg"
+);
 
 
-royaltyEggPets.forEach(function(petName){
+/* LIMITED */
 
-    searchData.push({
-        name:petName,
-        page:"royaltyEgg",
-        image:royaltyEggData[petName].normal.image,
-        type:"Royalty Egg"
-    });
+addSearchData(
+    releaseEggPets,
+    releaseEggData,
+    "releaseEgg",
+    "Release Egg"
+);
 
-});
+addSearchData(
+    exoticEggPets,
+    exoticEggData,
+    "exoticEgg",
+    "Exotic Egg"
+);
+
+addSearchData(
+    cosmicEggPets,
+    cosmicEggData,
+    "cosmicEgg",
+    "Cosmic Egg"
+);
+
+addSearchData(
+    royaltyEggPets,
+    royaltyEggData,
+    "royaltyEgg",
+    "Royalty Egg"
+);
+
+addSearchData(
+    fruityEggPets,
+    fruityEggData,
+    "fruityEgg",
+    "Fruity Egg"
+);
 
 
-fruityEggPets.forEach(function(petName){
+/* TEMPORARY */
 
-    searchData.push({
-        name:petName,
-        page:"fruityEgg",
-        image:fruityEggData[petName].normal.image,
-        type:"Fruity Egg"
-    });
-
-});
-
-
-shadowEggPets.forEach(function(petName){
-
-    searchData.push({
-        name:petName,
-        page:"shadowEgg",
-        image:shadowEggData[petName].normal.image,
-        type:"Shadow Egg"
-    });
-
-});
+addSearchData(
+    shadowEggPets,
+    shadowEggData,
+    "shadowEgg",
+    "Shadow Egg"
+);
 
 
 /* =========================
@@ -2844,10 +2945,14 @@ shadowEggPets.forEach(function(petName){
 ========================= */
 
 const searchInput =
-    document.getElementById("searchInput");
+    document.getElementById(
+        "searchInput"
+    );
 
 const searchResults =
-    document.getElementById("searchResults");
+    document.getElementById(
+        "searchResults"
+    );
 
 
 searchInput.addEventListener(
@@ -2855,15 +2960,15 @@ searchInput.addEventListener(
     function(){
 
         const query =
-            searchInput.value
-                .trim()
-                .toLowerCase();
+            this.value
+            .trim()
+            .toLowerCase();
 
 
         searchResults.innerHTML = "";
 
 
-        if(query === ""){
+        if(!query){
 
             searchResults.style.display =
                 "none";
@@ -2874,16 +2979,18 @@ searchInput.addEventListener(
 
 
         const results =
-            searchData.filter(function(item){
+            searchData.filter(
+                function(item){
 
-                return item.name
+                    return item.name
                     .toLowerCase()
                     .includes(query);
 
-            });
+                }
+            );
 
 
-        if(results.length === 0){
+        if(!results.length){
 
             const noResults =
                 document.createElement("div");
@@ -2921,9 +3028,6 @@ searchInput.addEventListener(
             img.src =
                 item.image;
 
-            img.alt =
-                item.name;
-
 
             const info =
                 document.createElement("div");
@@ -2952,20 +3056,34 @@ searchInput.addEventListener(
                 item.type;
 
 
-            info.appendChild(name);
-            info.appendChild(type);
+            info.appendChild(
+                name
+            );
 
-            searchItem.appendChild(img);
-            searchItem.appendChild(info);
+            info.appendChild(
+                type
+            );
+
+
+            searchItem.appendChild(
+                img
+            );
+
+            searchItem.appendChild(
+                info
+            );
 
 
             searchItem.addEventListener(
                 "click",
                 function(){
 
-                    openPage(item.page);
+                    openPage(
+                        item.page
+                    );
 
-                    searchInput.value = "";
+                    searchInput.value =
+                        "";
 
                     searchResults.style.display =
                         "none";
@@ -3003,14 +3121,14 @@ document.addEventListener(
         ){
 
             document
-                .querySelectorAll(".variantMenu")
-                .forEach(function(menu){
+            .querySelectorAll(".variantMenu")
+            .forEach(function(menu){
 
-                    menu.classList.remove(
-                        "open"
-                    );
+                menu.classList.remove(
+                    "open"
+                );
 
-                });
+            });
 
         }
 
@@ -3037,8 +3155,10 @@ document.addEventListener(
         ){
 
             document
-                .getElementById("sidebar")
-                .classList.remove("open");
+            .getElementById("sidebar")
+            .classList.remove(
+                "open"
+            );
 
         }
 
@@ -3047,39 +3167,7 @@ document.addEventListener(
 
 
 /* =========================
-   CONFIG
-========================= */
-
-const colorSelect =
-    document.getElementById("colorSelect");
-
-
-colorSelect.addEventListener(
-    "change",
-    function(){
-
-        applyColor(
-            colorSelect.value
-        );
-
-    }
-);
-
-
-const savedColor =
-    localStorage.getItem("bgsColor")
-    || "blue";
-
-
-colorSelect.value =
-    savedColor;
-
-
-applyColor(savedColor);
-
-
-/* =========================
-   RENDER EVERYTHING
+   RENDER ALL
 ========================= */
 
 renderList(
@@ -3097,14 +3185,12 @@ renderList(
     false
 );
 
-
 renderList(
     lunarEggPets,
     lunarEggData,
     "lunarEggList",
     false
 );
-
 
 renderList(
     voidEggPets,
@@ -3113,7 +3199,6 @@ renderList(
     false
 );
 
-
 renderList(
     hellEggPets,
     hellEggData,
@@ -3121,11 +3206,46 @@ renderList(
     false
 );
 
-
 renderList(
     nightmareEggPets,
     nightmareEggData,
     "nightmareEggList",
+    false
+);
+
+
+renderList(
+    djEggPets,
+    djEggData,
+    "djEggList",
+    false
+);
+
+renderList(
+    sandcastleEggPets,
+    sandcastleEggData,
+    "sandcastleEggList",
+    false
+);
+
+renderList(
+    cyborgEggPets,
+    cyborgEggData,
+    "cyborgEggList",
+    false
+);
+
+renderList(
+    shadowEggPermanentPets,
+    shadowEggPermanentData,
+    "shadowEggPermanentList",
+    false
+);
+
+renderList(
+    soulFlyEggPets,
+    soulFlyEggData,
+    "soulFlyEggList",
     false
 );
 
@@ -3137,14 +3257,12 @@ renderList(
     true
 );
 
-
 renderList(
     exoticEggPets,
     exoticEggData,
     "exoticEggList",
     true
 );
-
 
 renderList(
     cosmicEggPets,
@@ -3153,14 +3271,12 @@ renderList(
     true
 );
 
-
 renderList(
     royaltyEggPets,
     royaltyEggData,
     "royaltyEggList",
     true
 );
-
 
 renderList(
     fruityEggPets,
@@ -3179,23 +3295,20 @@ renderList(
 
 
 /* =========================
-   RESTORE PAGE
+   LOAD SAVED PAGE
 ========================= */
 
 const savedPage =
-    localStorage.getItem("currentPage")
-    || "home";
+    localStorage.getItem(
+        "currentPage"
+    );
 
 
-if(
-    document.getElementById(savedPage)
-){
+if(savedPage){
 
-    openPage(savedPage);
-
-}else{
-
-    openPage("home");
+    openPage(
+        savedPage
+    );
 
 }
 
