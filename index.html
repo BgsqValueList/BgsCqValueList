@@ -21,6 +21,7 @@ body {
     color: #111;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -53,6 +54,7 @@ header {
     border-radius: 8px;
 
     font-size: 25px;
+
     cursor: pointer;
 }
 
@@ -91,6 +93,7 @@ header {
     background: #fff;
     border-color: #999;
 }
+
 
 /* =========================
    SIDEBAR
@@ -142,6 +145,7 @@ header {
     font-weight: 600;
 }
 
+
 /* =========================
    MAIN
 ========================= */
@@ -170,8 +174,9 @@ main {
     margin-bottom: 20px;
 }
 
+
 /* =========================
-   NORMAL BOX
+   TEXT BOX
 ========================= */
 
 .text-box {
@@ -197,6 +202,7 @@ main {
 
     line-height: 1.6;
 }
+
 
 /* =========================
    IMAGE BOX
@@ -234,6 +240,7 @@ main {
     font-size: 15px;
 }
 
+
 /* =========================
    PET CARD
 ========================= */
@@ -258,7 +265,10 @@ main {
     margin-bottom: 12px;
 }
 
-/* Espacio reservado para la imagen */
+
+/* =========================
+   PET IMAGE
+========================= */
 
 .pet-image {
     width: 75px;
@@ -278,15 +288,35 @@ main {
     justify-content: center;
 }
 
-/* Nombre de la pet */
+
+/* =========================
+   PET INFO
+========================= */
+
+.pet-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
 
 .pet-name {
-    font-size: 17px;
+    font-size: 18px;
 
-    font-weight: 600;
+    font-weight: 700;
 
     color: #111;
+
+    margin-bottom: 3px;
 }
+
+.pet-stats {
+    font-size: 14px;
+
+    color: #666;
+}
+
 
 /* =========================
    SEARCH RESULTS
@@ -335,6 +365,7 @@ main {
     color: #888;
 }
 
+
 /* =========================
    MOBILE
 ========================= */
@@ -382,7 +413,9 @@ main {
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -486,7 +519,10 @@ main {
 
 <main>
 
-    <!-- HOME -->
+
+    <!-- =====================
+         HOME
+    ====================== -->
 
     <section
         class="page active"
@@ -520,7 +556,9 @@ main {
     </section>
 
 
-    <!-- EXPLORE -->
+    <!-- =====================
+         EXPLORE
+    ====================== -->
 
     <section
         class="page"
@@ -554,7 +592,9 @@ main {
     </section>
 
 
-    <!-- PETS -->
+    <!-- =====================
+         PETS
+    ====================== -->
 
     <section
         class="page"
@@ -566,16 +606,33 @@ main {
         </h1>
 
 
-        <!-- PET 1 -->
+        <!-- Shadow One -->
 
         <div class="pet-card">
 
             <div class="pet-image">
-                <!-- Imagen de Shadow One irá aquí -->
+                <!-- Imagen de Shadow One -->
             </div>
 
-            <div class="pet-name">
-                Shadow One
+
+            <div class="pet-info">
+
+                <div class="pet-name">
+                    Shadow One
+                </div>
+
+                <div class="pet-stats">
+                    Hatched: 2500
+                </div>
+
+                <div class="pet-stats">
+                    Chance: 1/10M
+                </div>
+
+                <div class="pet-stats">
+                    Value: 3500
+                </div>
+
             </div>
 
         </div>
@@ -583,7 +640,9 @@ main {
     </section>
 
 
-    <!-- VALUES -->
+    <!-- =====================
+         VALUES
+    ====================== -->
 
     <section
         class="page"
@@ -617,7 +676,9 @@ main {
     </section>
 
 
-    <!-- SECRETS -->
+    <!-- =====================
+         SECRETS
+    ====================== -->
 
     <section
         class="page"
@@ -651,7 +712,9 @@ main {
     </section>
 
 
-    <!-- W/L -->
+    <!-- =====================
+         W/L SYSTEM
+    ====================== -->
 
     <section
         class="page"
@@ -684,10 +747,12 @@ main {
 
     </section>
 
+
 </main>
 
 
 <script>
+
 
 /* =========================
    PAGES
@@ -729,7 +794,7 @@ const pages = [
 
 
 /* =========================
-   MENU
+   TOGGLE MENU
 ========================= */
 
 function toggleMenu() {
