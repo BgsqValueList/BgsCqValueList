@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Qcaaao's Bgs ValueList</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,26 +21,37 @@ body {
     color: #111;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header {
     height: 64px;
     background: #fff;
     border-bottom: 1px solid #ddd;
+
     display: flex;
     align-items: center;
+
     padding: 0 18px;
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+
     z-index: 100;
 }
 
 .menu-button {
     width: 42px;
     height: 42px;
+
     border: none;
     background: transparent;
+
     border-radius: 8px;
+
     font-size: 25px;
     cursor: pointer;
 }
@@ -48,6 +62,7 @@ header {
 
 .logo {
     margin-left: 12px;
+
     font-size: 20px;
     font-weight: 700;
 }
@@ -59,11 +74,16 @@ header {
 .search {
     width: 280px;
     height: 40px;
+
     border: 1px solid #ccc;
     border-radius: 22px;
+
     padding: 0 17px;
+
     outline: none;
+
     font-size: 14px;
+
     background: #fafafa;
 }
 
@@ -72,16 +92,27 @@ header {
     border-color: #999;
 }
 
+/* =========================
+   SIDEBAR
+========================= */
+
 .sidebar {
     position: fixed;
+
     top: 64px;
     left: -270px;
+
     width: 270px;
     height: calc(100vh - 64px);
+
     background: #fff;
+
     border-right: 1px solid #ddd;
+
     padding: 18px 12px;
+
     transition: left 0.25s ease;
+
     z-index: 90;
 }
 
@@ -91,9 +122,13 @@ header {
 
 .nav-item {
     padding: 14px 16px;
+
     margin-bottom: 4px;
+
     border-radius: 9px;
+
     font-size: 15px;
+
     cursor: pointer;
 }
 
@@ -103,17 +138,25 @@ header {
 
 .nav-item.active {
     background: #e8e8e8;
+
     font-weight: 600;
 }
 
+/* =========================
+   MAIN
+========================= */
+
 main {
     padding-top: 64px;
+
     min-height: 100vh;
 }
 
 .page {
     display: none;
+
     padding: 28px;
+
     min-height: calc(100vh - 64px);
 }
 
@@ -123,68 +166,162 @@ main {
 
 .page-title {
     font-size: 32px;
+
     margin-bottom: 20px;
 }
 
+/* =========================
+   NORMAL BOX
+========================= */
+
 .text-box {
     background: #fff;
+
     border: 1px solid #ddd;
+
     border-radius: 14px;
+
     padding: 22px;
+
     margin-bottom: 20px;
 }
 
 .text-box h2 {
     font-size: 21px;
+
     margin-bottom: 10px;
 }
 
 .text-box p {
     color: #666;
+
     line-height: 1.6;
 }
 
+/* =========================
+   IMAGE BOX
+========================= */
+
 .image-box {
     background: #fff;
+
     border: 1px solid #ddd;
+
     border-radius: 14px;
+
     min-height: 230px;
+
     padding: 20px;
+
     display: flex;
+
     align-items: center;
     justify-content: center;
+
     text-align: center;
 }
 
 .image-box img {
     max-width: 100%;
     max-height: 450px;
+
     border-radius: 10px;
 }
 
 .image-placeholder {
     color: #999;
+
     font-size: 15px;
 }
 
+/* =========================
+   PET CARD
+========================= */
+
+.pet-card {
+    width: 100%;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 14px;
+
+    padding: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+/* Espacio reservado para la imagen */
+
+.pet-image {
+    width: 75px;
+    height: 75px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    background: #f5f5f5;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nombre de la pet */
+
+.pet-name {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #111;
+}
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
 .search-results {
     display: none;
+
     position: fixed;
+
     top: 70px;
     right: 18px;
+
     width: 280px;
+
     max-height: 300px;
+
     overflow-y: auto;
+
     background: #fff;
+
     border: 1px solid #ddd;
+
     border-radius: 12px;
+
     padding: 8px;
+
     z-index: 200;
 }
 
 .search-result {
     padding: 12px;
+
     border-radius: 8px;
+
     cursor: pointer;
 }
 
@@ -194,17 +331,25 @@ main {
 
 .no-results {
     padding: 12px;
+
     color: #888;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 600px) {
+
     header {
         padding: 0 12px;
     }
 
     .logo {
         font-size: 16px;
+
         margin-left: 8px;
+
         max-width: 155px;
     }
 
@@ -222,25 +367,42 @@ main {
 
     .sidebar {
         width: 250px;
+
         left: -250px;
     }
 
     .search-results {
         right: 12px;
+
         width: 145px;
     }
+
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <button class="menu-button" onclick="toggleMenu()">☰</button>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <div class="logo">Qcaaao's Bgs ValueList</div>
+<header>
+
+    <button
+        class="menu-button"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+    <div class="logo">
+        Qcaaao's Bgs ValueList
+    </div>
 
     <div class="search-container">
+
         <input
             class="search"
             id="searchInput"
@@ -248,231 +410,518 @@ main {
             placeholder="Search..."
             oninput="searchPages()"
         >
+
     </div>
+
 </header>
 
-<nav class="sidebar" id="sidebar">
 
-    <div class="nav-item active" onclick="openPage('home', this)">
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<nav
+    class="sidebar"
+    id="sidebar"
+>
+
+    <div
+        class="nav-item active"
+        onclick="openPage('home', this)"
+    >
         Home
     </div>
 
-    <div class="nav-item" onclick="openPage('explore', this)">
+    <div
+        class="nav-item"
+        onclick="openPage('explore', this)"
+    >
         Explore
     </div>
 
-    <div class="nav-item" onclick="openPage('pets', this)">
+    <div
+        class="nav-item"
+        onclick="openPage('pets', this)"
+    >
         Pets
     </div>
 
-    <div class="nav-item" onclick="openPage('values', this)">
+    <div
+        class="nav-item"
+        onclick="openPage('values', this)"
+    >
         Values
     </div>
 
-    <div class="nav-item" onclick="openPage('secrets', this)">
+    <div
+        class="nav-item"
+        onclick="openPage('secrets', this)"
+    >
         Secrets
     </div>
 
-    <div class="nav-item" onclick="openPage('wl', this)">
+    <div
+        class="nav-item"
+        onclick="openPage('wl', this)"
+    >
         W/L System
     </div>
 
 </nav>
 
-<div class="search-results" id="searchResults"></div>
+
+<!-- =========================
+     SEARCH RESULTS
+========================= -->
+
+<div
+    class="search-results"
+    id="searchResults"
+></div>
+
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
-    <section class="page active" id="home">
-        <h1 class="page-title">Home</h1>
+    <!-- HOME -->
+
+    <section
+        class="page active"
+        id="home"
+    >
+
+        <h1 class="page-title">
+            Home
+        </h1>
 
         <div class="text-box">
-            <h2>Home Text Label</h2>
-            <p>Home content goes here.</p>
+
+            <h2>
+                Home Text Label
+            </h2>
+
+            <p>
+                Home content goes here.
+            </p>
+
         </div>
 
         <div class="image-box">
-            <div class="image-placeholder">Home Image</div>
+
+            <div class="image-placeholder">
+                Home Image
+            </div>
+
         </div>
+
     </section>
 
 
-    <section class="page" id="explore">
-        <h1 class="page-title">Explore</h1>
+    <!-- EXPLORE -->
+
+    <section
+        class="page"
+        id="explore"
+    >
+
+        <h1 class="page-title">
+            Explore
+        </h1>
 
         <div class="text-box">
-            <h2>Explore Text Label</h2>
-            <p>Explore content goes here.</p>
+
+            <h2>
+                Explore Text Label
+            </h2>
+
+            <p>
+                Explore content goes here.
+            </p>
+
         </div>
 
         <div class="image-box">
-            <div class="image-placeholder">Explore Image</div>
+
+            <div class="image-placeholder">
+                Explore Image
+            </div>
+
         </div>
+
     </section>
 
 
-    <section class="page" id="pets">
-        <h1 class="page-title">Pets</h1>
+    <!-- PETS -->
 
-        <div class="text-box">
-            <h2>Pets Text Label</h2>
-            <p>Pets content goes here.</p>
+    <section
+        class="page"
+        id="pets"
+    >
+
+        <h1 class="page-title">
+            Pets
+        </h1>
+
+
+        <!-- PET 1 -->
+
+        <div class="pet-card">
+
+            <div class="pet-image">
+                <!-- Imagen de Shadow One irá aquí -->
+            </div>
+
+            <div class="pet-name">
+                Shadow One
+            </div>
+
         </div>
 
-        <div class="image-box">
-            <div class="image-placeholder">Pets Image</div>
-        </div>
     </section>
 
 
-    <section class="page" id="values">
-        <h1 class="page-title">Values</h1>
+    <!-- VALUES -->
+
+    <section
+        class="page"
+        id="values"
+    >
+
+        <h1 class="page-title">
+            Values
+        </h1>
 
         <div class="text-box">
-            <h2>Values Text Label</h2>
-            <p>Values content goes here.</p>
+
+            <h2>
+                Values Text Label
+            </h2>
+
+            <p>
+                Values content goes here.
+            </p>
+
         </div>
 
         <div class="image-box">
-            <div class="image-placeholder">Values Image</div>
+
+            <div class="image-placeholder">
+                Values Image
+            </div>
+
         </div>
+
     </section>
 
 
-    <section class="page" id="secrets">
-        <h1 class="page-title">Secrets</h1>
+    <!-- SECRETS -->
+
+    <section
+        class="page"
+        id="secrets"
+    >
+
+        <h1 class="page-title">
+            Secrets
+        </h1>
 
         <div class="text-box">
-            <h2>Secrets Text Label</h2>
-            <p>Secrets content goes here.</p>
+
+            <h2>
+                Secrets Text Label
+            </h2>
+
+            <p>
+                Secrets content goes here.
+            </p>
+
         </div>
 
         <div class="image-box">
-            <div class="image-placeholder">Secrets Image</div>
+
+            <div class="image-placeholder">
+                Secrets Image
+            </div>
+
         </div>
+
     </section>
 
 
-    <section class="page" id="wl">
-        <h1 class="page-title">W/L System</h1>
+    <!-- W/L -->
+
+    <section
+        class="page"
+        id="wl"
+    >
+
+        <h1 class="page-title">
+            W/L System
+        </h1>
 
         <div class="text-box">
-            <h2>W/L System Text Label</h2>
-            <p>W/L System content goes here.</p>
+
+            <h2>
+                W/L System Text Label
+            </h2>
+
+            <p>
+                W/L System content goes here.
+            </p>
+
         </div>
 
         <div class="image-box">
-            <div class="image-placeholder">W/L System Image</div>
+
+            <div class="image-placeholder">
+                W/L System Image
+            </div>
+
         </div>
+
     </section>
 
 </main>
 
+
 <script>
+
+/* =========================
+   PAGES
+========================= */
+
 const pages = [
+
     {
         id: "home",
         name: "Home"
     },
+
     {
         id: "explore",
         name: "Explore"
     },
+
     {
         id: "pets",
         name: "Pets"
     },
+
     {
         id: "values",
         name: "Values"
     },
+
     {
         id: "secrets",
         name: "Secrets"
     },
+
     {
         id: "wl",
         name: "W/L System"
     }
+
 ];
 
+
+/* =========================
+   MENU
+========================= */
+
 function toggleMenu() {
-    document.getElementById("sidebar").classList.toggle("active");
+
+    document
+        .getElementById("sidebar")
+        .classList
+        .toggle("active");
+
 }
 
+
+/* =========================
+   OPEN PAGE
+========================= */
+
 function openPage(pageId, element) {
-    document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-    });
 
-    document.getElementById(pageId).classList.add("active");
+    document
+        .querySelectorAll(".page")
+        .forEach(function(page) {
 
-    document.querySelectorAll(".nav-item").forEach(function(item) {
-        item.classList.remove("active");
-    });
+            page.classList.remove("active");
+
+        });
+
+
+    document
+        .getElementById(pageId)
+        .classList
+        .add("active");
+
+
+    document
+        .querySelectorAll(".nav-item")
+        .forEach(function(item) {
+
+            item.classList.remove("active");
+
+        });
+
 
     element.classList.add("active");
 
-    document.getElementById("sidebar").classList.remove("active");
 
-    document.getElementById("searchResults").style.display = "none";
-    document.getElementById("searchInput").value = "";
+    document
+        .getElementById("sidebar")
+        .classList
+        .remove("active");
+
+
+    document
+        .getElementById("searchResults")
+        .style.display = "none";
+
+
+    document
+        .getElementById("searchInput")
+        .value = "";
+
 
     window.scrollTo(0, 0);
+
 }
 
+
+/* =========================
+   SEARCH
+========================= */
+
 function searchPages() {
-    const input = document.getElementById("searchInput");
-    const results = document.getElementById("searchResults");
-    const value = input.value.toLowerCase().trim();
+
+    const input =
+        document.getElementById("searchInput");
+
+    const results =
+        document.getElementById("searchResults");
+
+    const value =
+        input.value
+        .toLowerCase()
+        .trim();
+
 
     results.innerHTML = "";
 
+
     if (value === "") {
+
         results.style.display = "none";
+
         return;
+
     }
 
-    const matches = pages.filter(function(page) {
-        return page.name.toLowerCase().includes(value);
-    });
+
+    const matches =
+        pages.filter(function(page) {
+
+            return page.name
+                .toLowerCase()
+                .includes(value);
+
+        });
+
 
     if (matches.length === 0) {
-        results.innerHTML = '<div class="no-results">No results found.</div>';
+
+        results.innerHTML =
+            '<div class="no-results">No results found.</div>';
+
         results.style.display = "block";
+
         return;
+
     }
+
 
     matches.forEach(function(page) {
-        const result = document.createElement("div");
 
-        result.className = "search-result";
-        result.textContent = page.name;
+        const result =
+            document.createElement("div");
+
+
+        result.className =
+            "search-result";
+
+
+        result.textContent =
+            page.name;
+
 
         result.onclick = function() {
-            const navItems = document.querySelectorAll(".nav-item");
+
+            const navItems =
+                document.querySelectorAll(".nav-item");
+
 
             navItems.forEach(function(item) {
-                if (item.textContent.trim() === page.name) {
+
+                if (
+                    item.textContent.trim()
+                    === page.name
+                ) {
+
                     openPage(page.id, item);
+
                 }
+
             });
+
         };
 
+
         results.appendChild(result);
+
     });
 
+
     results.style.display = "block";
+
 }
 
-document.addEventListener("click", function(event) {
-    const searchContainer = document.querySelector(".search-container");
-    const results = document.getElementById("searchResults");
 
-    if (!searchContainer.contains(event.target) && !results.contains(event.target)) {
-        results.style.display = "none";
+/* =========================
+   CLOSE SEARCH
+========================= */
+
+document.addEventListener(
+    "click",
+    function(event) {
+
+        const searchContainer =
+            document.querySelector(".search-container");
+
+        const results =
+            document.getElementById("searchResults");
+
+
+        if (
+            !searchContainer.contains(event.target)
+            &&
+            !results.contains(event.target)
+        ) {
+
+            results.style.display = "none";
+
+        }
+
     }
-});
+);
+
 </script>
 
 </body>
