@@ -16,9 +16,7 @@
     --main-hover:#e1e4ff;
 }
 
-*{
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 html{
     min-height:100%;
@@ -35,8 +33,6 @@ body{
     overflow-x:hidden;
     overflow-y:auto;
 }
-
-/* HEADER */
 
 header{
     position:fixed;
@@ -73,8 +69,6 @@ header{
     white-space:nowrap;
     flex-shrink:0;
 }
-
-/* SEARCH */
 
 .searchContainer{
     position:relative;
@@ -151,8 +145,6 @@ header{
     color:#777;
 }
 
-/* SIDEBAR */
-
 .sidebar{
     position:fixed;
     top:95px;
@@ -194,8 +186,6 @@ header{
     background:var(--main-color);
     color:white;
 }
-
-/* PERMANENT DROPDOWN */
 
 .permanentDropdown{
     margin-bottom:14px;
@@ -262,8 +252,6 @@ header{
     color:white;
 }
 
-/* MAIN */
-
 main{
     width:100%;
     min-height:100vh;
@@ -294,8 +282,6 @@ main{
     color:var(--main-color);
 }
 
-/* HOME */
-
 .homeBox{
     background:white;
     border:3px solid var(--main-color);
@@ -304,8 +290,6 @@ main{
     font-size:24px;
     line-height:1.5;
 }
-
-/* PET LIST */
 
 .petList{
     width:100%;
@@ -355,8 +339,6 @@ main{
 .petStat b{
     color:#333;
 }
-
-/* VARIANTS */
 
 .variantContainer{
     position:relative;
@@ -429,8 +411,6 @@ main{
     object-fit:contain;
 }
 
-/* EGGS */
-
 .eggGrid{
     width:100%;
     display:grid;
@@ -481,8 +461,6 @@ main{
     margin:30px 0 20px;
 }
 
-/* CONFIG */
-
 .configBox{
     background:white;
     border:3px solid var(--main-color);
@@ -507,8 +485,6 @@ main{
     outline:none;
     background:white;
 }
-
-/* LARGE PC */
 
 @media(min-width:1600px){
 
@@ -600,16 +576,12 @@ main{
     }
 }
 
-/* TABLET */
-
 @media(min-width:601px) and (max-width:1599px){
 
     .searchContainer{
         max-width:45%;
     }
 }
-
-/* MOBILE */
 
 @media(max-width:600px){
 
@@ -826,9 +798,6 @@ Cqaaao Bgs ValueList
 
 </header>
 
-
-<!-- SIDEBAR -->
-
 <aside
     id="sidebar"
     class="sidebar"
@@ -841,14 +810,12 @@ Cqaaao Bgs ValueList
 Home
 </button>
 
-
 <button
     class="sidebarButton"
     data-page="limitedSecrets"
 >
 Limited Secrets
 </button>
-
 
 <div class="permanentDropdown">
 
@@ -869,7 +836,6 @@ Permanent Secrets
 </span>
 
 </button>
-
 
 <div
     id="permanentSubmenu"
@@ -901,7 +867,6 @@ The Cave
 
 </div>
 
-
 <button
     class="sidebarButton"
     data-page="rotationSecrets"
@@ -909,14 +874,12 @@ The Cave
 Rotation Secrets
 </button>
 
-
 <button
     class="sidebarButton"
     data-page="robuxPets"
 >
 Robux Pets
 </button>
-
 
 <button
     class="sidebarButton"
@@ -927,13 +890,9 @@ Config
 
 </aside>
 
-
 <main>
 
 <div class="content">
-
-
-<!-- HOME -->
 
 <section
     id="home"
@@ -955,9 +914,6 @@ Search for pets, check their variants, hatch information, chances and values.
 </div>
 
 </section>
-
-
-<!-- LIMITED SECRETS -->
 
 <section
     id="limitedSecrets"
@@ -986,7 +942,6 @@ Release Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="exoticEggButton"
@@ -1002,7 +957,6 @@ Exotic Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1020,7 +974,6 @@ Cosmic Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="royaltyEggButton"
@@ -1036,7 +989,6 @@ Royalty Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1057,9 +1009,6 @@ Fruity Egg
 </div>
 
 </section>
-
-
-<!-- PERMANENT OVERWORLD -->
 
 <section
     id="permanentSecrets"
@@ -1088,7 +1037,6 @@ Common Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="lunarEggButton"
@@ -1105,7 +1053,6 @@ Lunar Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="voidEggButton"
@@ -1117,11 +1064,10 @@ Lunar Egg
 >
 
 <div class="eggName">
-Void Egg
+Void Shard Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1138,7 +1084,6 @@ Hell Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1159,9 +1104,6 @@ Nightmare Egg
 </div>
 
 </section>
-
-
-<!-- CANDYLAND -->
 
 <section
     id="candyLand"
@@ -1190,7 +1132,6 @@ Jelly Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="dominusEggButton"
@@ -1211,9 +1152,6 @@ Dominus Egg
 
 </section>
 
-
-<!-- THE CAVE -->
-
 <section
     id="theCave"
     class="page"
@@ -1224,7 +1162,6 @@ The Cave
 </h1>
 
 <div class="eggGrid">
-
 
 <button
     class="eggButton"
@@ -1242,7 +1179,6 @@ DJ Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="sandcastleEggButton"
@@ -1258,7 +1194,6 @@ Sandcastle Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1276,7 +1211,6 @@ Cyborg Egg
 
 </button>
 
-
 <button
     class="eggButton"
     id="shadowEggPermanentButton"
@@ -1292,7 +1226,6 @@ Shadow Egg
 </div>
 
 </button>
-
 
 <button
     class="eggButton"
@@ -1314,9 +1247,6 @@ SoulFly Egg
 
 </section>
 
-
-<!-- ROTATION -->
-
 <section
     id="rotationSecrets"
     class="page"
@@ -1333,9 +1263,6 @@ Rotation Secrets
 
 </section>
 
-
-<!-- ROBUX -->
-
 <section
     id="robuxPets"
     class="page"
@@ -1351,9 +1278,6 @@ Robux Pets
 ></div>
 
 </section>
-
-
-<!-- EGG DETAIL PAGES -->
 
 <section
     id="releaseEgg"
@@ -1378,7 +1302,6 @@ Release Egg
 
 </section>
 
-
 <section
     id="exoticEgg"
     class="page"
@@ -1401,7 +1324,6 @@ Exotic Egg
 ></div>
 
 </section>
-
 
 <section
     id="cosmicEgg"
@@ -1426,7 +1348,6 @@ Cosmic Egg
 
 </section>
 
-
 <section
     id="royaltyEgg"
     class="page"
@@ -1449,7 +1370,6 @@ Royalty Egg
 ></div>
 
 </section>
-
 
 <section
     id="fruityEgg"
@@ -1474,7 +1394,6 @@ Fruity Egg
 
 </section>
 
-
 <section
     id="commonEgg"
     class="page"
@@ -1497,7 +1416,6 @@ Common Egg
 ></div>
 
 </section>
-
 
 <section
     id="lunarEgg"
@@ -1522,9 +1440,8 @@ Lunar Egg
 
 </section>
 
-
 <section
-    id="voidEgg"
+    id="voidShardEgg"
     class="page"
 >
 
@@ -1536,16 +1453,15 @@ Lunar Egg
 </button>
 
 <h1 class="pageTitle">
-Void Egg
+Void Shard Egg
 </h1>
 
 <div
-    id="voidEggList"
+    id="voidShardEggList"
     class="petList"
 ></div>
 
 </section>
-
 
 <section
     id="hellEgg"
@@ -1570,7 +1486,6 @@ Hell Egg
 
 </section>
 
-
 <section
     id="nightmareEgg"
     class="page"
@@ -1593,7 +1508,6 @@ Nightmare Egg
 ></div>
 
 </section>
-
 
 <section
     id="jellyEgg"
@@ -1618,7 +1532,6 @@ Jelly Egg
 
 </section>
 
-
 <section
     id="dominusEgg"
     class="page"
@@ -1641,7 +1554,6 @@ Dominus Egg
 ></div>
 
 </section>
-
 
 <section
     id="djEgg"
@@ -1666,7 +1578,6 @@ DJ Egg
 
 </section>
 
-
 <section
     id="sandcastleEgg"
     class="page"
@@ -1689,7 +1600,6 @@ Sandcastle Egg
 ></div>
 
 </section>
-
 
 <section
     id="cyborgEgg"
@@ -1714,7 +1624,6 @@ Cyborg Egg
 
 </section>
 
-
 <section
     id="shadowEggPermanent"
     class="page"
@@ -1738,7 +1647,6 @@ Shadow Egg
 
 </section>
 
-
 <section
     id="soulFlyEgg"
     class="page"
@@ -1761,9 +1669,6 @@ SoulFly Egg
 ></div>
 
 </section>
-
-
-<!-- CONFIG -->
 
 <section
     id="config"
@@ -1798,55 +1703,37 @@ GUI Color
 
 </section>
 
-
 </div>
 
 </main>
 
-
 <script>
 
-/* =========================
-   VARIANTS
-========================= */
-
 const limitedVariantNames = {
-
     normal:"Normal",
     shiny:"Shiny",
     mythic:"Mythic",
     shinyMythic:"Shiny Mythic"
-
 };
 
 const limitedVariantOrder = [
-
     "normal",
     "shiny",
     "mythic",
     "shinyMythic"
-
 ];
 
 const normalVariantNames = {
-
     normal:"Normal",
     shiny:"Shiny"
-
 };
 
 const normalVariantOrder = [
-
     "normal",
     "shiny"
-
 ];
 
-
-function getVariantPetName(
-    originalName,
-    variantKey
-){
+function getVariantPetName(originalName,variantKey){
 
     if(variantKey === "normal")
         return originalName;
@@ -1861,19 +1748,9 @@ function getVariantPetName(
         return "Shiny Mythic " + originalName;
 
     return originalName;
-
 }
 
-
-/* =========================
-   PET CARD
-========================= */
-
-function createPetCard(
-    petName,
-    data,
-    limited
-){
+function createPetCard(petName,data,limited){
 
     const variants =
         limited
@@ -1885,18 +1762,15 @@ function createPetCard(
             ? limitedVariantNames
             : normalVariantNames;
 
-
     const card =
         document.createElement("div");
 
     card.className="petCard";
 
-
     const image =
         document.createElement("img");
 
     image.className="petImage";
-
 
     const firstVariant =
         variants[0];
@@ -1904,33 +1778,24 @@ function createPetCard(
     const firstData =
         data[firstVariant] || {};
 
-
     if(firstData.image){
 
-        image.src =
-            firstData.image;
-
-        image.style.visibility =
-            "visible";
+        image.src=firstData.image;
+        image.style.visibility="visible";
 
     }else{
 
         image.removeAttribute("src");
-
-        image.style.visibility =
-            "hidden";
+        image.style.visibility="hidden";
 
     }
 
-
     card.appendChild(image);
-
 
     const info =
         document.createElement("div");
 
     info.className="petInfo";
-
 
     const name =
         document.createElement("div");
@@ -1943,9 +1808,7 @@ function createPetCard(
             firstVariant
         );
 
-
     info.appendChild(name);
-
 
     const hatched =
         document.createElement("div");
@@ -1956,9 +1819,7 @@ function createPetCard(
         "<b>Hatched:</b> " +
         (firstData.hatched || "N/A");
 
-
     info.appendChild(hatched);
-
 
     const chance =
         document.createElement("div");
@@ -1969,9 +1830,7 @@ function createPetCard(
         "<b>Chance:</b> " +
         (firstData.chance || "N/A");
 
-
     info.appendChild(chance);
-
 
     const value =
         document.createElement("div");
@@ -1982,12 +1841,9 @@ function createPetCard(
         "<b>Value:</b> " +
         (firstData.value || "N/A");
 
-
     info.appendChild(value);
 
-
     card.appendChild(info);
-
 
     const variantContainer =
         document.createElement("div");
@@ -1995,17 +1851,14 @@ function createPetCard(
     variantContainer.className=
         "variantContainer";
 
-
     const variantButton =
         document.createElement("button");
 
     variantButton.className=
         "variantButton";
 
-
     const variantButtonImage =
         document.createElement("img");
-
 
     if(firstData.image){
 
@@ -2014,22 +1867,17 @@ function createPetCard(
 
     }
 
-
     const variantText =
         document.createElement("span");
 
     variantText.textContent =
         names[firstVariant];
 
-
     const arrow =
         document.createElement("span");
 
-    arrow.className=
-        "variantArrow";
-
+    arrow.className="variantArrow";
     arrow.textContent="▼";
-
 
     variantButton.appendChild(
         variantButtonImage
@@ -2043,29 +1891,23 @@ function createPetCard(
         arrow
     );
 
-
     const menu =
         document.createElement("div");
 
     menu.className="variantMenu";
-
 
     variants.forEach(function(variant){
 
         const variantData =
             data[variant] || {};
 
-
         const option =
             document.createElement("div");
 
-        option.className=
-            "variantOption";
-
+        option.className="variantOption";
 
         const optionImage =
             document.createElement("img");
-
 
         if(variantData.image){
 
@@ -2074,13 +1916,11 @@ function createPetCard(
 
         }
 
-
         const optionText =
             document.createElement("span");
 
         optionText.textContent =
             names[variant];
-
 
         option.appendChild(
             optionImage
@@ -2090,7 +1930,6 @@ function createPetCard(
             optionText
         );
 
-
         option.addEventListener(
             "click",
             function(){
@@ -2098,28 +1937,23 @@ function createPetCard(
                 const selected =
                     data[variant] || {};
 
-
                 name.textContent =
                     getVariantPetName(
                         petName,
                         variant
                     );
 
-
                 hatched.innerHTML =
                     "<b>Hatched:</b> " +
                     (selected.hatched || "N/A");
-
 
                 chance.innerHTML =
                     "<b>Chance:</b> " +
                     (selected.chance || "N/A");
 
-
                 value.innerHTML =
                     "<b>Value:</b> " +
                     (selected.value || "N/A");
-
 
                 if(selected.image){
 
@@ -2147,10 +1981,8 @@ function createPetCard(
 
                 }
 
-
                 variantText.textContent =
                     names[variant];
-
 
                 menu.classList.remove(
                     "open"
@@ -2159,13 +1991,9 @@ function createPetCard(
             }
         );
 
-
-        menu.appendChild(
-            option
-        );
+        menu.appendChild(option);
 
     });
-
 
     variantButton.addEventListener(
         "click",
@@ -2189,14 +2017,12 @@ function createPetCard(
 
                 });
 
-
             menu.classList.toggle(
                 "open"
             );
 
         }
     );
-
 
     variantContainer.appendChild(
         variantButton
@@ -2206,20 +2032,12 @@ function createPetCard(
         menu
     );
 
-
     card.appendChild(
         variantContainer
     );
 
-
     return card;
-
 }
-
-
-/* =========================
-   RENDER LIST
-========================= */
 
 function renderList(
     names,
@@ -2236,9 +2054,7 @@ function renderList(
     if(!container)
         return;
 
-
     container.innerHTML="";
-
 
     names.forEach(function(petName){
 
@@ -2258,272 +2074,176 @@ function renderList(
 
 }
 
-
-/* =========================
-   PET DATA
-========================= */
-
 const releaseEggPets = [
-
     "Release Champion",
     "Release Trophy 2.0",
     "Release Shard",
     "Release Robot"
-
 ];
 
 const releaseEggData = {
 
 "Release Champion":{
-
-normal:{
-image:"images/1198-removebg-preview.png"
-},
-shiny:{
-image:"images/1198-removebg-preview.png"
-},
-mythic:{
-image:"images/1199-removebg-preview.png"
-},
-shinyMythic:{
-image:"images/1199-removebg-preview.png"
-}
-
+normal:{image:"images/1198-removebg-preview.png"},
+shiny:{image:"images/1198-removebg-preview.png"},
+mythic:{image:"images/1199-removebg-preview.png"},
+shinyMythic:{image:"images/1199-removebg-preview.png"}
 },
 
 "Release Trophy 2.0":{
-
-normal:{
-image:"images/1194-removebg-preview.png"
-},
-shiny:{
-image:"images/1194-removebg-preview.png"
-},
-mythic:{
-image:"images/1195-removebg-preview.png"
-},
-shinyMythic:{
-image:"images/1195-removebg-preview.png"
-}
-
+normal:{image:"images/1194-removebg-preview.png"},
+shiny:{image:"images/1194-removebg-preview.png"},
+mythic:{image:"images/1195-removebg-preview.png"},
+shinyMythic:{image:"images/1195-removebg-preview.png"}
 },
 
 "Release Shard":{
-
-normal:{
-image:"images/1196-removebg-preview.png"
-},
-shiny:{
-image:"images/1196-removebg-preview.png"
-},
-mythic:{
-image:"images/1197-removebg-preview.png"
-},
-shinyMythic:{
-image:"images/1197-removebg-preview.png"
-}
-
+normal:{image:"images/1196-removebg-preview.png"},
+shiny:{image:"images/1196-removebg-preview.png"},
+mythic:{image:"images/1197-removebg-preview.png"},
+shinyMythic:{image:"images/1197-removebg-preview.png"}
 },
 
 "Release Robot":{
-
-normal:{
-image:"images/1192-removebg-preview.png"
-},
-shiny:{
-image:"images/1192-removebg-preview.png"
-},
-mythic:{
-image:"images/1193-removebg-preview.png"
-},
-shinyMythic:{
-image:"images/1193-removebg-preview.png"
-}
-
+normal:{image:"images/1192-removebg-preview.png"},
+shiny:{image:"images/1192-removebg-preview.png"},
+mythic:{image:"images/1193-removebg-preview.png"},
+shinyMythic:{image:"images/1193-removebg-preview.png"}
 }
 
 };
 
-
-/* EXOTIC */
-
 const exoticEggPets = [
-
     "Electric Basilisk",
     "Air Basilisk",
     "Fire Basilisk",
     "Ice Basilisk",
     "Overlord Plushie",
     "Ultima"
-
 ];
 
 const exoticEggData = {
 
 "Electric Basilisk":{
-
 normal:{image:"images/Electric_Basilisk.webp"},
 shiny:{image:"images/Electric_Basilisk.webp"},
 mythic:{image:"images/Electric_Basilisk.webp"},
 shinyMythic:{image:"images/Electric_Basilisk.webp"}
-
 },
 
 "Air Basilisk":{
-
 normal:{image:"images/Air_Basilisk.webp"},
 shiny:{image:"images/Air_Basilisk.webp"},
 mythic:{image:"images/Air_Basilisk.webp"},
 shinyMythic:{image:"images/Air_Basilisk.webp"}
-
 },
 
 "Fire Basilisk":{
-
 normal:{image:"images/Fire_Basilisk.webp"},
 shiny:{image:"images/Fire_Basilisk.webp"},
 mythic:{image:"images/Fire_Basilisk.webp"},
 shinyMythic:{image:"images/Fire_Basilisk.webp"}
-
 },
 
 "Ice Basilisk":{
-
 normal:{image:"images/Ice_Basilisk.webp"},
 shiny:{image:"images/Ice_Basilisk.webp"},
 mythic:{image:"images/Ice_Basilisk.webp"},
 shinyMythic:{image:"images/Ice_Basilisk.webp"}
-
 },
 
 "Overlord Plushie":{
-
 normal:{image:"images/Overlord_Plushie.webp"},
 shiny:{image:"images/Overlord_Plushie.webp"},
 mythic:{image:"images/Overlord_Plushie.webp"},
 shinyMythic:{image:"images/Overlord_Plushie.webp"}
-
 },
 
 "Ultima":{
-
 normal:{image:"images/Ultima.webp"},
 shiny:{image:"images/Ultima.webp"},
 mythic:{image:"images/Ultima.webp"},
 shinyMythic:{image:"images/Ultima.webp"}
-
 }
 
 };
 
-
-/* COSMIC */
-
 const cosmicEggPets = [
-
     "Eternal Carrot",
     "Patronus",
     "Easter Robot"
-
 ];
 
 const cosmicEggData = {
 
 "Eternal Carrot":{
-
 normal:{image:"images/Eternal_Carrot.webp"},
 shiny:{image:"images/Eternal_Carrot.webp"},
 mythic:{image:"images/Eternal_Carrot.webp"},
 shinyMythic:{image:"images/Eternal_Carrot.webp"}
-
 },
 
 "Patronus":{
-
 normal:{image:"images/Patronus.webp"},
 shiny:{image:"images/Patronus.webp"},
 mythic:{image:"images/Patronus.webp"},
 shinyMythic:{image:"images/Patronus.webp"}
-
 },
 
 "Easter Robot":{
-
 normal:{image:"images/Easter_Robot.webp"},
 shiny:{image:"images/Easter_Robot.webp"},
 mythic:{image:"images/Easter_Robot.webp"},
 shinyMythic:{image:"images/Easter_Robot.webp"}
-
 }
 
 };
 
-
-/* ROYALTY */
-
 const royaltyEggPets = [
-
     "Diamond Ring",
     "King Kitty"
-
 ];
 
 const royaltyEggData = {
 
 "Diamond Ring":{
-
 normal:{image:"images/Diamond_Ring.webp"},
 shiny:{image:"images/Diamond_Ring.webp"},
 mythic:{image:"images/Diamond_Ring.webp"},
 shinyMythic:{image:"images/Diamond_Ring.webp"}
-
 },
 
 "King Kitty":{
-
 normal:{image:"images/King_Kitty.webp"},
 shiny:{image:"images/King_Kitty.webp"},
 mythic:{image:"images/King_Kitty.webp"},
 shinyMythic:{image:"images/King_Kitty.webp"}
-
 }
 
 };
 
-
-/* FRUITY */
-
 const fruityEggPets = [
-
     "Eternal Cucumber",
     "Dragonfruit"
-
 ];
 
 const fruityEggData = {
 
 "Eternal Cucumber":{
-
 normal:{image:"images/Eternal_Cucumber.webp"},
 shiny:{image:"images/Eternal_Cucumber.webp"},
 mythic:{image:"images/Eternal_Cucumber.webp"},
 shinyMythic:{image:"images/Eternal_Cucumber.webp"}
-
 },
 
 "Dragonfruit":{
-
 normal:{image:"images/Dragonfruit.webp"},
 shiny:{image:"images/Dragonfruit.webp"},
 mythic:{image:"images/Dragonfruit.webp"},
 shinyMythic:{image:"images/Dragonfruit.webp"}
-
 }
 
 };
-
-
-/* OVERWORLD */
 
 const commonEggPets = [
     "Royal Doggy"
@@ -2532,19 +2252,15 @@ const commonEggPets = [
 const commonEggData = {
 
 "Royal Doggy":{
-
 normal:{
 image:"images/RoyalDoggy.png"
 },
-
 shiny:{
 image:"images/RoyalDoggyShiny.png"
 }
-
 }
 
 };
-
 
 const lunarEggPets = [
     "Lunar Duality"
@@ -2553,40 +2269,32 @@ const lunarEggPets = [
 const lunarEggData = {
 
 "Lunar Duality":{
-
 normal:{
-image:"images/Lunar_Duality.webp"
+image:"images/20260903_004604.png"
 },
-
 shiny:{
-image:"images/Lunar_Duality.webp"
+image:"images/20260903_004604.png"
 }
-
 }
 
 };
 
-
-const voidEggPets = [
+const voidShardEggPets = [
     "Void Shard"
 ];
 
-const voidEggData = {
+const voidShardEggData = {
 
 "Void Shard":{
-
 normal:{
-image:"images/Void_Shard.webp"
+image:"images/20260903_004545.png"
 },
-
 shiny:{
-image:"images/Void_Shard.webp"
+image:"images/20260903_004545.png"
 }
-
 }
 
 };
-
 
 const hellEggPets = [
     "Hell Myriad"
@@ -2595,19 +2303,15 @@ const hellEggPets = [
 const hellEggData = {
 
 "Hell Myriad":{
-
 normal:{
-image:"images/Hell_Myriad.webp"
+image:"images/20260903_004510.png"
 },
-
 shiny:{
-image:"images/Hell_Myriad.webp"
+image:"images/20260903_004510.png"
 }
-
 }
 
 };
-
 
 const nightmareEggPets = [
     "The Overlord"
@@ -2616,21 +2320,15 @@ const nightmareEggPets = [
 const nightmareEggData = {
 
 "The Overlord":{
-
 normal:{
 image:"images/The_Overlord.webp"
 },
-
 shiny:{
 image:"images/The_Overlord.webp"
 }
-
 }
 
 };
-
-
-/* CANDYLAND */
 
 const jellyEggPets = [
     "Dogcat"
@@ -2639,19 +2337,15 @@ const jellyEggPets = [
 const jellyEggData = {
 
 "Dogcat":{
-
 normal:{
 image:"images/Dogcat.webp"
 },
-
 shiny:{
 image:"images/Dogcat.webp"
 }
-
 }
 
 };
-
 
 const dominusEggPets = [
     "OwoLord"
@@ -2660,21 +2354,15 @@ const dominusEggPets = [
 const dominusEggData = {
 
 "OwoLord":{
-
 normal:{
 image:"images/The_OwOlord.webp"
 },
-
 shiny:{
 image:"images/The_OwOlord.webp"
 }
-
 }
 
 };
-
-
-/* THE CAVE */
 
 const djEggPets = [
     "DJ Plasma"
@@ -2683,19 +2371,15 @@ const djEggPets = [
 const djEggData = {
 
 "DJ Plasma":{
-
 normal:{
 image:"images/1224-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1224-removebg-preview.png"
 }
-
 }
 
 };
-
 
 const sandcastleEggPets = [
     "Sandcastle Defender"
@@ -2704,19 +2388,15 @@ const sandcastleEggPets = [
 const sandcastleEggData = {
 
 "Sandcastle Defender":{
-
 normal:{
 image:"images/1217-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1217-removebg-preview.png"
 }
-
 }
 
 };
-
 
 const cyborgEggPets = [
     "Robotic Lord"
@@ -2725,236 +2405,171 @@ const cyborgEggPets = [
 const cyborgEggData = {
 
 "Robotic Lord":{
-
 normal:{
 image:"images/1223-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1223-removebg-preview.png"
 }
-
 }
 
 };
 
-
-/* SHADOW EGG */
-
 const shadowEggPermanentPets = [
-
     "Shadow Emperor",
     "Galactus"
-
 ];
 
 const shadowEggPermanentData = {
 
 "Shadow Emperor":{
-
 normal:{
 image:"images/1219-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1219-removebg-preview.png"
 },
-
 mythic:{
 image:"images/1220-removebg-preview.png"
 },
-
 shinyMythic:{
 image:"images/1220-removebg-preview.png"
 }
-
 },
 
 "Galactus":{
-
 normal:{
 image:"images/1252-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1252-removebg-preview.png"
 },
-
 mythic:{
 image:"images/1251-removebg-preview.png"
 },
-
 shinyMythic:{
 image:"images/1251-removebg-preview.png"
 }
-
 }
 
 };
 
-
-/* SOULFLY */
-
 const soulFlyEggPets = [
-
     "SoulFly",
     "Soul Inu",
     "Divine Heart"
-
 ];
 
 const soulFlyEggData = {
 
 "SoulFly":{
-
 normal:{
 image:"images/1225-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1225-removebg-preview.png"
 }
-
 },
 
 "Soul Inu":{
-
 normal:{
 image:"images/1222-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1222-removebg-preview.png"
 }
-
 },
 
 "Divine Heart":{
-
 normal:{
 image:"images/1221-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1221-removebg-preview.png"
 }
-
 }
 
 };
 
-
-/* ROTATION */
-
 const shadowEggPets = [
-
     "Shadow One",
     "Shadow Luminance",
     "Shadow Wolflord"
-
 ];
 
 const shadowEggData = {
 
 "Shadow One":{
-
 normal:{
 image:"images/1135-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1135-removebg-preview.png"
 }
-
 },
 
 "Shadow Luminance":{
-
 normal:{
 image:"images/1136-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1136-removebg-preview.png"
 }
-
 },
 
 "Shadow Wolflord":{
-
 normal:{
 image:"images/1137-removebg-preview.png"
 },
-
 shiny:{
 image:"images/1137-removebg-preview.png"
 }
-
 }
 
 };
 
-
-/* ROBUX */
-
 const robuxPets = [
-
     "Crimson Paladin",
     "Beta Tv",
     "Dowodle"
-
 ];
 
 const robuxPetData = {
 
 "Crimson Paladin":{
-
 normal:{
 image:"images/1218-removebg-preview.png",
 value:"30 R$"
 },
-
 shiny:{
 image:"images/1218-removebg-preview.png",
 value:"30 R$"
 }
-
 },
 
 "Beta Tv":{
-
 normal:{
 image:"images/Beta_Tv.webp",
 value:"15 R$"
 },
-
 shiny:{
 image:"images/Beta_Tv.webp",
 value:"15 R$"
 }
-
 },
 
 "Dowodle":{
-
 normal:{
 image:"images/Dowodle.webp",
 value:"15 R$"
 },
-
 shiny:{
 image:"images/Dowodle.webp",
 value:"15 R$"
 }
-
 }
 
 };
-
-
-/* =========================
-   RENDER
-========================= */
 
 renderList(
     robuxPets,
@@ -2978,9 +2593,9 @@ renderList(
 );
 
 renderList(
-    voidEggPets,
-    voidEggData,
-    "voidEggList",
+    voidShardEggPets,
+    voidShardEggData,
+    "voidShardEggList",
     false
 );
 
@@ -3082,9 +2697,6 @@ renderList(
     true
 );
 
-
-/* ROTATION DIRECTLY */
-
 renderList(
     shadowEggPets,
     shadowEggData,
@@ -3092,18 +2704,12 @@ renderList(
     false
 );
 
-
-/* =========================
-   PAGE SYSTEM
-========================= */
-
 function openPage(pageName){
 
     const currentPage =
         document.querySelector(
             ".page.active"
         );
-
 
     if(currentPage){
 
@@ -3113,7 +2719,6 @@ function openPage(pageName){
         );
 
     }
-
 
     document
         .querySelectorAll(".page")
@@ -3125,18 +2730,15 @@ function openPage(pageName){
 
         });
 
-
     const target =
         document.getElementById(
             pageName
         );
 
-
     if(target)
         target.classList.add(
             "active"
         );
-
 
     document
         .querySelectorAll(
@@ -3151,21 +2753,16 @@ function openPage(pageName){
 
         });
 
-
     const permanentPages = [
-
         "permanentSecrets",
         "candyLand",
         "theCave"
-
     ];
-
 
     const permanentButton =
         document.getElementById(
             "permanentDropdownButton"
         );
-
 
     if(
         permanentPages.includes(
@@ -3185,12 +2782,10 @@ function openPage(pageName){
 
     }
 
-
     localStorage.setItem(
         "currentPage",
         pageName
     );
-
 
     document
         .getElementById("sidebar")
@@ -3198,12 +2793,10 @@ function openPage(pageName){
             "open"
         );
 
-
     const savedScroll =
         localStorage.getItem(
             "scroll_" + pageName
         );
-
 
     setTimeout(function(){
 
@@ -3217,11 +2810,6 @@ function openPage(pageName){
     },0);
 
 }
-
-
-/* =========================
-   SIDEBAR
-========================= */
 
 document
     .getElementById("menuButton")
@@ -3237,7 +2825,6 @@ document
 
         }
     );
-
 
 document
     .querySelectorAll(".sidebarButton")
@@ -3256,9 +2843,6 @@ document
 
     });
 
-
-/* PERMANENT DROPDOWN */
-
 document
     .getElementById(
         "permanentDropdownButton"
@@ -3272,17 +2856,14 @@ document
                     "permanentSubmenu"
                 );
 
-
             const arrow =
                 document.getElementById(
                     "permanentArrow"
                 );
 
-
             submenu.classList.toggle(
                 "open"
             );
-
 
             arrow.textContent =
                 submenu.classList.contains(
@@ -3293,9 +2874,6 @@ document
 
         }
     );
-
-
-/* PERMANENT SUBBUTTONS */
 
 document
     .querySelectorAll(
@@ -3316,11 +2894,6 @@ document
 
     });
 
-
-/* =========================
-   EGG BUTTONS
-========================= */
-
 document
     .getElementById("releaseEggButton")
     .addEventListener(
@@ -3329,7 +2902,6 @@ document
             openPage("releaseEgg");
         }
     );
-
 
 document
     .getElementById("exoticEggButton")
@@ -3340,7 +2912,6 @@ document
         }
     );
 
-
 document
     .getElementById("cosmicEggButton")
     .addEventListener(
@@ -3349,7 +2920,6 @@ document
             openPage("cosmicEgg");
         }
     );
-
 
 document
     .getElementById("royaltyEggButton")
@@ -3360,7 +2930,6 @@ document
         }
     );
 
-
 document
     .getElementById("fruityEggButton")
     .addEventListener(
@@ -3369,7 +2938,6 @@ document
             openPage("fruityEgg");
         }
     );
-
 
 document
     .getElementById("commonEggButton")
@@ -3380,7 +2948,6 @@ document
         }
     );
 
-
 document
     .getElementById("lunarEggButton")
     .addEventListener(
@@ -3390,16 +2957,14 @@ document
         }
     );
 
-
 document
     .getElementById("voidEggButton")
     .addEventListener(
         "click",
         function(){
-            openPage("voidEgg");
+            openPage("voidShardEgg");
         }
     );
-
 
 document
     .getElementById("hellEggButton")
@@ -3410,7 +2975,6 @@ document
         }
     );
 
-
 document
     .getElementById("nightmareEggButton")
     .addEventListener(
@@ -3419,7 +2983,6 @@ document
             openPage("nightmareEgg");
         }
     );
-
 
 document
     .getElementById("jellyEggButton")
@@ -3430,7 +2993,6 @@ document
         }
     );
 
-
 document
     .getElementById("dominusEggButton")
     .addEventListener(
@@ -3439,7 +3001,6 @@ document
             openPage("dominusEgg");
         }
     );
-
 
 document
     .getElementById("djEggButton")
@@ -3450,7 +3011,6 @@ document
         }
     );
 
-
 document
     .getElementById("sandcastleEggButton")
     .addEventListener(
@@ -3460,7 +3020,6 @@ document
         }
     );
 
-
 document
     .getElementById("cyborgEggButton")
     .addEventListener(
@@ -3469,7 +3028,6 @@ document
             openPage("cyborgEgg");
         }
     );
-
 
 document
     .getElementById(
@@ -3484,7 +3042,6 @@ document
         }
     );
 
-
 document
     .getElementById("soulFlyEggButton")
     .addEventListener(
@@ -3493,9 +3050,6 @@ document
             openPage("soulFlyEgg");
         }
     );
-
-
-/* BACK BUTTONS */
 
 document
     .querySelectorAll(
@@ -3516,13 +3070,7 @@ document
 
     });
 
-
-/* =========================
-   SEARCH
-========================= */
-
 const searchData = [];
-
 
 function addSearchPets(
     pets,
@@ -3544,13 +3092,11 @@ function addSearchPets(
 
 }
 
-
 addSearchPets(
     robuxPets,
     "robuxPets",
     "Robux Pet"
 );
-
 
 addSearchPets(
     commonEggPets,
@@ -3565,9 +3111,9 @@ addSearchPets(
 );
 
 addSearchPets(
-    voidEggPets,
-    "voidEgg",
-    "Void Egg"
+    voidShardEggPets,
+    "voidShardEgg",
+    "Void Shard Egg"
 );
 
 addSearchPets(
@@ -3582,7 +3128,6 @@ addSearchPets(
     "Nightmare Egg"
 );
 
-
 addSearchPets(
     jellyEggPets,
     "jellyEgg",
@@ -3594,7 +3139,6 @@ addSearchPets(
     "dominusEgg",
     "Dominus Egg"
 );
-
 
 addSearchPets(
     djEggPets,
@@ -3626,7 +3170,6 @@ addSearchPets(
     "SoulFly Egg"
 );
 
-
 addSearchPets(
     releaseEggPets,
     "releaseEgg",
@@ -3657,31 +3200,13 @@ addSearchPets(
     "Fruity Egg"
 );
 
-
 addSearchPets(
     shadowEggPets,
     "rotationSecrets",
     "Rotation Secrets"
 );
 
-
-/* SEARCH INPUT */
-
-const searchInput =
-    document.getElementById(
-        "searchInput"
-    );
-
-
-const searchResults =
-    document.getElementById(
-        "searchResults"
-    );
-
-
-function getSearchImage(
-    item
-){
+function getSearchImage(item){
 
     const datasets = [
 
@@ -3693,7 +3218,7 @@ function getSearchImage(
 
         commonEggData,
         lunarEggData,
-        voidEggData,
+        voidShardEggData,
         hellEggData,
         nightmareEggData,
 
@@ -3712,7 +3237,6 @@ function getSearchImage(
 
     ];
 
-
     for(
         let i=0;
         i<datasets.length;
@@ -3722,12 +3246,10 @@ function getSearchImage(
         const data =
             datasets[i][item.name];
 
-
         if(data){
 
             const normal =
                 data.normal;
-
 
             if(
                 normal &&
@@ -3742,24 +3264,28 @@ function getSearchImage(
 
     }
 
-
     return "";
 
 }
 
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
 
-function showSearchResults(
-    query
-){
+const searchResults =
+    document.getElementById(
+        "searchResults"
+    );
+
+function showSearchResults(query){
 
     searchResults.innerHTML="";
-
 
     const lower =
         query
             .toLowerCase()
             .trim();
-
 
     if(!lower){
 
@@ -3769,7 +3295,6 @@ function showSearchResults(
         return;
 
     }
-
 
     const matches =
         searchData.filter(
@@ -3781,7 +3306,6 @@ function showSearchResults(
 
             }
         );
-
 
     if(matches.length === 0){
 
@@ -3812,18 +3336,15 @@ function showSearchResults(
                 row.className=
                     "searchItem";
 
-
                 const image =
                     document.createElement(
                         "img"
                     );
 
-
                 const imagePath =
                     getSearchImage(
                         item
                     );
-
 
                 if(imagePath){
 
@@ -3832,7 +3353,6 @@ function showSearchResults(
 
                 }
 
-
                 const info =
                     document.createElement(
                         "div"
@@ -3840,7 +3360,6 @@ function showSearchResults(
 
                 info.className=
                     "searchInfo";
-
 
                 const petName =
                     document.createElement(
@@ -3853,7 +3372,6 @@ function showSearchResults(
                 petName.textContent =
                     item.name;
 
-
                 const variant =
                     document.createElement(
                         "div"
@@ -3865,7 +3383,6 @@ function showSearchResults(
                 variant.textContent =
                     item.type;
 
-
                 info.appendChild(
                     petName
                 );
@@ -3874,7 +3391,6 @@ function showSearchResults(
                     variant
                 );
 
-
                 row.appendChild(
                     image
                 );
@@ -3882,7 +3398,6 @@ function showSearchResults(
                 row.appendChild(
                     info
                 );
-
 
                 row.addEventListener(
                     "click",
@@ -3900,7 +3415,6 @@ function showSearchResults(
                     }
                 );
 
-
                 searchResults.appendChild(
                     row
                 );
@@ -3910,12 +3424,10 @@ function showSearchResults(
 
     }
 
-
     searchResults.style.display =
         "block";
 
 }
-
 
 searchInput.addEventListener(
     "input",
@@ -3927,9 +3439,6 @@ searchInput.addEventListener(
 
     }
 );
-
-
-/* CLOSE SEARCH */
 
 document.addEventListener(
     "click",
@@ -3948,11 +3457,6 @@ document.addEventListener(
 
     }
 );
-
-
-/* =========================
-   COLOR CONFIG
-========================= */
 
 const colors = {
 
@@ -4021,7 +3525,6 @@ const colors = {
 
 };
 
-
 function applyColor(name){
 
     const color =
@@ -4030,14 +3533,12 @@ function applyColor(name){
     if(!color)
         return;
 
-
     document.documentElement
         .style
         .setProperty(
             "--main-color",
             color.main
         );
-
 
     document.documentElement
         .style
@@ -4046,14 +3547,12 @@ function applyColor(name){
             color.dark
         );
 
-
     document.documentElement
         .style
         .setProperty(
             "--main-light",
             color.light
         );
-
 
     document.documentElement
         .style
@@ -4062,7 +3561,6 @@ function applyColor(name){
             color.hover
         );
 
-
     localStorage.setItem(
         "bgsColor",
         name
@@ -4070,27 +3568,22 @@ function applyColor(name){
 
 }
 
-
 const colorSelect =
     document.getElementById(
         "colorSelect"
     );
-
 
 const savedColor =
     localStorage.getItem(
         "bgsColor"
     ) || "blue";
 
-
 colorSelect.value =
     savedColor;
-
 
 applyColor(
     savedColor
 );
-
 
 colorSelect.addEventListener(
     "change",
@@ -4103,16 +3596,10 @@ colorSelect.addEventListener(
     }
 );
 
-
-/* =========================
-   RESTORE PAGE
-========================= */
-
 const savedPage =
     localStorage.getItem(
         "currentPage"
     );
-
 
 if(
     savedPage &&
@@ -4132,9 +3619,6 @@ if(
     );
 
 }
-
-
-/* CLOSE VARIANT MENUS */
 
 document.addEventListener(
     "click",
